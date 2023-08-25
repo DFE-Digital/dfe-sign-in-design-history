@@ -4,17 +4,100 @@
 
 {% block content %}
 
+<div class="govuk-width-container ">
+      
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+      <h1 class="govuk-heading-xl">
+          DfE Sign-in design history
+      </h1>
+      <p class="govuk-body-l">
+          A history of the designs for the DfE Sign-in service
+      </p>
   </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  </div>
+</div>
+
+<section id="Documentation">
+  <h2 class="govuk-heading-m">Documentation</h2>
+
+  <!-- Row 1 -->
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                  <div class="govuk-card">
+                      <div class="govuk-card__content">
+                          <h3 class="govuk-heading-m"><a href="/prototypes.html">Prototypes</a></h3>
+                          <p class="govuk-body">Link to the prototypes which create DfE Sign-in.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-card">
+                  <div class="govuk-card__content">
+                      <h3 class="govuk-heading-m"><a href="design-history/designhistory.html">Design History</a></h3>
+                      <p class="govuk-body">Documented and shared design decisions. Creating a permanent record of how our service has developed over time.</p>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-card">
+                  <div class="govuk-card__content">
+                      <h3 class="govuk-heading-m"><a href="/component-library">Component Library</a></h3>
+                      <p class="govuk-body">Components are reusable parts of the user interface that have been used in the design of DfE Sign-in.</p>
+                  </div>
+              </div>
+              </div>
+
+              <div class="govuk-grid-column-one-half">
+                  <div class="govuk-card">
+                      <div class="govuk-card__content">
+                          <h3 class="govuk-heading-m"><a href="design-history/UserJourneysServiceMap.html">User Journeys and Service Design</a></h3>
+                          <p class="govuk-body">A collection of the user journeys within DfE Sign-in as well as service design related documentation.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+<section id="References">
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+  </div>
+  <h2 class="govuk-heading-m">References</h2>
+  <!-- Row 4 -->
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+          <div class="govuk-card">
+              <div class="govuk-card__content">
+                  <h3 class="govuk-heading-m"><a href="design-history/atozglossary.html">A to Z Glossary</a></h3>
+                  <p class="govuk-body">A collection of terms commonly used across the DfE Sign-in service.</p>
+              </div>
+          </div>
+      </div>
+     
+  </div>
+
+</section>
+
+
 </div>
 
 {% endblock %}

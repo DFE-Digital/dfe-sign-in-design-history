@@ -4,3 +4,13 @@
 // 
 
 // Add extra styles here
+
+.govuk-card--contained {
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #005ea5;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 20px;
+}

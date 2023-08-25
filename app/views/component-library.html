@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Component library
+      </h1>
+
+      <p>
+        Components are reusable parts of the user interface that have been used in the design of the DfE Sign-in service.
+      </p>
+
+      <p>
+        All of the listed components are made up from the GOV.UK Design System styles, patterns and components.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Related GOV.UK resources
+      </h2>
+
+      <ul class="list">
+        <li><a href="https://design-system.service.gov.uk" rel="external" target="external" title="This will open in a new tab or window">GOV.UK Design System</a></li>
+        <li><a href="https://www.gov.uk/guidance/government-design-principles" rel="external" target="external" title="This will open in a new tab or window">Government Design Principles</a></li>
+        <li><a href="https://www.gov.uk/service-manual" rel="external" target="external" title="This will open in a new tab or window">Service Design Manual</a></li>
+        <li><a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style" rel="external" target="external" title="This will open in a new tab or window">Style guide</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
