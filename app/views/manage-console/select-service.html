@@ -1,0 +1,1035 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="https://www.gov.uk/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <!--[if gt IE 8]><!-->
+          <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
+            <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+          </svg>
+          <!--<![endif]-->
+          <!--[if IE 8]>
+          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+          <![endif]-->
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="/V1/services" class="govuk-header__link govuk-header__service-name">
+        DfE Manage
+      </a>
+      <nav aria-label="Menu" class="govuk-header__navigation ">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list govuk-!-margin-bottom-4">
+            <li class="govuk-header__navigation-item">
+              <li class="govuk-header__navigation-item">
+                <a class="govuk-header__link" href="/V1/dfe-sign-in-login">
+                  Sign out
+                </a>
+              </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-phase-banner govuk-!-margin-bottom-6">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+          <h2 class="govuk-heading-l">Select a service</h2>
+            <p class="govuk-body govuk-!-margin-right-6">
+              Choose which service you would like to manage within the DfE Manage console.
+            </p>      
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+<table class="govuk-table govuk-!-margin-top-8">
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row extra-padding govuk-grid-row">
+          <th scope="col" class="govuk-table__header width-10">Select</th>
+          <th scope="col" class="govuk-table__header width-40">Service</th>
+          <th scope="col" class="govuk-table__header width-65">Description</th>
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input"  name="selectedService" type="radio" >
+                      <label class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0">
+                  <span class="govuk-label govuk-label--s"> Apply To Become An Academy </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer">
+                  Apply to convert from a school to an academy.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="8A949C8C-1BCA-4ADC-9080-36ADEBC08993" name="selectedService" type="radio" value="8A949C8C-1BCA-4ADC-9080-36ADEBC08993">
+                      <label for="8A949C8C-1BCA-4ADC-9080-36ADEBC08993" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="8A949C8C-1BCA-4ADC-9080-36ADEBC08993">
+                  <span class="govuk-label govuk-label--s"> Apprenticeships Service for Staff </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="8A949C8C-1BCA-4ADC-9080-36ADEBC08993">
+                  TBC
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="E9DD07F4-63B1-41AE-968A-052163DBDCA8" name="selectedService" type="radio" value="E9DD07F4-63B1-41AE-968A-052163DBDCA8">
+                      <label for="E9DD07F4-63B1-41AE-968A-052163DBDCA8" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="E9DD07F4-63B1-41AE-968A-052163DBDCA8">
+                  <span class="govuk-label govuk-label--s"> Assessment Service </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="E9DD07F4-63B1-41AE-968A-052163DBDCA8">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="CE5E156E-6474-4233-B111-6511A7EF8104" name="selectedService" type="radio" value="CE5E156E-6474-4233-B111-6511A7EF8104">
+                      <label for="CE5E156E-6474-4233-B111-6511A7EF8104" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="CE5E156E-6474-4233-B111-6511A7EF8104">
+                  <span class="govuk-label govuk-label--s"> Assessment Service - Develop an assessment </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="CE5E156E-6474-4233-B111-6511A7EF8104">
+                  Develop and manage assessments for digital National Curriculum Assessments.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="4035A11F-8C3F-495A-84F0-F8C312DF07CC" name="selectedService" type="radio" value="4035A11F-8C3F-495A-84F0-F8C312DF07CC">
+                      <label for="4035A11F-8C3F-495A-84F0-F8C312DF07CC" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="4035A11F-8C3F-495A-84F0-F8C312DF07CC">
+                  <span class="govuk-label govuk-label--s"> Assessment Service - Manage your school assessments </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="4035A11F-8C3F-495A-84F0-F8C312DF07CC">
+                  Register your pupils and review information for the reception baseline assessment TPT trial
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="FDA86CC0-26DD-4BA6-B5F3-54AFC760B3B0" name="selectedService" type="radio" value="FDA86CC0-26DD-4BA6-B5F3-54AFC760B3B0">
+                      <label for="FDA86CC0-26DD-4BA6-B5F3-54AFC760B3B0" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="FDA86CC0-26DD-4BA6-B5F3-54AFC760B3B0">
+                  <span class="govuk-label govuk-label--s"> Assessment Service - Start an assessment </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="FDA86CC0-26DD-4BA6-B5F3-54AFC760B3B0">
+                  Administer the reception baseline assessment TPT trial
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="45E84AAD-5275-409E-AB0F-D4DDE4858D70" name="selectedService" type="radio" value="45E84AAD-5275-409E-AB0F-D4DDE4858D70">
+                      <label for="45E84AAD-5275-409E-AB0F-D4DDE4858D70" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="45E84AAD-5275-409E-AB0F-D4DDE4858D70">
+                  <span class="govuk-label govuk-label--s"> Claim additional payments for teaching </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="45E84AAD-5275-409E-AB0F-D4DDE4858D70">
+                  Manage additional payments to teachers to encourage them to stay in the profession.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="A66A011F-63CD-4293-B1D1-B33EA3214A14" name="selectedService" type="radio" value="A66A011F-63CD-4293-B1D1-B33EA3214A14">
+                      <label for="A66A011F-63CD-4293-B1D1-B33EA3214A14" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="A66A011F-63CD-4293-B1D1-B33EA3214A14">
+                  <span class="govuk-label govuk-label--s"> DAS Ask Service </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="A66A011F-63CD-4293-B1D1-B33EA3214A14">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="4D74B2A2-7984-498B-8914-E6151245F98D" name="selectedService" type="radio" value="4D74B2A2-7984-498B-8914-E6151245F98D">
+                      <label for="4D74B2A2-7984-498B-8914-E6151245F98D" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="4D74B2A2-7984-498B-8914-E6151245F98D">
+                  <span class="govuk-label govuk-label--s"> DfE - Mert Super Duper Service </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="4D74B2A2-7984-498B-8914-E6151245F98D">
+                  Mert's Service for client integration
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="2C82F37A-158F-454A-9EAF-C54E1DDC6CFC" name="selectedService" type="radio" value="2C82F37A-158F-454A-9EAF-C54E1DDC6CFC">
+                      <label for="2C82F37A-158F-454A-9EAF-C54E1DDC6CFC" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="2C82F37A-158F-454A-9EAF-C54E1DDC6CFC">
+                  <span class="govuk-label govuk-label--s"> DfE Sign-in </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="2C82F37A-158F-454A-9EAF-C54E1DDC6CFC">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="025311FC-71F6-49CA-8F35-17B8BDB71890" name="selectedService" type="radio" value="025311FC-71F6-49CA-8F35-17B8BDB71890">
+                      <label for="025311FC-71F6-49CA-8F35-17B8BDB71890" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="025311FC-71F6-49CA-8F35-17B8BDB71890">
+                  <span class="govuk-label govuk-label--s"> DfE Sign-in </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="025311FC-71F6-49CA-8F35-17B8BDB71890">
+                  DfE Sign-in Services
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="C31B5DA5-4538-4188-AA3A-D53593AF98E3" name="selectedService" type="radio" value="C31B5DA5-4538-4188-AA3A-D53593AF98E3">
+                      <label for="C31B5DA5-4538-4188-AA3A-D53593AF98E3" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="C31B5DA5-4538-4188-AA3A-D53593AF98E3">
+                  <span class="govuk-label govuk-label--s"> DfE Sign-in </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="C31B5DA5-4538-4188-AA3A-D53593AF98E3">
+                  DfE Sign-in Profile
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="49BF814C-2545-4382-8AD7-CF120386492B" name="selectedService" type="radio" value="49BF814C-2545-4382-8AD7-CF120386492B">
+                      <label for="49BF814C-2545-4382-8AD7-CF120386492B" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="49BF814C-2545-4382-8AD7-CF120386492B">
+                  <span class="govuk-label govuk-label--s"> DfE Sign-in Help </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="49BF814C-2545-4382-8AD7-CF120386492B">
+                  DfE Sign-in Help
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="A434E676-01B3-43E9-9E7C-1A21030E7D40" name="selectedService" type="radio" value="A434E676-01B3-43E9-9E7C-1A21030E7D40">
+                      <label for="A434E676-01B3-43E9-9E7C-1A21030E7D40" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="A434E676-01B3-43E9-9E7C-1A21030E7D40">
+                  <span class="govuk-label govuk-label--s"> Digital Forms service </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="A434E676-01B3-43E9-9E7C-1A21030E7D40">
+                  TBC
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="EBA188E6-A149-4445-9F5D-4AEBC21175BA" name="selectedService" type="radio" value="EBA188E6-A149-4445-9F5D-4AEBC21175BA">
+                      <label for="EBA188E6-A149-4445-9F5D-4AEBC21175BA" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="EBA188E6-A149-4445-9F5D-4AEBC21175BA">
+                  <span class="govuk-label govuk-label--s"> Document exchange </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="EBA188E6-A149-4445-9F5D-4AEBC21175BA">
+                  Use Document Exchange to submit documents to the Education and Skills Funding Agency (ESFA) and to view and download documents published by the ESFA.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="2354CB2E-F559-4BF4-9981-4F6C6890AA5E" name="selectedService" type="radio" value="2354CB2E-F559-4BF4-9981-4F6C6890AA5E">
+                      <label for="2354CB2E-F559-4BF4-9981-4F6C6890AA5E" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="2354CB2E-F559-4BF4-9981-4F6C6890AA5E">
+                  <span class="govuk-label govuk-label--s"> Get Information About Schools </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="2354CB2E-F559-4BF4-9981-4F6C6890AA5E">
+                  Access information on establishments, local authorities, trusts, federations and governors, and update your organisation’s details.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="FD39DCFC-9B60-46C4-ACDC-699A2468B46F" name="selectedService" type="radio" value="FD39DCFC-9B60-46C4-ACDC-699A2468B46F">
+                      <label for="FD39DCFC-9B60-46C4-ACDC-699A2468B46F" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="FD39DCFC-9B60-46C4-ACDC-699A2468B46F">
+                  <span class="govuk-label govuk-label--s"> Get help buying for schools </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="FD39DCFC-9B60-46C4-ACDC-699A2468B46F">
+                  Get help buying for schools service
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="8893368F-8865-4AD8-8A48-4EB01EDCF324" name="selectedService" type="radio" value="8893368F-8865-4AD8-8A48-4EB01EDCF324">
+                      <label for="8893368F-8865-4AD8-8A48-4EB01EDCF324" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="8893368F-8865-4AD8-8A48-4EB01EDCF324">
+                  <span class="govuk-label govuk-label--s"> Get information about pupils </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="8893368F-8865-4AD8-8A48-4EB01EDCF324">
+                  GIAP is the replacement for Key to Success. Access selected pupil level census and attainment data from the national pupil database, create and monitor the progress of virtual cohorts of pupils and access pupil premium information.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="1EE0F737-6BB3-4FD6-B09A-54F5F6822EC3" name="selectedService" type="radio" value="1EE0F737-6BB3-4FD6-B09A-54F5F6822EC3">
+                      <label for="1EE0F737-6BB3-4FD6-B09A-54F5F6822EC3" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="1EE0F737-6BB3-4FD6-B09A-54F5F6822EC3">
+                  <span class="govuk-label govuk-label--s"> Get information about pupils (refactor) </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="1EE0F737-6BB3-4FD6-B09A-54F5F6822EC3">
+                  Get information about pupils
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="211FB81B-F084-4EF5-B31C-CC85C81F3EF3" name="selectedService" type="radio" value="211FB81B-F084-4EF5-B31C-CC85C81F3EF3">
+                      <label for="211FB81B-F084-4EF5-B31C-CC85C81F3EF3" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="211FB81B-F084-4EF5-B31C-CC85C81F3EF3">
+                  <span class="govuk-label govuk-label--s"> Get information about schools (EAPIM test) </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="211FB81B-F084-4EF5-B31C-CC85C81F3EF3">
+                  Get information about schools (EAPIM test)
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="8469B1D9-A794-4747-840B-46C267BBBDE9" name="selectedService" type="radio" value="8469B1D9-A794-4747-840B-46C267BBBDE9">
+                      <label for="8469B1D9-A794-4747-840B-46C267BBBDE9" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="8469B1D9-A794-4747-840B-46C267BBBDE9">
+                  <span class="govuk-label govuk-label--s"> Get my Ofsted Inspection Data Summary Report </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="8469B1D9-A794-4747-840B-46C267BBBDE9">
+                  This service allows schools, local authorities and other users to access their organisation’s inspection data summary report. The IDSR is also used by lead inspectors to prepare for upcoming inspections.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="3BFDE961-F061-4786-B618-618DEAF96E44" name="selectedService" type="radio" value="3BFDE961-F061-4786-B618-618DEAF96E44">
+                      <label for="3BFDE961-F061-4786-B618-618DEAF96E44" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="3BFDE961-F061-4786-B618-618DEAF96E44">
+                  <span class="govuk-label govuk-label--s"> Key to Success (LAs) </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="3BFDE961-F061-4786-B618-618DEAF96E44">
+                  Access confidential pupil data securely, monitor a pupil’s progress and access pupil premium allocations: for local authorities.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="02CE2BCE-C18C-48ED-80B8-1B6FCB6A394E" name="selectedService" type="radio" value="02CE2BCE-C18C-48ED-80B8-1B6FCB6A394E">
+                      <label for="02CE2BCE-C18C-48ED-80B8-1B6FCB6A394E" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="02CE2BCE-C18C-48ED-80B8-1B6FCB6A394E">
+                  <span class="govuk-label govuk-label--s"> MYESF </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="02CE2BCE-C18C-48ED-80B8-1B6FCB6A394E">
+                  MYESF
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="A4659F05-3F42-4994-80F2-90F39E5E81ED" name="selectedService" type="radio" value="A4659F05-3F42-4994-80F2-90F39E5E81ED">
+                      <label for="A4659F05-3F42-4994-80F2-90F39E5E81ED" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="A4659F05-3F42-4994-80F2-90F39E5E81ED">
+                  <span class="govuk-label govuk-label--s"> MYESF DEMO </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="A4659F05-3F42-4994-80F2-90F39E5E81ED">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="0E1E8697-A860-4895-A1AE-5A7212179866" name="selectedService" type="radio" value="0E1E8697-A860-4895-A1AE-5A7212179866">
+                      <label for="0E1E8697-A860-4895-A1AE-5A7212179866" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="0E1E8697-A860-4895-A1AE-5A7212179866">
+                  <span class="govuk-label govuk-label--s"> Manage Teacher Training Applications </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="0E1E8697-A860-4895-A1AE-5A7212179866">
+                  Manage teacher training applications is the service used to receive and respond to postgraduate ITT applications in England.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="A77C64B0-8B01-41B9-8715-2027068F5DA0" name="selectedService" type="radio" value="A77C64B0-8B01-41B9-8715-2027068F5DA0">
+                      <label for="A77C64B0-8B01-41B9-8715-2027068F5DA0" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="A77C64B0-8B01-41B9-8715-2027068F5DA0">
+                  <span class="govuk-label govuk-label--s"> Manage your education and skills funding (MYESF) </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="A77C64B0-8B01-41B9-8715-2027068F5DA0">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="46D22169-29B1-490D-A00D-96BC189DB350" name="selectedService" type="radio" value="46D22169-29B1-490D-A00D-96BC189DB350">
+                      <label for="46D22169-29B1-490D-A00D-96BC189DB350" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="46D22169-29B1-490D-A00D-96BC189DB350">
+                  <span class="govuk-label govuk-label--s"> National non-domestic rates (NNDR) claims </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="46D22169-29B1-490D-A00D-96BC189DB350">
+                  Access the online form to claim funding for national non-domestic rates. Your NNDR bill for the year you wish to claim will be required.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="CF154FD6-3AD2-4948-92F8-55DD9932F0E7" name="selectedService" type="radio" value="CF154FD6-3AD2-4948-92F8-55DD9932F0E7">
+                      <label for="CF154FD6-3AD2-4948-92F8-55DD9932F0E7" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="CF154FD6-3AD2-4948-92F8-55DD9932F0E7">
+                  <span class="govuk-label govuk-label--s"> OPAFastForm </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="CF154FD6-3AD2-4948-92F8-55DD9932F0E7">
+                  OPA FastForm
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="2CD8EEED-54E3-4A52-A7AE-BFEFA806392D" name="selectedService" type="radio" value="2CD8EEED-54E3-4A52-A7AE-BFEFA806392D">
+                      <label for="2CD8EEED-54E3-4A52-A7AE-BFEFA806392D" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="2CD8EEED-54E3-4A52-A7AE-BFEFA806392D">
+                  <span class="govuk-label govuk-label--s"> Old - Publish teacher training courses </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="2CD8EEED-54E3-4A52-A7AE-BFEFA806392D">
+                  
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="7933FB93-C24D-42BB-8D1E-ECFB0BEBD685" name="selectedService" type="radio" value="7933FB93-C24D-42BB-8D1E-ECFB0BEBD685">
+                      <label for="7933FB93-C24D-42BB-8D1E-ECFB0BEBD685" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="7933FB93-C24D-42BB-8D1E-ECFB0BEBD685">
+                  <span class="govuk-label govuk-label--s"> Publish Teacher Training Courses </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="7933FB93-C24D-42BB-8D1E-ECFB0BEBD685">
+                  Publish teacher training courses is the service that allows you to create and publish your courses to be displayed upon our Find service so that you can find the right trainees for your courses and candidates can find the right courses for them.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="CCE5DB23-7588-4B6B-9CD8-3665A4709484" name="selectedService" type="radio" value="CCE5DB23-7588-4B6B-9CD8-3665A4709484">
+                      <label for="CCE5DB23-7588-4B6B-9CD8-3665A4709484" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="CCE5DB23-7588-4B6B-9CD8-3665A4709484">
+                  <span class="govuk-label govuk-label--s"> Publish to the course directory </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="CCE5DB23-7588-4B6B-9CD8-3665A4709484">
+                  This service is for learning providers who are contracted to the Education and Skills Funding Agency and provide courses in England for people aged 16-18 or 19+. The service allows providers to add and edit courses, apprenticeships and T Levels, which are shown on the National Career Service, Find apprenticeship training for your apprentice and TLevels.gov.uk.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="C94FC59C-0D03-4FD3-8BDD-FE05CC97259E" name="selectedService" type="radio" value="C94FC59C-0D03-4FD3-8BDD-FE05CC97259E">
+                      <label for="C94FC59C-0D03-4FD3-8BDD-FE05CC97259E" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="C94FC59C-0D03-4FD3-8BDD-FE05CC97259E">
+                  <span class="govuk-label govuk-label--s"> Register Trainee Teachers </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="C94FC59C-0D03-4FD3-8BDD-FE05CC97259E">
+                  Register trainee teachers is the service that providers use to register trainees that have accepted places onto their ITT courses. Providers can use this service to award trainees their qualifications. This service has replaced the Database for Trainee Teachers and providers (DTTP).
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="4AC2D3F4-E524-4AF1-88BC-E2709E30195F" name="selectedService" type="radio" value="4AC2D3F4-E524-4AF1-88BC-E2709E30195F">
+                      <label for="4AC2D3F4-E524-4AF1-88BC-E2709E30195F" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="4AC2D3F4-E524-4AF1-88BC-E2709E30195F">
+                  <span class="govuk-label govuk-label--s"> School Experience </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="4AC2D3F4-E524-4AF1-88BC-E2709E30195F">
+                  The digital service to help schools offer in-school and virtual school experiences, and for interested candidates to apply.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="2205F4A9-46EB-404F-8BD8-2053FB8FC372" name="selectedService" type="radio" value="2205F4A9-46EB-404F-8BD8-2053FB8FC372">
+                      <label for="2205F4A9-46EB-404F-8BD8-2053FB8FC372" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="2205F4A9-46EB-404F-8BD8-2053FB8FC372">
+                  <span class="govuk-label govuk-label--s"> Significant Change </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="2205F4A9-46EB-404F-8BD8-2053FB8FC372">
+                  Apply to make changes to an academy. This can include things like adding a nursery, making changes to buildings, or boarding or SEN changes.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="AD08DB43-A3C6-45FB-96E4-DE6C206FD65E" name="selectedService" type="radio" value="AD08DB43-A3C6-45FB-96E4-DE6C206FD65E">
+                      <label for="AD08DB43-A3C6-45FB-96E4-DE6C206FD65E" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="AD08DB43-A3C6-45FB-96E4-DE6C206FD65E">
+                  <span class="govuk-label govuk-label--s"> T Level Data Collection </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="AD08DB43-A3C6-45FB-96E4-DE6C206FD65E">
+                  T Level Data Collection service
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="3E8B29E1-E16D-4715-AB25-53332989DB1C" name="selectedService" type="radio" value="3E8B29E1-E16D-4715-AB25-53332989DB1C">
+                      <label for="3E8B29E1-E16D-4715-AB25-53332989DB1C" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="3E8B29E1-E16D-4715-AB25-53332989DB1C">
+                  <span class="govuk-label govuk-label--s"> T Level Results and Certification </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="3E8B29E1-E16D-4715-AB25-53332989DB1C">
+                  Access students' results and certifications for T Level courses.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="8FBA5FDE-832B-499B-957E-8BCD97D11B2D" name="selectedService" type="radio" value="8FBA5FDE-832B-499B-957E-8BCD97D11B2D">
+                      <label for="8FBA5FDE-832B-499B-957E-8BCD97D11B2D" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="8FBA5FDE-832B-499B-957E-8BCD97D11B2D">
+                  <span class="govuk-label govuk-label--s"> Teacher Services - Appropriate Body </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="8FBA5FDE-832B-499B-957E-8BCD97D11B2D">
+                  See teacher records, register early career teachers for induction, and provide updates on induction for local authorities and relevant schools.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="DDFA2FA3-9824-4678-A2E0-F34D6D71948E" name="selectedService" type="radio" value="DDFA2FA3-9824-4678-A2E0-F34D6D71948E">
+                      <label for="DDFA2FA3-9824-4678-A2E0-F34D6D71948E" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="DDFA2FA3-9824-4678-A2E0-F34D6D71948E">
+                  <span class="govuk-label govuk-label--s"> Teacher Services - Employer Access - Agent </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="DDFA2FA3-9824-4678-A2E0-F34D6D71948E">
+                  See teacher records, carry out teacher status checks, and see those no longer allowed to teach for teacher supply agencies, local authorities, and training providers.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="AA4BD63E-61B8-421F-90DF-8EF2CD15AA38" name="selectedService" type="radio" value="AA4BD63E-61B8-421F-90DF-8EF2CD15AA38">
+                      <label for="AA4BD63E-61B8-421F-90DF-8EF2CD15AA38" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="AA4BD63E-61B8-421F-90DF-8EF2CD15AA38">
+                  <span class="govuk-label govuk-label--s"> Teacher Services - Employer Access - Schools </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="AA4BD63E-61B8-421F-90DF-8EF2CD15AA38">
+                  See teacher records, carry out teacher status checks, update a teacher’s employment status, and see those no longer allowed to teach for nurseries, schools, academies, free and independent schools, and colleges.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="0D15C5BD-CA2F-4211-B789-853BB34CE884" name="selectedService" type="radio" value="0D15C5BD-CA2F-4211-B789-853BB34CE884">
+                      <label for="0D15C5BD-CA2F-4211-B789-853BB34CE884" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="0D15C5BD-CA2F-4211-B789-853BB34CE884">
+                  <span class="govuk-label govuk-label--s"> Teacher Services - ITT Provider </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="0D15C5BD-CA2F-4211-B789-853BB34CE884">
+                  See trainee teacher records, make Qualified Teacher Status recommendations, and provide course updates and results for teacher training providers.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="E348F7D4-93D9-4B43-9B78-C84D80C2F34C" name="selectedService" type="radio" value="E348F7D4-93D9-4B43-9B78-C84D80C2F34C">
+                      <label for="E348F7D4-93D9-4B43-9B78-C84D80C2F34C" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="E348F7D4-93D9-4B43-9B78-C84D80C2F34C">
+                  <span class="govuk-label govuk-label--s"> Teaching Vacancies </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="E348F7D4-93D9-4B43-9B78-C84D80C2F34C">
+                  Teaching Vacancies is a free, national search and job-listing service from the Department for Education.
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="26C79440-252C-444B-A471-AFC996FFEF54" name="selectedService" type="radio" value="26C79440-252C-444B-A471-AFC996FFEF54">
+                      <label for="26C79440-252C-444B-A471-AFC996FFEF54" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="26C79440-252C-444B-A471-AFC996FFEF54">
+                  <span class="govuk-label govuk-label--s"> View Your Education Data (VYED) </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="26C79440-252C-444B-A471-AFC996FFEF54">
+                  Access interactive dashboards and reports on the data submitted by your organisation. Also includes access to View my financial insights (VMFI).
+              </label>
+          </td>
+      </tr>
+      
+
+      <tr class="govuk-table__row extra-padding">
+          <td class="govuk-table__cell">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input auto-scroll-on-change" id="" name="selectedService" type="radio" value="36B1132A-ADDE-4981-B08A-8E673CA5315F">
+                      <label for="36B1132A-ADDE-4981-B08A-8E673CA5315F" class="govuk-label govuk-radios__label cursor-pointer"></label>
+                  </div>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0" for="36B1132A-ADDE-4981-B08A-8E673CA5315F">
+                  <span class="govuk-label govuk-label--s"> View your payment </span>
+              </label>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="cursor-pointer" for="36B1132A-ADDE-4981-B08A-8E673CA5315F">
+                  View your payment
+              </label>
+          </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a type="submit" class="govuk-button" href="/manage-console/manage-dashboard">
+      Continue
+  </a>
+</div>                
+
+</main>
+
+{% endblock %}
