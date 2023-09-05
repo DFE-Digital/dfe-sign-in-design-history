@@ -21,8 +21,8 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__service-name">
-        DfE Manage
+      <a href="/V1/services" class="govuk-header__link govuk-header__service-name">
+        DfE Sign-in
       </a>
       <nav aria-label="Menu" class="govuk-header__navigation ">
         <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
@@ -48,17 +48,17 @@
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="">
+            <a class="govuk-header__link" href="#">
               Organisations
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../help.html">
+            <a class="govuk-header__link" href="/manage-console/help.html">
               Help
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="">
+            <a class="govuk-header__link" href="#">
               Sign out
             </a>
           </li>
@@ -98,46 +98,49 @@
         </div>
       </div>
 
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0 govuk-!-margin-top-9">
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              Multi-factor authentication turned on
+            </h3>
+            <p class="govuk-body">You have turned on multi-factor authentication for [service name].</p>
+
+            <p class="govuk-body govuk-!-margin-top-4">Users must now use a security code to confirm their identity every time they sign into their account.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="govuk-!-margin-top-9">
+            <h2 class="govuk-heading-m">Related actions</h2>
+            <ul class="govuk-list">
+                <li><a class="govuk-link govuk-!-font-weight-bold" href="../select-service.html">Change service</a></li>
+            </ul>
+        </aside>
+    </div>
+
       <div class="govuk-width-container">
         <div class="servicesv2">
             <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
-                    <div class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
-
-                      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                        <div class="govuk-notification-banner__header">
-                          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                            Success
-                          </h2>
-                        </div>
-                        <div class="govuk-notification-banner__content">
-                          <h3 class="govuk-notification-banner__heading">
-                            Service configuration changed
-                          </h3>
-                          <p class="govuk-body">Your changes to service configuration for [service name] have been saved.</p>
-                        </div>
-                      </div>
-
+                <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
+                    <div class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
                         <div class="govuk-width-container">
                           <h1 class="govuk-heading-xl govuk-!-margin-left-3">Assessment service</h1>
                         </div>
-
                     </div>
                   </div>
-
-                <div class="govuk-grid-column-one-third">
-                    <aside class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
-                        <h2 class="govuk-heading-m">Related actions</h2>
-                        <ul class="govuk-list">
-                            <li><a class="govuk-link govuk-!-font-weight-bold" href="/V1/manage-console-journey/manage-select-service">Change service</a></li>
-                        </ul>
-                    </aside>
-                </div>
               </div>
 
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
-                    <h1 class="govuk-heading-m govuk-!-margin-bottom-0">View and configure your service</h1>
+                    <h1 class="govuk-heading-m govuk-!-margin-bottom-0">Set up and configure your service</h1>
                     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-1">
                 </div>
             </div>
@@ -148,16 +151,16 @@
 
                     <div class="manage-card">
                       <h3 class="govuk-heading-s">
-                          <a id="service-configuration" class="govuk-link-bold" href="../manage-console/view-service-info/view-service-info.html">View service information</a>
+                          <a id="service-configuration" class="govuk-link-bold" href="../view-service-info/view-service-info.html">View service information</a>
                       </h3>
                       <p class="govuk-body govuk-!-margin-bottom-8">View the name and description of your service.</p>
                   </div>
                       
                       <div class="manage-card">
                           <h3 class="govuk-heading-s">
-                              <a id="service-configuration" class="govuk-link-bold" href="../manage-console/service-configuration/service-configuration.html">Configure service</a>
+                              <a id="service-configuration" class="govuk-link-bold" href="../service-configuration/service-configuration.html">Service configuration</a>
                           </h3>
-                          <p class="govuk-body govuk-!-margin-bottom-8">View and change your service configuration information.</p>
+                          <p class="govuk-body govuk-!-margin-bottom-8">See your service configuration information.</p>
                       </div>
       
                       <div class="manage-card">
@@ -171,7 +174,7 @@
 
                       <div class="manage-card">
                         <h3 class="govuk-heading-s">
-                            <a id="manage-mfa" class="govuk-link-bold" href="#">Multi-factor authentication</a>
+                            <a id="manage-mfa" class="govuk-link-bold" href="../mfa/mfa-configuration.html">Multi-factor authentication</a>
                         </h3>
                         <p class="govuk-body govuk-!-margin-bottom-8">
                           Turn multi-factor authentication on or off for your service.
@@ -184,7 +187,7 @@
 
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <h1 class="govuk-heading-m govuk-!-margin-bottom-0">Support your service's users</h1>
+                <h1 class="govuk-heading-m govuk-!-margin-bottom-0">Manage your service's users</h1>
                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-1">
             </div>
         </div>
@@ -197,7 +200,7 @@
                       <h3 class="govuk-heading-s">
                           <a id="service-configuration" class="govuk-link-bold" href="#">User management</a>
                       </h3>
-                      <p class="govuk-body govuk-!-margin-bottom-8">Manage and invite users to your service.</p>
+                      <p class="govuk-body govuk-!-margin-bottom-8">Manage those who use your service and invite new users.</p>
                   </div>
   
                    
