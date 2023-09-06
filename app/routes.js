@@ -17,10 +17,10 @@ router.post('/mfa-configuration-answer', function (req, res) {
     // Check whether the variable matches a condition
     if (mfaConfiguration == "Turn on"){
       // Send user to next page
-      res.redirect('/manage-console/mfa/turn-on-mfa')
+      res.redirect('/manage-console/v1/mfa/turn-on-mfa')
     } else if (mfaConfiguration == "Turn off"){
       // Send user to ineligible page
-      res.redirect('/manage-console/mfa/turn-off-mfa')
+      res.redirect('/manage-console/v1/mfa/turn-off-mfa')
     }
   })
 
@@ -33,10 +33,10 @@ router.post('/turn-on-mfa-answer-manage', function (req, res) {
     // Check whether the variable matches a condition
     if (turnOffMfa == "Yes"){
       // Send user to next page
-      res.redirect('/manage-console/mfa/dashboard-turn-on-banner')
+      res.redirect('/manage-console/v1/mfa/dashboard-turn-on-banner')
     } else if (turnOffMfa == "No"){
       // Send user to ineligible page
-      res.redirect('/manage-console/manage-dashboard')
+      res.redirect('/manage-console/v1/manage-dashboard')
     }
   })
 
@@ -49,9 +49,9 @@ router.post('/turn-off-mfa-answer', function (req, res) {
     // Check whether the variable matches a condition
     if (turnOffMfa == "Yes"){
       // Send user to next page
-      res.redirect('/manage-console/mfa/dashboard-turn-off-banner')
+      res.redirect('/manage-console/v1/mfa/dashboard-turn-off-banner')
     } else if (turnOffMfa == "No"){
       // Send user to ineligible page
-      res.redirect('/manage-console/manage-dashboard')
+      res.redirect('/manage-console/v1/manage-dashboard')
     }
   })
