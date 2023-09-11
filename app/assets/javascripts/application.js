@@ -15,3 +15,45 @@ function showPassword() {
     x.type = "password";
   }
 }
+
+function showFilters() {
+  var x = document.getElementById("userFilter");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+const btn = document.getElementById("show-filter");
+btn.addEventListener("click", ()=>{
+
+    if(btn.innerText === "Show filters"){
+        btn.innerText = "Hide filters";
+    }else{
+        btn.innerText= "Show filters";
+    }
+})
+
+function myFunction() {
+  document.getElementById("userFilter").style.minWidth = "200px";
+}
+
+const btn2 = document.getElementById("showServices");
+btn2.addEventListener("click", ()=>{
+
+    if(btn2.innerText === "Only show users with access to my service"){
+        btn2.innerText = "Show all users";
+    }else{
+        btn2.innerText= "Only show users with access to my service";
+    }
+})
+
+function showServices() {
+  var x = document.getElementById("currentDisplay");
+  if (x.innerHTML === "Currently viewing all users of Assessment Service") {
+    x.innerHTML = "Currently viewing all users with access to DfE Sign-in";
+  } else {
+    x.innerHTML = "Currently viewing all users of Assessment Service";
+  }
+}

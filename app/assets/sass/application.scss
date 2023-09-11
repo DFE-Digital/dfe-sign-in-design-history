@@ -537,3 +537,13 @@ aside {
 .govuk-body {
   margin-bottom: 20px;
 }
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#div1 {
+  flex-grow: 1;
+  flex-basis: calc(100% / 3);
+}
