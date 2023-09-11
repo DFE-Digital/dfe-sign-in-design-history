@@ -103,82 +103,157 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
      
-          <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage organisations</h1>
-            
-                <p class="govuk-body">You can use the organisation management tool to search and view organisations on DfE manage console.</p>
+          <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create new service</h1>
 
-                <h2 class="govuk-heading-l">Search for organisations</h2>
-    
-                <p class="govuk-body">On DfE manage console, you can search for all organisations on DfE Sign-in, including organisations with access to your service.</p>
-
-                <p class="govuk-body">To search for all DfE Sign-in users:</p>
+                <p class="govuk-body">As a developer in the DfE Sign-in team, to create a service on DfE manage console, you need to:</p>
 
                 <ol class="govuk-list govuk-list--number govuk-!-margin-top-4">
                   <li>Sign into your DfE Sign-in account.</li>
                   <li>Once signed in, select ‘DfE Sign-in manage’ from your list of services.</li>
-                  <li>Choose which service you would like to manage.</li>
-                  <li>Select ‘Organisations’ from the top navigation bar or click ‘Search organisations’ on the DfE manage console dashboard. </li>
-                  <li>Enter a name, legal name, URN, UID, UPIN or UKPRN. Click ‘search’.</li>
+                  <li>On the DfE manage console dashboard, click ‘Create new service’.</li>
+                  <li>Enter the relevant fields.</li>
+                  <li>Review details and click ‘Create new service’.</li>
                 </ol>
 
-                <h3 class="govuk-heading-m govuk-!-margin-top-5">
-                  Search all organisations
-              </h3>
+              <p class="govuk-body">When you create a new service, you must provide the service’s:</p>
 
-              <p class="govuk-body">If you want to search for all organisations on DfE Sign-in, check that the text under the search box says ‘Currently viewing all organisations’. If it says ‘Currently viewing organisations with access to [service name]’, click the ‘Show all organisations’ link.</p>
+              <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                <li>type</li>
+                <li>name</li>
+                <li>description</li>
+                <li>home URL</li>
+                <li>post password-reset URL</li>
+                <li>client ID</li>
+                <li>redirect URL</li>
+                <li>logout redirect URL</li>
+                <li>response type</li>
+                <li>API secret</li>
+              </ul>
+
+              <p class="govuk-body">Depending on the response type selected, you may also need to provide:</p>
+
+              <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                <li>refresh token</li>
+                <li>client secret</li>
+                <li>token endpoint authentication method</li>
+              </ul>
+               
                
 
-              <h3 class="govuk-heading-m govuk-!-margin-top-5">
-                Search organisations with access to your service
-            </h3>
+              <h2 class="govuk-heading-l govuk-!-margin-top-5">
+                Service type
+            </h2>
 
-            <p class="govuk-body">If you want to search for organisations with access to your service, check that the text under the search box says ‘Currently viewing organisations with access to [service name]’. If it says ‘Currently viewing all organisations’, click the ‘Only show organisations with access to my service’ link.</p>
+            <p class="govuk-body">When creating a new service, you must choose the service type.</p>
+
+            <p class="govuk-body">There are 2 types of service you can create:</p>
+
+
+            <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+              <li>standard service: services that allow you to add different levels of access for users, including roles, sub-services and policies</li>
+              <li>ID-only service: services that only use DfE Sign-in for authentication, meaning you cannot add roles, sub-services or policies</li>
+            </ul>
              
 
             <h3 class="govuk-heading-m govuk-!-margin-top-5">
-                Filter your search
+              Standard service
           </h3>
+
+          <p class="govuk-body">A standard service on DfE Sign-in allows you to add different levels of access for users, including roles, sub-services and policies.</p>
           
-          <p class="govuk-body">You can also refine your search with the filtering tool by clicking ‘Show filter’. You can filter organisations by:</p>
+          <p class="govuk-body">Some examples of where this would be needed include: </p>
 
                 <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
-                  <li>status</li>
-                  <li>organisation type</li>
+                  <li>if different organisations need different information or functionality: a role could be created to give certain permissions to perform specific functionality </li>
+                  <li>if a service needs internal admin users: a role could be created to give a user specific access to an admin page</li>
                 </ul>
 
-                <p class="govuk-body">The filters will remain in place even if you move to another page.</p>
-
-                <p class="govuk-body">If you select ‘Clear filters’, the filtering tool will remove all your selections.</p>
+                <p class="govuk-body">Roles and sub-services are managed by policies. Policies are a group of conditions that must be met for a user to request a role. For example, a policy could state that users must be in a DfE organisation to request access to an admin role.</p>
 
 
-                <h2 class="govuk-heading-l govuk-!-margin-top-5">View organisation details</h2>
+                <h3 class="govuk-heading-m govuk-!-margin-top-5">ID-only services</h3>
 
-                <p class="govuk-body">Select an individual organisation from the list of search results to view its details.</p>
+                <p class="govuk-body">An ID-only service uses DfE Sign-in for authentication only. These types of services do not have different levels of access for users. This means you cannot add roles, sub-services or policies to an ID-only service.</p>
 
-                <p class="govuk-body">On an organisation’s profile you will find their:</p>
+                <p class="govuk-body">Some examples of where this would be useful include:</p>
 
                 <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
-                  <li>legal name</li>
-                  <li>address</li>
-                  <li>organisation type</li>
-                  <li>URN</li>
-                  <li>UKPRN</li>
-                  <li>UPIN</li>
-                  <li>establishment number</li>
-                  <li>local authority</li>
-                  <li>legacy ID</li>
-                  <li>status</li>
+                  <li>a service based around a form: where all users need the same level of access and the service only needs information of a user and their chosen organisation</li>
+                  <li>a service that needs the same level of access for all users: where all users have the same permissions to perform the same functionality</li>
                 </ul>
 
-                <p class="govuk-body">On the organisation’s profile, you can also view users who are registered with your service. In the table, you can find each user's:</p>
+                <p class="govuk-body">ID-only services cannot be seen in the DfE Sign-in service list.</p>
+
+                <p class="govuk-body">Find out more about <a class="govuk-link-bold" href="#">managing policies</a> and <a class="govuk-link-bold" href="#">managing roles</a>.</p>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">Service name</h2>
+
+                <p class="govuk-body">When creating a new service, you must choose a name for the service.</p>
+
+                <p class="govuk-body">A service name should:</p>
 
                 <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
-                  <li>name</li>
-                  <li>email</li>
-                  <li>permission level</li>
-                  <li>status</li>
-                  <li>last login</li>
+                  <li>be 500 characters or less (we recommend 65 characters or less)</li>
+                  <li>be unique, clear and descriptive</li>
                 </ul>
+
+                <p class="govuk-body">Once the service has been created, you can change the service name without having to contact the DfE Sign-in team.</p>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">Service description</h2>
+
+                <p class="govuk-body">When creating a new service, you must include a short service description.</p>
+
+                <p class="govuk-body">The service description will appear at the front end of the service, and should tell users:</p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                  <li>what the service is for</li>
+                  <li>what it can do</li>
+                  <li>who can use it</li>
+                </ul>
+
+                <p class="govuk-body">To keep a service description understandable and relevant, it should be specific, informative and concise.</p>
+
+                <p class="govuk-body">When writing a service description, you should:</p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                  <li>be succinct, descriptions should be short (there is no character limit, but we recommend 500 characters or less)</li>
+                  <li>use plain English</li>
+                  <li>be descriptive</li>
+                  <li>avoid jargon or acronyms that are not explained</li>
+                  <li>front-load the description, with important information at the beginning</li>
+                </ul>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">Service details</h2>
+
+                <p class="govuk-body">Read the <a class="govuk-link-bold" href="../help-pages/service-config.html">service configuration help page</a> to find out more about service details:</p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                  <li>home URL</li>
+                  <li>post password-reset URL</li>
+                </ul>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">OpenID Connect</h2>
+
+                <p class="govuk-body">Read the <a class="govuk-link-bold" href="../help-pages/service-config.html">service configuration help page</a> to find out more about OpenID Connect:</p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+                  <li>client ID</li>
+                  <li>redirect URL</li>
+                  <li>logout redirect URL</li>
+                  <li>response types</li>
+                  <li>refresh token</li>
+                  <li>client secret</li>
+                  <li>token endpoint authentication method</li>
+                </ul>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">API</h2>
+
+                <p class="govuk-body">Read the <a class="govuk-link-bold" href="../help-pages/service-config.html">service configuration help page</a> to find out more about API.</p>
 
 
                 <p class="govuk-body font-style-italic govuk-!-margin-top-5">
