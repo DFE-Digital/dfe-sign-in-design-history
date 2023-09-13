@@ -83,46 +83,75 @@
     </p>
   </div>
 
-  <a href="../user-management/sub-service.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-bottom-5">Back</a>
+  <a href="../user-bruce-wayne.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-bottom-5">Back</a>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters govuk-!-margin-top-3">
       <span class="govuk-caption-l">Assessment service</span>
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Review new service for Bruce Wayne</h1> 
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Select a sub-service for: Assessment Service</h1> 
           <p class="govuk-body govuk-!-margin-right-6">
-            Review these details before confirming. Approvers at this organisation will be notified that you added a service to this user.
-          </p>  
-
+            This service, and selected sub-services or roles, will be added to the user's account, assigned to organisation: <strong>[Org name]</strong>
+          </p>
     </div>
-   
 
 
 
   <div class="govuk-grid-column-three-quarters govuk-!-margin-top-5">
-
 <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Review summary</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row extra-padding govuk-grid-row">
+          <th scope="col" class="govuk-table__header">Select</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-full">Sub-service</th>
+      </tr>
+  </thead>
   <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header govuk-!-width-one-third">User name</th>
-      <td class="govuk-table__cell">[User name]</td>
+      
+
+      <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-padding-bottom-5 govuk-!-padding-top-5">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="select-sub-service" name="select-sub-service" type="checkbox" value="select-sub-service">
+                <label class="govuk-label govuk-checkboxes__label">
+                </label>
+              </div>
+          </td>
+          <td class="govuk-table__cell">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0">
+                  <span class="govuk-label govuk-label--s"> School practitioner</span>
+              </label>
+          </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-padding-bottom-5 govuk-!-padding-top-5">
+          <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="select-sub-service" name="select-sub-service" type="checkbox" value="select-sub-service">
+              <label class="govuk-label govuk-checkboxes__label">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0">
+                <span class="govuk-label govuk-label--s"> School Administration</span>
+            </label>
+        </td>
     </tr>
+
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Email address</th>
-      <td class="govuk-table__cell">[Email address]</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Organisation</th>
-      <td class="govuk-table__cell">[Org name]</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Service</th>
-      <td class="govuk-table__cell">[Service name]</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Sub-service/role</th>
-      <td class="govuk-table__cell">[Sub-service/role]</td>
-    </tr>
+      <td class="govuk-table__cell govuk-!-padding-bottom-5 govuk-!-padding-top-5">
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="select-sub-service" name="select-sub-service" type="checkbox" value="select-sub-service">
+            <label class="govuk-label govuk-checkboxes__label">
+            </label>
+          </div>
+      </td>
+      <td class="govuk-table__cell">
+          <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-padding-left-0">
+              <span class="govuk-label govuk-label--s"> Pupil</span>
+          </label>
+      </td>
+  </tr>
+
   </tbody>
 </table>
 
@@ -130,12 +159,14 @@
 </div>
 
 
+
+
 <div class="govuk-button-group">
-  <a type="submit" class="govuk-button" href="../user-management/user-bruce-wayne-banner.html">
-      Add service
+  <a type="submit" class="govuk-button" href="../service-access/review-service.html">
+      Continue
   </a>
 
-  <a class="govuk-button govuk-button--secondary" href="../user-management/user-bruce-wayne.html" role="button">Cancel</a>
+  <a class="govuk-button govuk-button--secondary" href="../user-bruce-wayne.html" role="button">Cancel</a>
 </div>                
 
 </main>
