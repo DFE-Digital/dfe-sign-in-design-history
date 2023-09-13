@@ -87,11 +87,11 @@
     <a href="../manage-dashboard.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     <div class="govuk-width-container">
-      <div class="servicesv2">
+
           <div class="govuk-grid-row">
-              <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
+              <div class="govuk-grid-column-full govuk-!-padding-0">
                   <div class="govuk-!-margin-top-5">
-                      <div class="govuk-width-container">
+
                         <span class="govuk-caption-xl govuk-!-margin-left-3">Assessment Service</span>
                         <h1 class="govuk-heading-xl govuk-!-margin-left-3">Organisation search</h1>
 
@@ -106,10 +106,11 @@
                                   <div id="event-name-hint" class="govuk-hint">
                                     Search by name, URN, UID, UPIN or UKPRN
                                   </div>
-                                  <input class="govuk-input govuk-!-width-three-quarters" type="text" id="criteria" name="criteria" value="">
+                                  <input class="govuk-input govuk-!-width-one-half" type="text" id="criteria" name="criteria" value="">
                                   <button type="submit" class="govuk-button" data-module="govuk-button">
                                       Search
                                   </button>
+                                  <a class="govuk-link-bold govuk-!-margin-left-2 govuk-!-font-size-19" href="#">Clear search</a>
                                   <p class="govuk-body govuk-!-margin-bottom-2">
                                       Currently viewing all organisations
                                   </p>
@@ -127,7 +128,7 @@
                         Show filters
                       </button>
 
-                      </div>
+
                   </div>
 
                   
@@ -135,7 +136,7 @@
               </div>
               
                       
-              </div>
+
 
 
                 <div class="govuk-grid-row meta">
@@ -188,34 +189,42 @@
                     <thead class="govuk-table__head">
                         
                         <tr class="govuk-table__row sortable">
-                            <th scope="col" class="govuk-table__header width-30">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
                                 <a href="#" class="govuk-link">
                                 Organisation
                                 </a>
-                            </th><th scope="col" class="govuk-table__header width-15">
+                            </th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                              <a href="#" class="govuk-link">
+                              Legal name
+                              </a>
+                          </th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
                                 <a href="#" class="govuk-link">
-                                Type
+                                Category
                                 </a>
                             </th>
-                            <th scope="col" class="govuk-table__header width-10">
+                            <th scope="col" class="govuk-table__header">
                                 <a href="#" class="govuk-link">
                                 URN
                                 </a>
                             </th>
-                            <th scope="col" class="govuk-table__header width-10">
+                            <th scope="col" class="govuk-table__header">
                                 <a href="#" class="govuk-link">
                                 UID
                                 </a>
                             </th>
-                            <th scope="col" class="govuk-table__header width-10">
+                            <th scope="col" class="govuk-table__header">
+                              <a href="#" class="govuk-link">
                                 UPIN
+                              </a>
                             </th>
-                            <th scope="col" class="govuk-table__header width-15">
+                            <th scope="col" class="govuk-table__header">
                                 <a href="#" class="govuk-link">
                                 UKPRN
                                 </a>
                             </th>
-                            <th scope="col" class="govuk-table__header width-20 govuk-table__header--numeric">
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">
                                 <a href="#" class="govuk-link">
                                 Status
                                 </a>                            
@@ -227,9 +236,10 @@
                     
                         <tr class="govuk-table__row">
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
-                                <a class="govuk-link" href="#">Arkham Limited</a>
+                                <a class="govuk-link" href="../organisation-search/org-arkham-limited.html">Arkham Limited</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Wayne Enterprises</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">304859</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -241,6 +251,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Blackgate Centre</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">204859</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -253,6 +264,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Castle view</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Hylton Castle Community Fund</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">10485</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -265,7 +277,8 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Castletown trust</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Lawton Family Corporation</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">10857</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -277,6 +290,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Farringdon academy</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Multi-Academy Trust</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">93057</td>
@@ -289,6 +303,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Glenbrook North Children's Centres</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Riverview Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Other Stakeholders</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -301,6 +316,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Greendale Community Centre</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">047749</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -313,6 +329,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Hill Valley trust</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Back To The Future Project</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">90487</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -325,6 +342,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Midtown Academies</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Flash Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Multi-Academy Trust</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">08370</td>
@@ -337,6 +355,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">North Shore Limited</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">29058</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -349,6 +368,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Padua Limited</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -361,6 +381,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Ravencroft Institute</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Institute Centres LTD</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Single-Academy Trust</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">18873</td>
@@ -373,7 +394,8 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Red House Teaching Agency</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">03809</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -385,6 +407,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Rushmore Academy</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Anderson Corporation</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">983784</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -397,7 +420,8 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Rydell High Academies</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">988636</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -409,6 +433,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Shawshank Academy</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Dufrense & Red Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Other Stakeholders</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -421,6 +446,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Shermer Teaching Agency </a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">290858</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -433,7 +459,8 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">South Park Trust</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Single-Academy Trust</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">20083</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -445,6 +472,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Southmoor Children's Centres</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Grangetown Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">80486</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -457,6 +485,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Springfield Centre</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">29074</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -469,7 +498,8 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Sunnydale Academies</a>
                             </th>
-                            <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Single-Academy Trust</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">30984</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -481,6 +511,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Town's end Children's Trust</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Parker Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">97468</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -493,6 +524,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Wayne Foundation</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">Martha Wayne LTD</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Establishment</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">28884</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -505,6 +537,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Welton Academy</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16">PIMS Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
@@ -517,6 +550,7 @@
                             <th class="govuk-table__cell govuk-table__header govuk-!-padding-bottom-4 govuk-!-padding-top-4">
                                 <a class="govuk-link" href="#">Xavier Trust</a>
                             </th>
+                            <td class="govuk-table__cell govuk-!-font-size-16">X-Trust Limited</td>
                             <td class="govuk-table__cell govuk-!-font-size-16">Training Providers</td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
                             <td class="govuk-table__cell govuk-!-font-size-16"></td>
