@@ -71,110 +71,72 @@
 
 
 {% block content %}
+
 <div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      prototype
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a href="../user-management/sub-service.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-bottom-5">Back</a>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-3">
+      <span class="govuk-caption-l">Assessment service</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Review new service for Bruce Wayne</h1> 
+          <p class="govuk-body govuk-!-margin-right-6">
+            Review these details before confirming. Approvers at this organisation will be notified that you added a service to this user.
+          </p>  
+
+    </div>
+   
+
+
+
+  <div class="govuk-grid-column-three-quarters govuk-!-margin-top-5">
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Review summary</caption>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">User name</th>
+      <td class="govuk-table__cell">[User name]</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">[Email address]</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Organisation</th>
+      <td class="govuk-table__cell">[Org name]</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Service</th>
+      <td class="govuk-table__cell">[Service name]</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sub-service/role</th>
+      <td class="govuk-table__cell">[Sub-service/role]</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 </div>
 
-<main id="content" class="govuk-!-margin-bottom-5"> 
 
-    <a href="../user-management/user-management.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
-  
-    <div class="govuk-width-container">
-          <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                  <div class="govuk-!-margin-top-5">
-                      <div class="govuk-width-container">
-                        <span class="govuk-caption-l">Assessment service</span>
-                        <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Bruce Wayne</h1>
-                        
-                      <div class="govuk-label">
-                        <p class="govuk-phase-banner__content govuk-!-margin-bottom-3">
-                          <span class="govuk-body govuk-!-font-weight-bold govuk-!-margin-right-1">
-                            Account status:
-                          </span>
-                          <strong class="govuk-tag govuk-tag--green govuk-phase-banner__content__tag">
-                            active
-                          </strong>
-                        </p>
-                        <p class="govuk-body govuk-!-margin-bottom-0">
-                          <strong>Email:</strong>
-                          bruce.wayne@education.gov.uk
-                        </p>
-                        <p class="govuk-body">
-                          <strong>Last login:</strong>
-                          04 Jan 2022, 06:46 AM
-                        </p>
-                      </div>
-                      </div>
-                  </div>
-                </div>
+<div class="govuk-button-group">
+  <a type="submit" class="govuk-button" href="../user-management/user-bruce-wayne-banner.html">
+      Add service
+  </a>
 
-                <div class="govuk-grid-column-one-third">
-                  <aside class="govuk-!-margin-top-5">
-                      <h2 class="govuk-heading-m">Related actions</h2>
-                      <ul class="govuk-list">
-                          <li><a class="govuk-link govuk-!-font-weight-bold" href="../user-management/sign-in-audit.html">View user sign in audit</a></li>
-                      </ul>
-                  </aside>
-              </div>
-
-              </div>
-              
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    
-                  <div class="govuk-grid-row govuk-!-margin-top-5">
-                    <div class="govuk-grid-column-full">
-                      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Department for Education</h3>
-                      <p class="govuk-body govuk-!-margin-bottom-0">
-                        Legacy ID: 39405
-                      </p>
-
-                      <p class="govuk-body govuk-!-margin-bottom-0">
-                        Permission level: Approver
-                      </p>
-
-                      <a href="../user-management/sub-service.html" class="govuk-body govuk-!-font-weight-bold">Give access to service</a>
-                      
-      
-                      <div class="govuk-grid-row govuk-!-margin-top-5">
-                        <div class="govuk-grid-column-full">
-                        
-                      <table class="data govuk-table cell-align-top">
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header width-35">Service</th>
-                                <th scope="col" class="govuk-table__header width-45">Role</th>
-                            </tr>
-                        </thead>
-          
-                        <tbody class="govuk-table__body">
-                          <tr class="govuk-table__row">
-                              <td class="govuk-table__cell govuk-!-font-weight-bold">Get my Ofsted Inspection Data Summary Report</td>
-                              <td class="govuk-table__cell">No service role</td>
-                          </tr>
-                      
-                          <tr class="govuk-table__row">
-                              <td class="govuk-table__cell govuk-!-font-weight-bold">DfE Sign-in manage</td>
-                              <td class="govuk-table__cell">Get my Ofsted Inspection Data Summary Report (HTML) - Service Configuration</td>
-                          </tr>
-                      
-                      </tbody>
-                    </table>
-                  
-                
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+  <a class="govuk-button govuk-button--secondary" href="../user-management/user-bruce-wayne.html" role="button">Cancel</a>
+</div>                
 
 </main>
 
