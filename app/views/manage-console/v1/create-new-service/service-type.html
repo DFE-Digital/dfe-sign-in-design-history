@@ -93,12 +93,12 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Create new service</h1>
 
-    <form class="form" action="/mfa-configuration-answer" method="post">
+    <form class="form" action="/service-type-answer" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        name: "signIn",
+        name: "service-type",
         fieldset: {
           legend: {
             text: "Service type",
@@ -109,14 +109,14 @@
        
         items: [
           {
-            value: "government-gateway",
+            value: "Standard",
             text: "Standard service",
             hint: {
               text: "Services that allow you to have different levels of access, including roles, sub-services and policies."
             }
           },
           {
-            value: "govuk-one-login",
+            value: "ID-only",
             text: "ID-only service",
             hint: {
               text: "Services that only use DfE Sign-in for authentication, meaning you cannot add roles, sub-services or policies"
@@ -124,6 +124,7 @@
           }
         ]
       }) }}
+
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">

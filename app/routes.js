@@ -55,3 +55,19 @@ router.post('/turn-off-mfa-answer', function (req, res) {
       res.redirect('/manage-console/v1/manage-dashboard')
     }
   })
+
+  // Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/service-type-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var serviceType = req.session.data['service-type']
+
+  // Check whether the variable matches a condition
+  if (serviceType == "Standard"){
+    // Send user to next page
+    res.redirect('#')
+  } else if (serviceType == "ID-only"){
+    // Send user to ineligible page
+    res.redirect('/manage-console/v1/create-new-service/name-description')
+  }
+})
