@@ -71,3 +71,44 @@ router.post('/service-type-answer', function (req, res) {
     res.redirect('/manage-console/v1/create-new-service/name-description')
   }
 })
+
+  // Run this code when a form is submitted to 'juggling-balls-answer'
+  router.post('/policy-type-answer', function (req, res) {
+
+    // Make a variable and give it the value from 'how-many-balls'
+    var policyType = req.session.data['policy-type']
+  
+    // Check whether the variable matches a condition
+    if (policyType == "Organisation"){
+      // Send user to next page
+      res.redirect('/manage-console/v1/manage-policies/organisation-conditions/add-condition')
+    } else if (policyType == "User"){
+      // Send user to ineligible page
+      res.redirect('/manage-console/v1/manage-policies/user-conditions/add-condition')
+    }
+  })
+
+    // Run this code when a form is submitted to 'juggling-balls-answer'
+    router.post('/org-condition-type-answer', function (req, res) {
+
+      // Make a variable and give it the value from 'how-many-balls'
+      var conditionType = req.session.data['org-condition-type']
+    
+      // Check whether the variable matches a condition
+      if (conditionType == "Establishment"){
+        // Send user to next page
+        res.redirect('/manage-console/v1/manage-policies/organisation-conditions/establishment-type')
+      } else if (conditionType == "Category"){
+        // Send user to ineligible page
+        res.redirect('#')
+      } else if (conditionType == "Organisation"){
+        // Send user to ineligible page
+        res.redirect('#')
+      }else if (conditionType == "Status"){
+        // Send user to ineligible page
+        res.redirect('#')
+      }else if (conditionType == "No condition"){
+        // Send user to ineligible page
+        res.redirect('/manage-console/v1/manage-policies/organisation-conditions/policy-name')
+      }
+    })
