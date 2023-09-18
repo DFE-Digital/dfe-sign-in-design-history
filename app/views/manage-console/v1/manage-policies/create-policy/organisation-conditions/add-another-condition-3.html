@@ -21,39 +21,39 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="../manage-dashboard.html" class="govuk-header__link govuk-header__service-name">
+      <a href="../../../manage-dashboard.html" class="govuk-header__link govuk-header__service-name">
         DfE Manage
       </a>
       <nav aria-label="Menu" class="govuk-header__navigation ">
         <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
         <ul id="navigation" class="govuk-header__navigation-list">
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../manage-dashboard.html">
+            <a class="govuk-header__link" href="../../../manage-dashboard.html">
               Dashboard
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../service-configuration/service-configuration.html">
+            <a class="govuk-header__link" href="../../../service-configuration/service-configuration.html">
               Configuration
             </a>
           </li>
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="../manage-policies/policies.html">
+            <a class="govuk-header__link" href="../../policies.html">
               Policies
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../user-management/user-management.html">
+            <a class="govuk-header__link" href="../../../user-management/user-management.html">
               Users
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../organisation-search/organisation-search.html">
+            <a class="govuk-header__link" href="../../../organisation-search/organisation-search.html">
               Organisations
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="../help.html">
+            <a class="govuk-header__link" href="../../../help.html">
               Help
             </a>
           </li>
@@ -84,7 +84,7 @@
 
 <main id="content" class="govuk-!-margin-bottom-5"> 
 
-  <a href="../manage-policies/policies.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+  <a href="../organisation-conditions/organisation-id.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -93,36 +93,33 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Create new policy</h1>
 
-    <form class="form" action="/policy-type-answer" method="post">
+    <form class="form" action="/org-condition-type-answer" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        name: "policy-type",
+        name: "org-condition-type",
         fieldset: {
           legend: {
-            text: "Choose a policy type",
+            text: "Add another policy condition",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--m"
           }
         },
         hint: {
-          text: "Select the type of policy you want to create."
+          text: "Select a policy condition."
         },
         items: [
           {
-            value: "Organisation",
-            text: "Organisation type",
+            value: "Status",
+            text: "Status",
             hint: {
-              text: "Limit access to your service based on organisation status, category, ID or establishment type"
+              text: "Limit access to your service based on the active status of an organisation, such as open or closed"
             }
           },
           {
-            value: "User",
-            text: "User type",
-            hint: {
-              text: "Limit access to your service based on user permission level or email address"
-            }
+            value: "No condition",
+            text: "Do not add another condition"
           }
         ]
       }) }}
@@ -130,7 +127,7 @@
 
       <button class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">Continue</button>
 
-      <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
+      <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
 
     </form>
 

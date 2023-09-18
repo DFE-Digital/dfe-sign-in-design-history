@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="../policies.html">
+            <a class="govuk-header__link" href="../../manage-policies/policies.html">
               Policies
             </a>
           </li>
@@ -84,7 +84,7 @@
 
 <main id="content" class="govuk-!-margin-bottom-5"> 
 
-  <a href="../policy-type.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+  <a href="../../manage-policies/policies.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -93,49 +93,35 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Create new policy</h1>
 
-    <form class="form" action="/org-condition-type-answer" method="post">
+    <form class="form" action="/policy-type-answer" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        name: "org-condition-type",
+        name: "policy-type",
         fieldset: {
           legend: {
-            text: "Add a policy condition",
+            text: "Choose a policy type",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--m"
           }
         },
         hint: {
-          text: "Select a policy condition."
+          text: "Select the type of policy you want to create."
         },
         items: [
           {
-            value: "Establishment",
-            text: "Establishment type",
+            value: "Organisation",
+            text: "Organisation type",
             hint: {
               text: "Limit access to your service based on organisation status, category, ID or establishment type"
             }
           },
           {
-            value: "Category",
-            text: "Organisation category",
+            value: "User",
+            text: "User type",
             hint: {
-              text: "Limit access to your service based on the type of organisation, such as a training provider"
-            }
-          },
-          {
-            value: "Organisation",
-            text: "Organisation ID",
-            hint: {
-              text: "Limit access to individual organisations"
-            }
-          },
-          {
-            value: "Status",
-            text: "Status",
-            hint: {
-              text: "Limit access to your service based on the active status of an organisation, such as open or closed"
+              text: "Limit access to your service based on user permission level or email address"
             }
           }
         ]
@@ -144,7 +130,7 @@
 
       <button class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">Continue</button>
 
-      <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
+      <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
 
     </form>
 

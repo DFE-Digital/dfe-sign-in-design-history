@@ -21,39 +21,39 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="../manage-dashboard.html" class="govuk-header__link govuk-header__service-name">
+      <a href="../../../manage-dashboard.html" class="govuk-header__link govuk-header__service-name">
         DfE Manage
       </a>
       <nav aria-label="Menu" class="govuk-header__navigation ">
         <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
         <ul id="navigation" class="govuk-header__navigation-list">
             <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="../manage-dashboard.html">
+                <a class="govuk-header__link" href="../../../manage-dashboard.html">
                   Dashboard
                 </a>
               </li>
               <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="../service-configuration/service-configuration.html">
+                <a class="govuk-header__link" href="../../../service-configuration/service-configuration.html">
                   Configuration
                 </a>
               </li>
               <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-                <a class="govuk-header__link" href="../manage-policies/policies.html">
+                <a class="govuk-header__link" href="../../../manage-policies/policies.html">
                   Policies
                 </a>
               </li>
               <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="../user-management/user-management.html">
+                <a class="govuk-header__link" href="../../../user-management/user-management.html">
                   Users
                 </a>
               </li>
               <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="../organisation-search/organisation-search.html">
+                <a class="govuk-header__link" href="../../../organisation-search/organisation-search.html">
                   Organisations
                 </a>
               </li>
               <li class="govuk-header__navigation-item">
-                <a class="govuk-header__link" href="../help.html">
+                <a class="govuk-header__link" href="../../../help.html">
                   Help
                 </a>
               </li>
@@ -85,7 +85,7 @@
 
   <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../manage-dashboard.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="../user-conditions/email-address.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
@@ -93,11 +93,26 @@
   
         <span class="govuk-caption-xl govuk-!-margin-top-5">Assessment Service</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Manage policies</h1>
-  
-        <p class="govuk-body">A policy is a set of conditions that determines who can and cannot access your service.</p>
+        <h1 class="govuk-heading-l">Create new policy</h1>
 
-        <p class="govuk-body">You can view, create, change and remove policies.</p>
+        <h2 class="govuk-heading-m">Name your policy</h2>
+        <p class="govuk-body">Choose a name for your new policy that reflects the conditions you have added. The policy name will only be seen by internal users.</p>   
+  
+        <div class="govuk-form-group govuk-!-margin-top-5">
+          <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Policy name
+            </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text">
+            </div>
+
+          <div class="govuk-button-group govuk-!-margin-top-5">
+            <a type="submit" class="govuk-button" href="../user-conditions/review-policy.html">
+              Continue
+          </a>
+
+          <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
+            
+        </div>
 
     </div>
 
@@ -111,53 +126,6 @@
   </div>
 
   </div>
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            
-
-              <table class="govuk-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Policy name</th>
-                    <th scope="col" class="govuk-table__header">Roles</th>
-                    <th scope="col" class="govuk-table__header">Conditions</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    <th scope="col" class="govuk-table__header"></th>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="#">[Policy name]</a></th>
-                    <td class="govuk-table__cell">3</td>
-                    <td class="govuk-table__cell">1</td>
-                    <td class="govuk-table__cell">Active</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="#">[Policy name]</a></th>
-                    <td class="govuk-table__cell">6</td>
-                    <td class="govuk-table__cell">2</td>
-                    <td class="govuk-table__cell">Active</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="#">[Policy name]</a></th>
-                    <td class="govuk-table__cell">9</td>
-                    <td class="govuk-table__cell">0</td>
-                    <td class="govuk-table__cell">Active</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a></td>
-                  </tr>
-                </tbody>
-              </table>
-
-                <div class="govuk-button-group pull-right">
-                  <a type="submit" class="govuk-button" href="../manage-policies/create-policy/policy-type.html">
-                    Create new policy
-                </a>
-              </div>
-             
-    </div>
        
   </main>
 
