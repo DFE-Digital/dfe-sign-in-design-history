@@ -83,9 +83,9 @@
     </p>
   </div>
 
-  <main id="content" class="govuk-!-margin-bottom-5"> 
+  <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../policies.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="../user-conditions/add-another-condition.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
@@ -93,63 +93,38 @@
   
         <span class="govuk-caption-xl govuk-!-margin-top-5">Assessment Service</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Change your policy</h1>
-  
-        <p class="govuk-body">You can review and change the [policy name] policy name and its existing policy conditions. You can also add more policy conditions.</p>   
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Add policy condition</h1>
 
-        <table class="govuk-table">
-          
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Policy details</th>
-              <th scope="col" class="govuk-table__header"></th>
-              <th scope="col" class="govuk-table__header"></th>
-              <th scope="col" class="govuk-table__header"></th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Policy type</th>
-              <td class="govuk-table__cell">User type</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Policy name</th>
-              <td class="govuk-table__cell">[Policy name]</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/user-policy-name.html">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Permission level</th>
-              <td class="govuk-table__cell">
-                [Permission level]
-              </td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/permission-level.html">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">User email addresses</th>
-              <td class="govuk-table__cell"> 
-                <div class="govuk-!-margin-bottom-2">bruce.wayne@education.gov.uk</div>
-                <div>bond.james.bond@gov.uk</div>
-                <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/email-address.html">Change</a></td>
-            </tr>
-          </tbody>
-        </table>
+        <h2 class="govuk-heading-m">Add email addresses</h2>
+        <p class="govuk-body">Choose which users can access your service by their email address. Add at least 1.</p>
+        
+        <div class="govuk-form-group govuk-!-margin-top-5">
+          <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Email address
+            </label>
+          <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2" id="event-name" name="event-name" type="text" value="bruce.wayne@education.gov.uk"> <a class="govuk-link-bold govuk-body" href="#">Remove</a>
+          <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2 govuk-!-margin-top-4" id="event-name" name="event-name" type="text"> <a class="govuk-link-bold govuk-body" href="#">Remove</a>
+        </div>
 
-        <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold" href="../change-policy/add-condition/user-conditions/add-condition.html">Add another policy condition</a></p>
+        <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold" href="#">Add another email address</a></p>
 
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Only users with these email addresses will be able to add your service to their account. 
+            </strong>
+          </div>
 
-        <div class="govuk-button-group">
-          <a type="submit" class="govuk-button" href="../change-policy/policies-banner.html">
-            Save
-        </a>
+          <div class="govuk-button-group govuk-!-margin-top-5">
+            <a type="submit" class="govuk-button" href="../../user-change-policy.html">
+              Continue
+          </a>
 
-        <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
-          
-      </div>
+          <a class="govuk-button govuk-button--secondary" href="../../user-change-policy.html" role="button">Cancel</a>
+            
+        </div>
+
     </div>
 
     <div class="govuk-grid-column-one-third pull-right">
@@ -162,8 +137,7 @@
   </div>
 
   </div>
-     
-
+       
   </main>
 
 {% endblock %}

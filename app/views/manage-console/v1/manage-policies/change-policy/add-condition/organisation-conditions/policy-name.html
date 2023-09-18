@@ -83,9 +83,9 @@
     </p>
   </div>
 
-  <main id="content" class="govuk-!-margin-bottom-5"> 
+  <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../policies.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="../organisation-conditions/add-another-condition.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
@@ -93,63 +93,27 @@
   
         <span class="govuk-caption-xl govuk-!-margin-top-5">Assessment Service</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Change your policy</h1>
+        <h1 class="govuk-heading-l">Create new policy</h1>
+
+        <h2 class="govuk-heading-m">Name your policy</h2>
+        <p class="govuk-body">Choose a name for your new policy that reflects the conditions you have added. The policy name will only be seen by internal users.</p>   
   
-        <p class="govuk-body">You can review and change the [policy name] policy name and its existing policy conditions. You can also add more policy conditions.</p>   
+        <div class="govuk-form-group govuk-!-margin-top-5">
+          <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Policy name
+            </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text">
+            </div>
 
-        <table class="govuk-table">
-          
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Policy details</th>
-              <th scope="col" class="govuk-table__header"></th>
-              <th scope="col" class="govuk-table__header"></th>
-              <th scope="col" class="govuk-table__header"></th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Policy type</th>
-              <td class="govuk-table__cell">User type</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Policy name</th>
-              <td class="govuk-table__cell">[Policy name]</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/user-policy-name.html">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Permission level</th>
-              <td class="govuk-table__cell">
-                [Permission level]
-              </td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/permission-level.html">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">User email addresses</th>
-              <td class="govuk-table__cell"> 
-                <div class="govuk-!-margin-bottom-2">bruce.wayne@education.gov.uk</div>
-                <div>bond.james.bond@gov.uk</div>
-                <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/email-address.html">Change</a></td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="govuk-button-group govuk-!-margin-top-5">
+            <a type="submit" class="govuk-button" href="../organisation-conditions/review-policy.html">
+              Continue
+          </a>
 
-        <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold" href="../change-policy/add-condition/user-conditions/add-condition.html">Add another policy condition</a></p>
+          <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
+            
+        </div>
 
-
-        <div class="govuk-button-group">
-          <a type="submit" class="govuk-button" href="../change-policy/policies-banner.html">
-            Save
-        </a>
-
-        <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
-          
-      </div>
     </div>
 
     <div class="govuk-grid-column-one-third pull-right">
@@ -162,8 +126,7 @@
   </div>
 
   </div>
-     
-
+       
   </main>
 
 {% endblock %}
