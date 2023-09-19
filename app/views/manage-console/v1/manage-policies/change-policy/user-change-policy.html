@@ -120,20 +120,21 @@
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/user-policy-name.html">Change</a></td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row" id="conditionPermission">
               <th scope="row" class="govuk-table__header">Permission level</th>
               <td class="govuk-table__cell">
                 [Permission level]
               </td>
-              <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+              <td class="govuk-table__cell"> <button class="button-link govuk-body govuk-!-margin-bottom-0" onclick="removeRow()">Remove</button></td>
               <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/permission-level.html">Change</a></td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row" id="conditionEmail">
               <th scope="row" class="govuk-table__header">User email addresses</th>
               <td class="govuk-table__cell"> 
                 <div class="govuk-!-margin-bottom-2">bruce.wayne@education.gov.uk</div>
                 <div>bond.james.bond@gov.uk</div>
-                <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+                </td>
+                <td class="govuk-table__cell"><button class="button-link govuk-body govuk-!-margin-bottom-0" onclick="removeRow2()">Remove</button></td>
               <td class="govuk-table__cell"><a class="govuk-link" href="../change-policy/email-address.html">Change</a></td>
             </tr>
           </tbody>

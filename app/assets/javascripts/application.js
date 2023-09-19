@@ -57,3 +57,57 @@ function showServices() {
     x.innerHTML = "Currently viewing all users of Assessment Service";
   }
 }
+
+function removeRow() {
+  var x = document.getElementById("conditionPermission");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function removeRow2() {
+  var x = document.getElementById("conditionEmail");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function removeRow3() {
+  var x = document.getElementById("conditionEstablishment");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function removeRow4() {
+  var x = document.getElementById("conditionCategory");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function removeRow5() {
+  var x = document.getElementById("conditionID");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function removeRow6() {
+  var x = document.getElementById("conditionStatus");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
