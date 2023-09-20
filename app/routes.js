@@ -223,3 +223,19 @@ router.post('/service-type-answer', function (req, res) {
             res.redirect('/manage-console/v1/manage-policies/change-policy/add-condition/user-conditions/add-another-condition')
           }
         })
+
+        // Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/remove-policy-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var removePolicy = req.session.data['remove-policy']
+
+  // Check whether the variable matches a condition
+  if (removePolicy == "yes"){
+    // Send user to next page
+    res.redirect('/manage-console/v1/manage-policies/remove-policy/policies-banner')
+  } else if (removePolicy == "no"){
+    // Send user to ineligible page
+    res.redirect('/manage-console/v1/manage-policies/view-policies/organisation-policy')
+  }
+})
