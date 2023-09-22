@@ -190,329 +190,6 @@ aside {
     text-align: center;
     white-space: nowrap;
   }
-  
-  .selected-filters-background {
-      background-color: #f3f2f1;
-      padding-bottom: 20px;
-  }
-  
-  .filterContainer .govuk-accordion__section-button {
-      padding-bottom: 0px;
-  }
-  
-  .filterScroll {
-      overflow: scroll; 
-      height: calc(95vh);
-  }
-  
-  .filterContainer .govuk-accordion__section--expanded .govuk-accordion__section-button {
-      padding-bottom: 0px;
-  }
-  
-  .filterContainer .js-enabled .govuk-accordion__section--expanded .govuk-accordion__section-button {
-      padding-bottom: 0px;
-  }
-  
-  .filterContainer .govuk-form-group {
-      margin-bottom: 0px;
-  }
-  
-  
-  .filterContainer .govuk-form-group .govuk-form-group:last-of-type {
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-bottom: 0px;
-  }
-  
-  .filterContainer .filterLabel {
-      margin-top: 5px;
-  }
-  
-  .filterContainer .js-enabled .govuk-accordion__section-content {
-      padding-bottom: 0px;
-  }
-  
-  .filterContainer .filterSearch {
-      padding-left: 0px;
-      padding-right: 0px;
-  }
-  
-  .filterContainer .govuk-accordion__controls {
-      padding-top: 10px;
-  }
-  
-  .filterContainer .showOneSection .govuk-accordion__controls {
-      padding-top: 10px;
-      display: none;
-  }
-  
-  
-  .filtersSelected .filter__tag:link, .filter__tag:visited {
-      color: #0b0c0c;
-  }
-  
-  .filtersSelected .filter__tag {
-      background-color: #fff;
-      border: 1px solid #0b0c0c;
-      display: inline-block;
-      margin-top: 5px;
-      padding: 5px;
-      text-decoration: none;
-  }
-  
-  .filtersSelected a:hover {
-   cursor: cursor;
-   background: lightgray;
-  }
-     
-  
-  .filtersSelected .filter-tags {
-      padding-left: 0px;
-      margin-top: 5px;
-  }
-  
-  .filtersSelected .filter__tag:after {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      vertical-align: middle;
-      font-weight: bold;
-      display: inline-block;
-      background-image: url(../images/icon-tag-remove-cross.svg);
-      content: "";
-      }
-  
-  .filtersSelected .filter__tag:link, .filter__tag:visited {
-      color: #0b0c0c;
-  }
-  
-  .filtersSelected .clearTags {
-      display: none;
-  }
-  
-  .filterSelected .hidden {
-      display: none;
-  }
-  
-  .filtersSelected .selectedText {
-      margin-left: 40px;
-  }
-  
-  
-  .filtersSelected .js-enabled .govuk-accordion__section-summary {
-      margin-bottom: 12px; 
-  }
-  
-  .right-align {
-      float: right;
-  }
-  
-  
-  .hidden {
-      display: none;
-  }
-  
-  
-  .arrowChange {
-      transform: rotateX(180deg);
-  }
-  
-  
-  .hiddenCheckboxes {
-      cursor: pointer;
-  }
-  
-  .hiddenCheckboxes:hover{
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .hiddenCheckboxes:focus {
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .checkboxExpand {
-      margin-top: 10px; 
-  }
-  
-  .checkboxExpanded {
-      -ms-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  }
-  
-  .filterbyHeading {
-      text-align: left;
-      border: none;
-      box-shadow: none;
-  }
-  
-  .filterbyHeading:hover {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  .filterbyHeading:active {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  dd {
-  margin-inline-start: 10px;
-  }
-  
-  ///
-  
-  .filterSearch {
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-  
-  .filterLabel {
-      font-size: 16px;
-      color: grey;
-      margin-top: 10px;
-  }
-  
-  .filterSearchInput {
-      border-color: black;
-  }
-  
-  div.filter-content {
-      display: none;
-  }
-  
-  
-  .filterbyContainer {
-      border: solid 1px lightgrey;
-  }
-  
-  .filterbyHeading {
-      background-color: lightgrey;
-      width: 100%;
-      padding: 6px;
-      margin-bottom: 0px;
-      cursor: pointer;
-  
-      h4 {
-          margin-bottom: 0px;
-      }
-  }
-  
-  .filterbyCheckbox {
-      padding-left: 10px;
-  }
-  
-  
-  .filterbyCheckbox-autoheight {
-      padding-left: 10px;
-  }
-  
-  .hidden {
-      display: none;
-  }
-  
-  .hiddenCheckboxes {
-      cursor: pointer;
-  }
-  
-  .hiddenCheckboxes:hover{
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .hiddenCheckboxes:focus {
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .checkboxExpand {
-      margin-top: 10px; 
-  }
-  
-  .checkboxExpanded {
-      -ms-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  }
-  
-  .filterbyHeading {
-      text-align: left;
-      border: none;
-      box-shadow: none;
-  }
-  
-  .filterbyHeading:hover {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  .filterbyHeading:active {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  dd {
-  margin-inline-start: 10px;
-  }
-  
-  .hidden {
-      display: none;
-  }
-  
-  .hiddenCheckboxes {
-      cursor: pointer;
-  }
-  
-  .hiddenCheckboxes:hover{
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .hiddenCheckboxes:focus {
-      background: #F8F8F8;
-      outline: 3px solid #FFBF47;
-  }
-  
-  .checkboxExpand {
-      margin-top: 10px; 
-  }
-  
-  .checkboxExpanded {
-      -ms-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  }
-  
-  .filterbyHeading {
-      text-align: left;
-      border: none;
-      box-shadow: none;
-  }
-  
-  .filterbyHeading:hover {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  .filterbyHeading:active {
-      background-color: #dbdad9;
-      text-align: left ;
-      border-color: #fd0;
-  }
-  
-  dd {
-  margin-inline-start: 10px;
-  }
 
   .govuk-main-wrapper {
     padding-bottom: 40px;
@@ -547,3 +224,328 @@ aside {
   flex-grow: 1;
   flex-basis: calc(100% / 3);
 }
+
+//Filters starts here 
+.selected-filters-background {
+	background-color: #f3f2f1;
+	padding-bottom: 20px;
+}
+
+.filterContainer .govuk-accordion__section-button {
+	padding-bottom: 0px;
+}
+
+.filterScroll {
+	overflow: scroll; 
+	height: calc(95vh);
+}
+
+.filterContainer .govuk-accordion__section--expanded .govuk-accordion__section-button {
+	padding-bottom: 0px;
+}
+
+.filterContainer .js-enabled .govuk-accordion__section--expanded .govuk-accordion__section-button {
+	padding-bottom: 0px;
+}
+
+.filterContainer .govuk-form-group {
+	margin-bottom: 0px;
+}
+
+
+.filterContainer .govuk-form-group .govuk-form-group:last-of-type {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+}
+
+.filterContainer .filterLabel {
+	margin-top: 5px;
+}
+
+.filterContainer .js-enabled .govuk-accordion__section-content {
+	padding-bottom: 0px;
+}
+
+.filterContainer .filterSearch {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.filterContainer .govuk-accordion__controls {
+	padding-top: 10px;
+}
+
+.filterContainer .showOneSection .govuk-accordion__controls {
+	padding-top: 10px;
+	display: none;
+}
+
+
+.filtersSelected .filter__tag:link, .filter__tag:visited {
+	color: #0b0c0c;
+}
+
+.filtersSelected .filter__tag {
+	background-color: #fff;
+	border: 1px solid #0b0c0c;
+	display: inline-block;
+	margin-top: 5px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.filtersSelected a:hover {
+ cursor: cursor;
+ background: lightgray;
+}
+   
+
+.filtersSelected .filter-tags {
+	padding-left: 0px;
+	margin-top: 5px;
+}
+
+.filtersSelected .filter__tag:after {
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	vertical-align: middle;
+	font-weight: bold;
+	display: inline-block;
+	background-image: url(../images/icon-tag-remove-cross.svg);
+	content: "";
+	}
+
+.filtersSelected .filter__tag:link, .filter__tag:visited {
+	color: #0b0c0c;
+}
+
+.filtersSelected .clearTags {
+	display: none;
+}
+
+.filterSelected .hidden {
+	display: none;
+}
+
+.filtersSelected .selectedText {
+	margin-left: 40px;
+}
+
+
+.filtersSelected .js-enabled .govuk-accordion__section-summary {
+	margin-bottom: 12px; 
+}
+
+.right-align {
+    float: right;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.arrowChange {
+	transform: rotateX(180deg);
+}
+
+
+.hiddenCheckboxes {
+    cursor: pointer;
+}
+
+.hiddenCheckboxes:hover{
+    background: #F8F8F8;
+    outline: 3px solid #FFBF47;
+}
+
+.hiddenCheckboxes:focus {
+    background: #F8F8F8;
+    outline: 3px solid #FFBF47;
+}
+
+.checkboxExpand {
+    margin-top: 10px; 
+}
+
+.checkboxExpanded {
+    -ms-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+.filterbyHeading {
+    text-align: left;
+    border: none;
+    box-shadow: none;
+}
+
+.filterbyHeading:hover {
+    background-color: #dbdad9;
+    text-align: left ;
+    border-color: #fd0;
+}
+
+.filterbyHeading:active {
+    background-color: #dbdad9;
+    text-align: left ;
+    border-color: #fd0;
+}
+
+dd {
+margin-inline-start: 10px;
+}
+
+///
+
+.filterSearch {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.filterLabel {
+	font-size: 16px;
+	color: grey;
+	margin-top: 10px;
+}
+
+.filterSearchInput {
+	border-color: black;
+}
+
+div.filter-content {
+	display: none;
+}
+
+
+.filterbyContainer {
+	border: solid 1px lightgrey;
+}
+
+.filterbyHeading {
+	background-color: lightgrey;
+	width: 100%;
+	padding: 6px;
+	margin-bottom: 0px;
+	cursor: pointer;
+
+	h4 {
+		margin-bottom: 0px;
+	}
+}
+
+.filterbyCheckbox {
+	padding-left: 10px;
+}
+
+
+.filterbyCheckbox-autoheight {
+	padding-left: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.hiddenCheckboxes {
+	cursor: pointer;
+}
+
+.hiddenCheckboxes:hover{
+	background: #F8F8F8;
+	outline: 3px solid #FFBF47;
+}
+
+.hiddenCheckboxes:focus {
+	background: #F8F8F8;
+	outline: 3px solid #FFBF47;
+}
+
+.checkboxExpand {
+	margin-top: 10px; 
+}
+
+.checkboxExpanded {
+	-ms-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+.filterbyHeading {
+	text-align: left;
+	border: none;
+	box-shadow: none;
+}
+
+.filterbyHeading:hover {
+	background-color: #dbdad9;
+	text-align: left ;
+	border-color: #fd0;
+}
+
+.filterbyHeading:active {
+	background-color: #dbdad9;
+	text-align: left ;
+	border-color: #fd0;
+}
+
+dd {
+margin-inline-start: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.hiddenCheckboxes {
+	cursor: pointer;
+}
+
+.hiddenCheckboxes:hover{
+	background: #F8F8F8;
+	outline: 3px solid #FFBF47;
+}
+
+.hiddenCheckboxes:focus {
+	background: #F8F8F8;
+	outline: 3px solid #FFBF47;
+}
+
+.checkboxExpand {
+	margin-top: 10px; 
+}
+
+.checkboxExpanded {
+	-ms-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+.filterbyHeading {
+	text-align: left;
+	border: none;
+	box-shadow: none;
+}
+
+.filterbyHeading:hover {
+	background-color: #dbdad9;
+	text-align: left ;
+	border-color: #fd0;
+}
+
+.filterbyHeading:active {
+	background-color: #dbdad9;
+	text-align: left ;
+	border-color: #fd0;
+}
+
+dd {
+margin-inline-start: 10px;
+}
+//Filters ends here//
