@@ -131,12 +131,3 @@ function removeRow6() {
     x.style.display = "none";
   }
 }
-
-$(document).ready(function () {
-  $("#mainContentSearch").on("keyup", function () {
-    var value = $(this).val().toLowerCase();
-    $("#mainContentResults tr").filter(function () {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-    });
-  });
-});
