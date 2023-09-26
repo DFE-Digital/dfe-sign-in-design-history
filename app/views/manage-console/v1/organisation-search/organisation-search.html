@@ -106,28 +106,27 @@
                                   <div id="event-name-hint" class="govuk-hint">
                                     Search by name, URN, UID, UPIN or UKPRN
                                   </div>
-                                  <input class="govuk-input govuk-!-width-one-half" type="text" id="criteria" name="criteria" value="">
+                                  <input class="govuk-input govuk-!-width-one-half" type="text" id="criteria" name="criteria">
                                   <button type="submit" class="govuk-button" data-module="govuk-button">
                                       Search
                                   </button>
                                   <a class="govuk-link-bold govuk-!-margin-left-2 govuk-!-font-size-19" href="#">Clear search</a>
-                                  <p class="govuk-body govuk-!-margin-bottom-2">
-                                      Currently viewing all organisations
-                                  </p>
-                                  <p class="govuk-body">
-                                      <button type="submit" class="button-link govuk-!-font-weight-bold" name="showServices" value="current">
-                                          Only show organisations with access to my service
-                                      </button>
-                                  </p>
+
+                                  <p class="govuk-body govuk-!-margin-bottom-2" id="currentDisplayOrgs">
+                                    Currently viewing all organisations
+                                </p>
+
+                                <p class="govuk-body">
+                                    <button3 type="submit" class="button-link govuk-!-font-weight-bold" name="showOrgs" value="current" id="showOrgs" onclick="showOrgs()">
+                                      Only show organisations with access to my service
+                                    </button3>
+                                </p>
                                   
                               </div>
                           </fieldset>
                       </form>
 
-                      <button class="govuk-button govuk-button--secondary govuk-!-margin-left-3" data-module="govuk-button">
-                        Show filters
-                      </button>
-
+                      <button type="button" class="govuk-button govuk-button--secondary govuk-!-margin-left-3" id="show-filter" name="button" onclick="showFilters()">Show filters</button>
 
                   </div>
 
@@ -184,6 +183,324 @@
                       
                   </div>
                 </div>
+
+
+
+                <div class="govuk-grid-row">
+
+                  <div class="govuk-grid-column-one-quarter position-sticky hidden" id="userFilter">
+                      <div class="filterScroll">
+              
+                          <div class="govuk-form-group filterbyContainer">
+                              <fieldset class="govuk-fieldset">
+                                  <div class="selected-filters-background">
+                                      <div class="govuk-form-group filterSearch">
+                                          <h2 class="govuk-heading-s govuk-!-display-inline-block govuk-!-margin-top-2 govuk-!-margin-bottom-2" for="filter-by-type">Selected filters</h2>
+                                         
+              
+                                          <div id="showHideText">
+                                              <p class="govuk-body-s">No filters selected</p>
+                                          </div>
+              
+                                          <div class="filtersSelected">
+                                              <div class="filter">
+                                                  <div class="filter__content">
+                                                      <div class="filter__selected">
+              
+                                                          <!-- // Status Tags -->
+              
+                                                          <div class="hidden" id="statusText">
+                                                              <h3 class="govuk-hint govuk-body govuk-!-font-size-16 govuk-!-margin-0">Status</h3>
+                                                          </div>
+                                                          <ul class="filter-tags">
+                                                              <li id="filterStatusOption1" class="hidden">
+                                                                  <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Closed</a>
+                                                              </li>
+                                                              <li id="filterStatusOption2" class="hidden">
+                                                                  <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Dissolved</a>
+                                                              </li>
+                                                              <li id="filterStatusOption3" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Hidden</a>
+                                                                </li>
+                                                                <li id="filterStatusOption4" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>In Liquidation</a>
+                                                                </li>
+                                                                <li id="filterStatusOption5" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Locked Duplicate</a>
+                                                                </li>
+                                                                <li id="filterStatusOption6" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Locked Restructure</a>
+                                                                </li>
+                                                                <li id="filterStatusOption7" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Open</a>
+                                                                </li>
+                                                                <li id="filterStatusOption8" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Proposed to close</a>
+                                                                </li>
+                                                                <li id="filterStatusOption9" class="hidden">
+                                                                    <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Proposed to open</a>
+                                                                </li>
+                                                          </ul>
+              
+                                                          <!-- // Organisation category Tags -->
+              
+                                                          <div class="hidden" id="orgCategoryText">
+                                                              <h3 class="govuk-hint govuk-body govuk-!-font-size-16 govuk-!-margin-0">Organisation type</h3>
+                                                          </div>
+                                                          <ul class="filter-tags">
+                                                              <li id="filterOrgCategoryOption1" class="hidden">
+                                                                  <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Billing Authority</a>
+                                                              </li>
+                                                              <li id="filterOrgCategoryOption2" class="hidden">
+                                                                  <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Establishment</a>
+                                                              </li>
+                                                              <li id="filterOrgCategoryOption3" class="hidden">
+                                                                  <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Government</a>
+                                                              </li>
+                                                              <li id="filterOrgCategoryOption4" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Local Authority</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption5" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Multi-Academy Trust</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption6" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Other GIAS Stakeholder</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption7" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Other Legacy Organisations</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption8" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Other Stakeholders</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption9" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>PIMS Training Providers</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption10" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Secure Single-Academy Trust</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption11" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Single-Academy Trust</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption12" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Software Suppliers</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption13" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Training Providers</a>
+                                                            </li>
+                                                            <li id="filterOrgCategoryOption14" class="hidden">
+                                                                <a class="filter__tag" href=""><span class="govuk-visually-hidden">Remove this filter</span>Youth Custody Service</a>
+                                                            </li>
+                                                          </ul>
+
+                                                          <a href="" class="govuk-link govuk-!-display-inline-block left-align" onclick="$('input:checkbox').removeAttr('checked'); toggleMe(), countChecked();">Clear filters</a>
+
+                                                      </div>
+                                                  </div>
+                                              </div>
+              
+                                          </div>
+                                      </div>
+                                  </div>
+                              </fieldset>
+              
+                              <fieldset class="govuk-fieldset">
+                                  <div class="govuk-form-group filterSearch">
+                                      <div class="filterContainer govuk-!-margin-bottom-0">
+                                          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                                              <div class="govuk-accordion__section">
+                                                  <div class="govuk-accordion__section-header">
+                                                      <h2 class="govuk-accordion__section-heading">
+                                                          <span class="govuk-accordion__section-button govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0" id="accordion-with-summary-sections-heading-1">
+                                                              <span class="govuk-visually-hidden">Filter by</span>
+                                                              Status
+                                                          </span>
+                                                      </h2>
+                                                      <div class="govuk-accordion__section-summary govuk-body govuk-body-s" id="accordion-with-summary-sections-summary-1">
+                                                          <span id="statusCount">0</span> selected
+                                                      </div>
+                                                  </div>
+
+                                                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content govuk-!-padding-bottom-5 govuk-!-padding-top-0" aria-labelledby="accordion-with-summary-sections-heading-1">
+                                                      <fieldset class="govuk-fieldset">
+              
+                                                          <div class="govuk-checkboxes govuk-checkboxes--small filterbyCheckbox" id="filterByStatus">
+                                                              <div class="govuk-checkboxes__item">
+                                                                  <input class="govuk-checkboxes__input" id="showHideChange" name="filterByStatus1" onclick="showMe('filterStatusOption1'), updateStatusCount()" type="checkbox">
+                                                                  <label class="govuk-label govuk-checkboxes__label" for="showHideChange">
+                                                                      Closed
+                                                                  </label>
+                                                              </div>
+                                                              <div class="govuk-checkboxes__item">
+                                                                  <input class="govuk-checkboxes__input" id="showHideChangeF2" name="filterByStatus2" onclick="showMeF2('filterStatusOption2'), updateStatusCount()" type="checkbox">
+                                                                  <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF2">
+                                                                      Dissolved
+                                                                  </label>
+                                                              </div>
+                                                              <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF3" name="filterByStatus3" onclick="showMeF3('filterStatusOption3'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF3">
+                                                                    Hidden
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF4" name="filterByStatus4" onclick="showMeF4('filterStatusOption4'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF4">
+                                                                    In Liquidation
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF5" name="filterByStatus5" onclick="showMeF5('filterStatusOption5'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF5">
+                                                                    Locked Duplicate
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF6" name="filterByStatus6" onclick="showMeF6('filterStatusOption6'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF6">
+                                                                    Locked Restructure
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF7" name="filterByStatus7" onclick="showMeF7('filterStatusOption7'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF7">
+                                                                    Open
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF8" name="filterByStatus8" onclick="showMeF8('filterStatusOption8'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF8">
+                                                                    Proposed to close
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF9" name="filterByStatus9" onclick="showMeF9('filterStatusOption9'), updateStatusCount()" type="checkbox">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF9">
+                                                                    Proposed to open
+                                                                </label>
+                                                            </div>
+                                                          </div>
+                                                      </fieldset>
+                                                  </div>
+                                              </div>
+              
+                                              <div class="govuk-accordion__section">
+                                                  <div class="govuk-accordion__section-header">
+                                                      <h2 class="govuk-accordion__section-heading">
+                                                          <span class="govuk-accordion__section-button govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0" id="accordion-with-summary-sections-heading-1">
+                                                              <span class="govuk-visually-hidden">Filter by</span>
+                                                              Organisation category
+                                                          </span>
+                                                      </h2>
+                                                      <div class="govuk-accordion__section-summary govuk-body govuk-body-s" id="accordion-with-summary-sections-summary-1">
+                                                          <span id="orgCategoryCount">0</span> selected
+                                                      </div>
+                                                  </div>
+
+                                                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content govuk-!-padding-bottom-5 govuk-!-padding-top-0" aria-labelledby="accordion-with-summary-sections-heading-1">
+                                                      <fieldset class="govuk-fieldset">
+              
+                                                          <div class="govuk-checkboxes govuk-checkboxes--small filterbyCheckbox" id="filterByOrgCategory">
+                                                              <div class="govuk-checkboxes__item govuk-!-margin-top-2">
+                                                                  <input class="govuk-checkboxes__input" id="showHideChangeF10" name="filterByOrgCategory1" onclick="showMeF10('filterOrgCategoryOption1'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                  <label class="govuk-label govuk-checkboxes__label"for="showHideChangeF10">
+                                                                      Billing Authority
+                                                                  </label>
+                                                              </div>
+                                                              <div class="govuk-checkboxes__item">
+                                                                  <input class="govuk-checkboxes__input" id="showHideChangeF11" name="filterByOrgCategory2" onclick="showMeF11('filterOrgCategoryOption2'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                  <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF11">
+                                                                    Establishment
+                                                                  </label>
+                                                              </div>
+                                                              <div class="govuk-checkboxes__item">
+                                                                  <input class="govuk-checkboxes__input" id="showHideChangeF12" name="filterByOrgCategory3" onclick="showMeF12('filterOrgCategoryOption3'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                  <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF12">
+                                                                      Government
+                                                                  </label>
+                                                              </div>
+                                                              <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF13" name="filterByOrgCategory4" onclick="showMeF13('filterOrgCategoryOption4'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF13">
+                                                                    Local Authority
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF14" name="filterByOrgCategory5" onclick="showMeF14('filterOrgCategoryOption5'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF14">
+                                                                    Multi-Academy Trust
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF15" name="filterByOrgCategory6" onclick="showMeF15('filterOrgCategoryOption6'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF15">
+                                                                    Other GIAS Stakeholder
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF16" name="filterByOrgCategory7" onclick="showMeF16('filterOrgCategoryOption7'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF16">
+                                                                    Other Legacy Organisations
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF17" name="filterByOrgCategory8" onclick="showMeF17('filterOrgCategoryOption8'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF17">
+                                                                    Other Stakeholders
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF18" name="filterByOrgCategory9" onclick="showMeF18('filterOrgCategoryOption9'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF18">
+                                                                    PIMS Training Providers
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF19" name="filterByOrgCategory10" onclick="showMeF19('filterOrgCategoryOption10'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF19">
+                                                                    Secure Single-Academy Trust
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF20" name="filterByOrgCategory11" onclick="showMeF20('filterOrgCategoryOption11'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF20">
+                                                                    Single Academy Trust
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF21" name="filterByOrgCategory12" onclick="showMeF21('filterOrgCategoryOption12'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF21">
+                                                                    Software Suppliers
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF22" name="filterByOrgCategory13" onclick="showMeF22('filterOrgCategoryOption13'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF22">
+                                                                    Training Providers
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-checkboxes__item">
+                                                                <input class="govuk-checkboxes__input" id="showHideChangeF23" name="filterByOrgCategory14" onclick="showMeF23('filterOrgCategoryOption14'), updateOrgCategoryCount()" type="checkbox" value="hmrc">
+                                                                <label class="govuk-label govuk-checkboxes__label" for="showHideChangeF23">
+                                                                    Youth Custody Service
+                                                                </label>
+                                                            </div>
+                                                          </div>
+                                                      </fieldset>
+                                                  </div>
+                                              </div>
+
+                                            
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </fieldset>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="container">
+                    <div class="govuk-grid-column-three-quarters" id="div1">
                 
                 <table class="govuk-table">
                     <thead class="govuk-table__head">
@@ -561,6 +878,10 @@
                     
                     </tbody>
                 </table>
+                </div>
+                </div>
+
+                </div>
                           
                 
                           <div class="govuk-grid-row">
@@ -611,9 +932,577 @@
                               </div>
                             </div>
                           
-          
-          
-
 </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+
+    // Show me Status
+
+    function showMe(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus1");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+    }
+
+
+    function showMeF2(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus2");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+    }
+
+    function showMeF3(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus3");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF4(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus4");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF5(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus5");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF6(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus6");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF7(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus7");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF8(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus8");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+    function showMeF9(box) {
+
+        var chboxs = document.getElementsByName("filterByStatus9");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+
+
+
+    // Show me Org category
+
+    function showMeF10(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory1");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+    }
+
+    function showMeF11(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory2");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+    }
+
+    function showMeF12(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory3");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+    }
+
+    function showMeF13(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory4");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF14(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory5");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF15(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory6");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF16(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory7");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF17(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory8");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF18(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory9");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF19(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory10");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF20(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory11");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF21(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory12");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF22(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory13");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+    function showMeF23(box) {
+
+        var chboxs = document.getElementsByName("filterByOrgCategory14");
+        var vis = "none";
+        for (var i = 0; i < chboxs.length; i++) {
+            if (chboxs[i].checked) {
+                vis = "block";
+                break;
+            }
+        }
+        document.getElementById(box).style.display = vis;
+        }
+
+ 
+
+    function toggleMe() {
+        var x = document.getElementsByClassName("filter__content");
+
+        var i;
+        for (i = 0; i < x.length - 1; i++) {
+            x[i].classList.toggle("hidden")
+        }
+    }
+
+    // Counter for checkboxes in Status
+
+    var updateStatusCount = function () {
+        var x = $(".govuk-checkboxes__input:checked").length;
+        document.getElementById("statusCount").innerHTML = x;
+    };
+
+    // Counter for checkboxes in Organisation category
+
+    var updateOrgCategoryCount = function () {
+        var x = $(".govuk-checkboxes__input:checked").length;
+        document.getElementById("orgCategoryCount").innerHTML = x;
+    };
+
+    //Status
+
+    document.getElementById('showHideChange').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+
+    };
+    document.getElementById('showHideChangeF2').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF3').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF4').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF5').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF6').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF7').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF8').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+    document.getElementById('showHideChangeF9').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('statusText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('statusText').style.display = "none";
+        }
+    };
+
+    //Organisation category
+
+    document.getElementById('showHideChangeF10').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF11').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF12').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF13').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF14').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF15').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF16').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF17').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF18').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF19').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF20').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF21').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF22').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+    document.getElementById('showHideChangeF23').onchange = function () {
+        if ($('input[type=checkbox]:checked').length > 0) {
+            document.getElementById('showHideText').style.display = "none";
+            document.getElementById('orgCategoryText').style.display = "block";
+        } else {
+            document.getElementById('showHideText').style.display = "block";
+            document.getElementById('orgCategoryText').style.display = "none";
+        }
+    };
+
+</script>
 
 {% endblock %}
