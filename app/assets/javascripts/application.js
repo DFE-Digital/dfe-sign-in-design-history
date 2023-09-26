@@ -58,6 +58,26 @@ function showServices() {
   }
 }
 
+const btn3 = document.getElementById("showOrgs");
+btn3.addEventListener("click", ()=>{
+
+    if(btn3.innerText === "Only show organisations with access to my service"){
+        btn3.innerText = "Show all organisations";
+    }else{
+        btn3.innerText= "Only show organisations with access to my service";
+    }
+})
+
+function showOrgs() {
+  var x = document.getElementById("currentDisplayOrgs");
+  if (x.innerHTML === "Currently viewing organisations with access to Assessment Service") {
+    x.innerHTML = "Currently viewing all organisations";
+  } else {
+    x.innerHTML = "Currently viewing organisations with access to Assessment Service";
+  }
+}
+
+
 function removeRow() {
   var x = document.getElementById("conditionPermission");
   if (x.style.display === "none") {
