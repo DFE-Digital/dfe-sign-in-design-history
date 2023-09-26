@@ -105,11 +105,15 @@
                                   <div id="event-name-hint" class="govuk-hint">
                                       Search by name, email, legacy ID or organisation
                                   </div>
-                                  <input class="govuk-input govuk-!-width-one-half" type="text" id="criteria" name="criteria">
+                                  <input class="govuk-input govuk-!-width-one-half" type="text" id="userSearch">
                                   <button type="submit" class="govuk-button" data-module="govuk-button">
                                       Search
                                   </button>
-                                  <a class="govuk-link-bold govuk-!-margin-left-2 govuk-!-font-size-19" href="#">Clear search</a>
+
+                                    <button type="submit" class="button-link govuk-!-font-weight-bold govuk-body govuk-!-font-size-19 govuk-!-margin-left-2" onclick="document.getElementById('userSearch').value = ''">
+                                        Clear search
+                                    </button>
+
                                   <p class="govuk-body govuk-!-margin-bottom-2" id="currentDisplay">
                                       Currently viewing all users with access to DfE Sign-in
                                   </p>
@@ -292,6 +296,11 @@
                                 <fieldset class="govuk-fieldset">
                                     <div class="govuk-form-group filterSearch">
                                         <div class="filterContainer govuk-!-margin-bottom-0">
+
+                                            <button class="govuk-button govuk-!-margin-bottom-0 govuk-!-margin-top-3" data-module="govuk-button">
+                                                Apply filters
+                                              </button>
+                                              
                                             <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
                                                 <div class="govuk-accordion__section">
                                                     <div class="govuk-accordion__section-header">
