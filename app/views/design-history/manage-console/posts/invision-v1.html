@@ -1,0 +1,145 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+T Levels Overview - V5 to V6-1
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="../../../index.html">Home</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Invision prototype > Version 1</h1>
+        <p>Documented changes from the intiial Invision prototype to the creation of version 1 of Manage console located in this design history.</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body-l">Contents</p>
+        <ol class="govuk-list govuk-list--number">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#site-wide-changes">Site-wide changes</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#providers-dashboard">Providers dashboard</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#ao-dashboard">AO dashboard</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#manage-learner-records">Manage learner records</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#download-t-level-results">Download T Level results</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#bulk-upload">Bulk upload</a></li>
+        </ol>
+
+        <!--   Changes made across the site   -->
+        <h2 class="govuk-heading-l" id="site-wide-changes">Site-wide changes</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Added a "Known issues" dropdown to version 5. This shows details of all technical issues and limitations currently present in that version</li>
+            <p class="govuk-hint">Due to some issues having a disproportionate burden it was decided that we would leave them in and mention them in a dropdown menu.</p>
+            <li>Added a start page to the prototype</li>
+            <p class="govuk-hint">In order to showcase what the start page of this product would look like, we made a dummy one that will be implemented in full on the live version of the service</p>
+            <li>Added an accessibility statement</li>
+            <p class="govuk-hint">We added an information page in the footer detailing all the accessibility checks and any issues that we are aware of but unable to fix</p>
+            <li>Fixed validation for a number of different inputs across the page</li>
+            <p class="govuk-hint">Some of the inputs had incorrect validation, causing them to act in ways unintended if a user was to input incorrect information. This has been rectified and all inputs should have correct validation</p>
+            <li>Altered breadcrumbs in various pages</li>
+            <p class="govuk-hint">Page design changed, and it was decided we would alter the way we display breadcrumbs on pages</p>
+            <li>Cleaned up code for various pages, making it more legible</li>
+            <p class="govuk-hint">Altered the code in a way that it didn't affect content, however allowed developers to better read the code. Any future changes that may need to be made should be easier to do</p>
+        </ul>
+
+
+        <!--   Changes made to the Providers dashboard     -->
+        <h2 class="govuk-heading-l" id="providers-dashboard">Providers dashboard</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Various content changes</li>
+            <p class="govuk-hint">A number of changes were made to the content of the tiles in the dashboard</p>
+            <li>Updated tile design</li>
+            <p class="govuk-hint">The design of the tiles needed to be changes in version 6, leading to the current design present today (as of version 6-1)</p>
+            <li>Added new tiles</li>
+            <p class="govuk-hint">As we added new journeys and services we also needed to add new tiles to access them</p>
+        </ul>
+
+        <!--   Changes made to AO dashboard    -->
+        <h2 class="govuk-heading-l" id="ao-dashboard">AO dashboard</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Updated tile design</li>
+            <p class="govuk-hint">Like with the providers dashboard, the AO dashboard also needed to be updated to a new design</p>
+        </ul>
+
+
+
+        <!--   Changes made to the manage learner records page    -->
+        <h2 class="govuk-heading-l" id="manage-learner-records">Manage learner records</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Added a search learner records page that filters learners based on what link the user follows</li>
+            <p class="govuk-hint">Added a page that displays the various start years that learners may have joined in. Following one of these links will filter the learners so that only the ones that started at the chosen year is displayed</p>
+            <li>Added ability to search for a learner via ULN</li>
+            <p class="govuk-hint">On the same page that asks you to filter via year we also have a search bar for if a user would prefer to search for an individual learner</p>
+            <li>Added ability to filter learners</li>
+            <p class="govuk-hint">After selecting a year to filter by we also added the ability to further filter uses via checkboxes on the sidebar. Users can filter by subject, or the state of the learners course</p>
+            <li>Added ability to sort learners by last name</li>
+            <p class="govuk-hint">Users can also sort learners by A-Z or Z-A by clicking on the correct link. This sorting process should only target the learners last name.</p>
+            <li>Added ability to search for learners based on last name or ULN</li>
+            <p class="govuk-hint">after sorting via year, if a user wanted to search for a specific learner we also added a search bar where users can type in learner details in order to find them.</p>
+            <li>Added dynamic pagination and dynamic text that changes based on the amount of learners present, or what page the user is on</li>
+            <p class="govuk-hint">Instead of displaying all learners at once, we have limited displayed learners down to 10 per page and added the ability to cycle between pages. There will some text stating how many learners there are total which will change based on the amount</p>
+            <li>Added and updated data present in prototype</li>
+            <p class="govuk-hint">It was decided that in order to correctly test the prototype we needed some real data, so we altered the learner data files and inputted more learners</p>
+            <li>Updated design of T Level record page</li>
+            <p class="govuk-hint">Once a learner is selected it will take you to their specific page. The design of this page has changed numerous times over the different versions to fit user needs</p>
+            <li>Made maths, English, and IP statuses able to be changed and made them dynamic across learners</li>
+            <p class="govuk-hint">Users can now change details in the individual learner pages, these changes are saved on said learners and can be accessed again without the details being overwritten</p>
+            <li>Added ability to request a replacement document and added the journey to do so</li>
+            <p class="govuk-hint">Should a learner lose their documents providers can request that a replacement be sent out to them. This feature only because available when learners have completed their course</p>
+            <li>Simplified IP journey</li>
+            <p class="govuk-hint">Removed and condensed multiple pages in the IP journey to create a less confusing and more succinct experience</p>
+            <li>Multiple changes to IP journey to suit shifting design requirements</li>
+            <li>Added two new options to IP journey: Learner needs more time and Learner will not complete their industry placement</li>
+            <p class="govuk-hint">Options added for if a learner will never complete their IP journey but is still continuing with the course, as well as if a learner is planning on completing their IP but haven't done so yet</p>
+            <li>Added a variety of success banners based on learner IP status</li>
+            <p class="govuk-hint">Depending on what the user selects a different banner will be displayed, depicting the status of the learners industry placement</p>
+            <li>Added a tag next to the learners name, displaying whether or not their record has been completed</li>
+            <p class="govuk-hint">These tags were previously removed, but then added back as it was decided that it would help users know at a glance the status of their learners</p>
+        </ul>
+
+
+        <!--   Download T Level results     -->
+        <h2 class="govuk-heading-l" id="download-t-level-results">Download T Level results</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Created Download T Level results page</li>
+            <p class="govuk-hint">Added a page where users can download the results for all active learners who are in the final year of their T Level</p>
+        </ul>
+
+
+        <!--   Bulk upload     -->
+        <h2 class="govuk-heading-l" id="bulk-upload">Bulk upload</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Created bulk upload journey</li>
+            <p class="govuk-hint">
+                Created a bulk upload journey consisting of 3 different pages. Users can upload multiple CSV files of their learners and these learners will be uploaded to the system.
+                There is a validation method in place that will inform users if they are using the wrong type of file or data format.
+            </p>
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}
