@@ -1,0 +1,183 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DfE Sign-in Overview
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../index.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">DfE Sign-in Overview</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-top-5">DfE Sign-in Overview</h1>
+    <p class="govuk-body-l">Information about the DfE Sign-in service</p>
+    <p>From: DfE Sign-in Team</p>
+    <p>Published: 27th September 2023</p>
+    <p>Last updated: 27th September 2023</p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-5">
+
+    <p class="govuk-body-l">Contents</p>
+    <ol class="govuk-list govuk-list--number">
+      <li><a href="#what-is-dfe-sign-in">What is DfE Sign-in</a></li>
+      <li><a href="#what-dfe-sign-in-isnt">What DfE Sign-in isn't</a></li>
+      <li><a href="#dfe-sign-in-services">DfE Sign-in Services</a></li>
+      <li><a href="#additional-elements">Additional elements to DfE Sign-in</a></li>
+      <li><a href="#where_are_we_currently">Where we are currently</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+
+    </ol>
+
+    <!-- What is DfE Sign-in section -->
+    <h2 class="govuk-heading-l" id="what-is-dfe-sign-in">What is DfE Sign-in</h2>
+    <p class="govuk-body">DfE Sign-in is a generic Identity and Access Management platform, its designed to facilitate Single Sign-On and fined grand access management rules for DfE services used by people in organisations and institutions (Such as schools, Local Authorities, etc...). We refer to this a B2B (Business to Business) and broadly speaking we cover all use cases where a user is using a DfE Service on behalf of an organisation that isn't the Department for Education itself.</p>
+    
+ <!-- What DfE Sign-in isn't section -->
+ <h2 class="govuk-heading-l" id="what-dfe-sign-in-isnt">What DfE Sign-in isn't</h2>
+ <p class="govuk-body">DfE Sign-In is not an Identity platform for DfE Employees working on DfE devices. Although some services may require DfE employees to sign-in through DfE Sign-In it is not intended to replace the integrated authentication provided by the enterprise Active Directory. (NOTE Federation with Active Directory is however, on our roadmap).</p>
+ <p class="govuk-body">DfE Sign-In is not a replacement for GovUK Verify and should not be used as an identity solution for citizens (Unless a compelling reason exists) or for services that require levels of assurance.</p>
+
+
+     <!-- DfE Sign-in Services section -->
+    <h2 class="govuk-heading-l" id="dfe-sign-in-services">DfE Sign-in Services</h2>
+    <p class="govuk-body">DfE Sign-in is a Single sign-on service which allows users to access several important services through one account, making it convenient and easier for users to access the services they need most.</p>
+
+    <p class="govuk-body">In total there are 35 different services which are accessed and managed through DfE Sign-in.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Services accessed using DfE Sign-in
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>These DfE services are accessed using a DfE Sign-in account.</p>
+  
+          <ol class="govuk-list govuk-list--bullet">
+            <li>Analyse school performance</li>
+            <li>Apply To Become An Academy</li>
+            <li> Assessment Service</li>
+            <li> Assessment Service - Develop an assessment</li>
+            <li>Assessment Service - Manage your school assessments</li>
+            <li>Assessment Service - Start an assessment</li>
+            <li>Child Safeguarding Incident Notification System</li>
+            <li> Claim additional payments for teaching</li>
+            <li>Collect</li>
+            <li>Document exchange</li>
+            <li>ESFA Digital Forms Service</li>
+            <li>Get Information About Schools</li>
+            <li>Get help buying for schools</li>
+            <li>Get information about pupils</li>
+            <li>Get my Ofsted Inspection Data Summary Report</li>
+            <li>Hiring Supply Teachers and Agency Workers</li>
+            <li>Manage your education and skills funding (MYESF)</li>
+            <li>Multiplication tables check</li>
+            <li>National non-domestic rates (NNDR) claims</li>
+            <li>Online Collections Service - including Risk Protection Arrangements</li>
+            <li>Plan Technology For Your School</li>
+            <li>Publish to the course directory</li>
+            <li>Register Trainee Teachers</li>
+            <li>School Experience</li>
+            <li>School to School</li>
+            <li>Submit DBV SEND Progress Report (LAs)</li>
+            <li>Submit Learner Data</li>
+            <li>Submit Learner Data Operations</li>
+            <li>T Level Results and Certification</li>
+            <li>T Levels - Connect with Employers</li>
+            <li>Teacher Services - Appropriate Body</li>
+            <li>Teacher Services - Employer Access - Agent</li>
+            <li>Teacher Services - Employer Access - Schools</li>
+            <li>Teaching Vacancies</li>
+            <li>View Your Education Data (VYED)</li>
+    </ol>
+        </div>
+      </details>
+   
+
+    <!-- Additional uses of DfE Sign-in -->
+    <h2 class="govuk-heading-l" id="additional-elements">Additional elements to DfE Sign-in</h2>
+
+    <h3 class="govuk-heading-m">Manage Console</h3>
+
+    <p class="govuk-body">Manage console (also called DfE Manage) is a part of DfE Sign-in for internal DfE users only. It allows internal staff to Manage a service and it's users within DfE Sign-in.</p>
+
+    <p class="govuk-body">Manage console allows users to:</p>
+
+    <ol class="govuk-list govuk-list--bullet">
+        <li>Configure a service</li>
+        <li>Manage users</li>
+        <li>Search for organisations</li>
+        <li>Manage policies</li>
+        <li>View service information</li>
+</ol>
+
+    <p class="govuk-body">Manage console is maintained by the DSI team.</p>
+
+    <h3 class="govuk-heading-m">Support Console</h3>
+
+    <p class="govuk-body">Support console is a part of DfE Sign-in for DfE Sign-in support staff (also called BAU team or support desk) only. It is an admin console which allows the team to resolve and manage issues for users.</p>
+
+    <h3 class="govuk-heading-m">Pirean migration</h3>
+
+    <p class="govuk-body">Pirean (also known as IDAMS) is a legacy login service which several of the services now using DfE Sign-in previously used in the past.</p>
+
+    <p class="govuk-body">The services which used Pirean (IDAMS) were required to be migrated from the legacy service to DfE Sign-in. Each service was migrated one at a time and added to DfE Sign-in as a usable service.</p>
+
+    <p class="govuk-body">The DfE Sign-in team manages and facilitates the migration of each service from Pirean (IDAMS) to DfE Sign-in.</p>
+    
+
+    <!-- Where we are currently-->
+    <h2 class="govuk-heading-l" id="where_are_we_currently">Where we are currently</h2>
+    <p></p>
+    
+    <p>DM and Product Owner to add information.</p>
+  
+    <!-- Roadmap-->
+    <h2 class="govuk-heading-l" id="roadmap">Roadmap</h2>
+    <p class="govuk-body">The current roadmap displays each workstream which forms DfE Sign-in.</p>
+
+    <a href="/public/images/dfe-sign-in-roadmap.png"><img src="/public/images/dfe-sign-in-roadmap.png" alt="Screenshot of the DfE Sign-in roadmap" width="950px"></a>
+    
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third pull-right">
+    <aside>
+        <h3 class="govuk-heading-m">Related content</h3>
+        <ul class="govuk-list">
+              <li>
+                <a class="govuk-link" href="https://dfe-secureaccess.atlassian.net/wiki/spaces/NSA/overview?homepageId=65538">Confluence</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="https://dfe-secureaccess.atlassian.net/jira/software/c/projects/NSA/boards/21">JIRA</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="https://lucid.app/folder/invitations/accept/inv_e733b204-5748-42c5-9afc-5998d159b5e0">DfE Sign-in Lucid Boards</a>
+              </li>
+        </ul>
+    </aside>
+</div>
+
+</div>
+{% endblock %}
