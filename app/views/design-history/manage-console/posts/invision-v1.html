@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-T Levels Overview - V5 to V6-1
+ Manage Console Overview - Invision prototype > Version 1
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@ T Levels Overview - V5 to V6-1
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl govuk-!-margin-top-5">Invision prototype > Version 1</h1>
-        <p>Documented changes from the intiial Invision prototype to the creation of version 1 of Manage console located in this design history.</p>
+        <p>Documented changes from the intial Invision prototype to the creation of version 1 of Manage console located in this design history.</p>
     </div>
 </div>
 <div class="govuk-grid-row">
@@ -46,10 +46,9 @@ T Levels Overview - V5 to V6-1
          <h2 class="govuk-heading-l" id="prototype-transer">Transfer prototype from Invision Studio to Gov prototype kit</h2>
 
          <ul class="govuk-list govuk-list--bullet">
-             <li>Created bulk upload journey</li>
+             <li>Transferred the entire Manage Console prototype from Invision Studio to the Gov prototype kit</li>
              <p class="govuk-hint">
-                 Created a bulk upload journey consisting of 3 different pages. Users can upload multiple CSV files of their learners and these learners will be uploaded to the system.
-                 There is a validation method in place that will inform users if they are using the wrong type of file or data format.
+                 Invision Studio as of 2023 is no longer supported or available and has been sunset as a prototyping product. The entire Manage Console prototype existed in Invision Studio therefore it was necessary to transfer all existing pages to the prototype kit to ensure it is supported moving forward.
              </p>
          </ul>
 
@@ -57,18 +56,10 @@ T Levels Overview - V5 to V6-1
         <h2 class="govuk-heading-l" id="filters">Organisation & user management filters</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Added a "Known issues" dropdown to version 5. This shows details of all technical issues and limitations currently present in that version</li>
-            <p class="govuk-hint">Due to some issues having a disproportionate burden it was decided that we would leave them in and mention them in a dropdown menu.</p>
-            <li>Added a start page to the prototype</li>
-            <p class="govuk-hint">In order to showcase what the start page of this product would look like, we made a dummy one that will be implemented in full on the live version of the service</p>
-            <li>Added an accessibility statement</li>
-            <p class="govuk-hint">We added an information page in the footer detailing all the accessibility checks and any issues that we are aware of but unable to fix</p>
-            <li>Fixed validation for a number of different inputs across the page</li>
-            <p class="govuk-hint">Some of the inputs had incorrect validation, causing them to act in ways unintended if a user was to input incorrect information. This has been rectified and all inputs should have correct validation</p>
-            <li>Altered breadcrumbs in various pages</li>
-            <p class="govuk-hint">Page design changed, and it was decided we would alter the way we display breadcrumbs on pages</p>
-            <li>Cleaned up code for various pages, making it more legible</li>
-            <p class="govuk-hint">Altered the code in a way that it didn't affect content, however allowed developers to better read the code. Any future changes that may need to be made should be easier to do</p>
+            <li>Created filters for Organisation search & User management sections of Manage Console</li>
+            <p class="govuk-hint">Users will now be able to filter organisations by Status & Organisation category. In user management users will be able to filter users by User type, Organisation type, Last login & Account status.</p>
+            <li>Added an apply filter button to the filters</li>
+            <p class="govuk-hint">Added an apply filters button to the filters, this feature was required as the developers required a button to prevent the page from refreshing after each filter has been selected. Users can now choose multiple filters without the page refreshing and can refresh the page using apply filters to show the filtered table.</p>
         </ul>
 
 
@@ -76,20 +67,44 @@ T Levels Overview - V5 to V6-1
         <h2 class="govuk-heading-l" id="service-config">Service configuration</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Various content changes</li>
-            <p class="govuk-hint">A number of changes were made to the content of the tiles in the dashboard</p>
-            <li>Updated tile design</li>
-            <p class="govuk-hint">The design of the tiles needed to be changes in version 6, leading to the current design present today (as of version 6-1)</p>
-            <li>Added new tiles</li>
-            <p class="govuk-hint">As we added new journeys and services we also needed to add new tiles to access them</p>
+            <li>Create section headings</li>
+            <p class="govuk-hint">Created section headings for: service details, OpenID Connect & API as well as providing descriptions for each section.</p>
+            <li>Moved input field labels above the input field</li>
+            <p class="govuk-hint">The label of each input field has been moved above each input field to follow GDS guidance and patterns and to make the page more accessible.</p>
+            <li>Added hint text to each input field</li>
+            <p class="govuk-hint">In user research users expressed that they were unsure of what some of the input fields and labels meant, hitn text has been added underneath the label to help users understand what each field is and does.</p>
+            <li>Extended the length of input fields</li>
+            <p class="govuk-hint">Due to the character length of some of the inputs which users were required to enter it was required to extend the input field lengths to follow GDS guidance and guidelines.</p>
+            <li>Added the ability to remove fields</li>
+            <p class="govuk-hint">Added the ability for users to remove input fields where required for example Redirect URL and Logout Redirect URL as users can enter multiple URL's and required the ability to remove URL's.</p>
+            <li>Added an Add URL button</li>
+            <p class="govuk-hint">Added an button to replace the Add URL link to follow GDS guidance and to ensure it was clear to users where and how they could add URL's.</p>
+            <li>Updated the Response types & removed Grant types</li>
+            <p class="govuk-hint">To follow best practice in line with OIDC guidance we updated the response types to show the correct values & removed grant types as users should not have the ability to select this and should instead be automatically selected for them.</p>
+            <li>Added a warning message related to Response types</li>
+            <p class="govuk-hint">Added a warning message to the Response types category as when a user makes a selection a flow type is automatically selected for them. The warning message is displayed to let the users know which flow has been selected.</p>
+            <li>Added a refresh token field</li>
+            <p class="govuk-hint">Added a refresh token field for users to select, this was previously found under Grant types however required a section of it's own as it is classed as a separate field in OIDC guidance.</p>
+            <li>Moved the client secret input field</li>
+            <p class="govuk-hint">Moved the input field for client secret underneath the repsonse types as the client secret input field is only required depending on what selection the user has made in response types.</p>
+            <li>Aligned 'show' buttons with the input field</li>
+            <p class="govuk-hint">Aligned the show buttons linked to the input field inline with the input field to ensure it is clear to users that the button relates to the field it it alongside rather than underneath the field.</p>
+            <li>Updated the selections users can make under Token endpoint authentication method</li>
+            <p class="govuk-hint">Updated the options under token endpoint authentication method to align with the OIDc guidance and requirements.</p>
+            <li>Made some fields conditional to appear depending on what options the user has selected</li>
+            <p class="govuk-hint">Under OIDC guidance Refresh token, client secret and toekn endpoint authentication method should only be selected or made available depending on which refresh token options the user has selected therefore certain fields will not appear until a selection is made to prevent users selecting the wrong setup.</p>
+            <li>Created a review service configuration page</li>
+            <p class="govuk-hint">Created a review service configuration page to give users the opportunity to review the changes they have made in order prevent users making mistakes potentially causing service outages.</p>
         </ul>
 
         <!--   Changes made to service onboarding    -->
         <h2 class="govuk-heading-l" id="service-onboarding">Service onboarding</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Updated tile design</li>
-            <p class="govuk-hint">Like with the providers dashboard, the AO dashboard also needed to be updated to a new design</p>
+            <li>Created service onboarding journey</li>
+            <p class="govuk-hint">Created a new journey which previously didn't exist to allow users to onboard a service to DfE Sign-in.</p>
+            <li>Updated the journey to replicate the service configuration pages</li>
+            <p class="govuk-hint">Updated the journey to replicate the service configuration page to ensure consistency for users between the two elements.</p>
         </ul>
 
 
@@ -98,35 +113,22 @@ T Levels Overview - V5 to V6-1
         <h2 class="govuk-heading-l" id="manage-policies">Manage policies</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Added a search learner records page that filters learners based on what link the user follows</li>
-            <p class="govuk-hint">Added a page that displays the various start years that learners may have joined in. Following one of these links will filter the learners so that only the ones that started at the chosen year is displayed</p>
-            <li>Added ability to search for a learner via ULN</li>
-            <p class="govuk-hint">On the same page that asks you to filter via year we also have a search bar for if a user would prefer to search for an individual learner</p>
-            <li>Added ability to filter learners</li>
-            <p class="govuk-hint">After selecting a year to filter by we also added the ability to further filter uses via checkboxes on the sidebar. Users can filter by subject, or the state of the learners course</p>
-            <li>Added ability to sort learners by last name</li>
-            <p class="govuk-hint">Users can also sort learners by A-Z or Z-A by clicking on the correct link. This sorting process should only target the learners last name.</p>
-            <li>Added ability to search for learners based on last name or ULN</li>
-            <p class="govuk-hint">after sorting via year, if a user wanted to search for a specific learner we also added a search bar where users can type in learner details in order to find them.</p>
-            <li>Added dynamic pagination and dynamic text that changes based on the amount of learners present, or what page the user is on</li>
-            <p class="govuk-hint">Instead of displaying all learners at once, we have limited displayed learners down to 10 per page and added the ability to cycle between pages. There will some text stating how many learners there are total which will change based on the amount</p>
-            <li>Added and updated data present in prototype</li>
-            <p class="govuk-hint">It was decided that in order to correctly test the prototype we needed some real data, so we altered the learner data files and inputted more learners</p>
-            <li>Updated design of T Level record page</li>
-            <p class="govuk-hint">Once a learner is selected it will take you to their specific page. The design of this page has changed numerous times over the different versions to fit user needs</p>
-            <li>Made maths, English, and IP statuses able to be changed and made them dynamic across learners</li>
-            <p class="govuk-hint">Users can now change details in the individual learner pages, these changes are saved on said learners and can be accessed again without the details being overwritten</p>
-            <li>Added ability to request a replacement document and added the journey to do so</li>
-            <p class="govuk-hint">Should a learner lose their documents providers can request that a replacement be sent out to them. This feature only because available when learners have completed their course</p>
-            <li>Simplified IP journey</li>
-            <p class="govuk-hint">Removed and condensed multiple pages in the IP journey to create a less confusing and more succinct experience</p>
-            <li>Multiple changes to IP journey to suit shifting design requirements</li>
-            <li>Added two new options to IP journey: Learner needs more time and Learner will not complete their industry placement</li>
-            <p class="govuk-hint">Options added for if a learner will never complete their IP journey but is still continuing with the course, as well as if a learner is planning on completing their IP but haven't done so yet</p>
-            <li>Added a variety of success banners based on learner IP status</li>
-            <p class="govuk-hint">Depending on what the user selects a different banner will be displayed, depicting the status of the learners industry placement</p>
-            <li>Added a tag next to the learners name, displaying whether or not their record has been completed</li>
-            <p class="govuk-hint">These tags were previously removed, but then added back as it was decided that it would help users know at a glance the status of their learners</p>
+            <li>Remove tabs when a user is viewing policy information</li>
+            <p class="govuk-hint">Removed tabs and displayed the roles and consitions tables on the same page, allowing users to see both tables at the same time without clicking enabling comparison between the two table easier.</p>
+            <li>Added a description to the manage policies page</li>
+            <p class="govuk-hint">Added a description of what policies are and what users can do to ensure users understand what they can do.</p>
+            <li>Added links to help pages related to manage policies</li>
+            <p class="govuk-hint">Added links to manage policies help pages under related actions to ensure users can quickly access help when they need it.</p>
+            <li>Added additional information to the policy pages</li>
+            <p class="govuk-hint">Added additional information to the policies page such as policy status and policy type to ensure users have the information they require.</p>
+            <li>Added the ability for users to view individual roles related to a policy</li>
+            <p class="govuk-hint">Users can now click the name of a role and be taken to a role page which previously didn't exist, this enables users to view all policies related to a specific role.</p>
+            <li>Added the ability to create a new policy</li>
+            <p class="govuk-hint">Added the ability to create a new policy, enabling them to update their policies to ensure users have the right access to the services they require.</p>
+            <li>Added the ability to change and edit existing policies</li>
+            <p class="govuk-hint">Added the ability to change and edit exisiting policies ensuring users can maintain a policy after they have created it to ensure that users can access the right services when they require it and prevent users accessing services which they don't require.</p>
+            <li>Added the ability to remove and delete a policy</li>
+            <p class="govuk-hint">Added the ability to remove and delete a policy from a service, allowing users to keep their policies up to date and remove older policies which are no longer required.</p>
         </ul>
 
 
@@ -134,8 +136,20 @@ T Levels Overview - V5 to V6-1
         <h2 class="govuk-heading-l" id="help">Help pages</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Created Download T Level results page</li>
-            <p class="govuk-hint">Added a page where users can download the results for all active learners who are in the final year of their T Level</p>
+            <li>Created the help section for help articles</li>
+            <p class="govuk-hint">Created the help section for where users can go to get help and answers to their questions in the form of help articles.</p>
+            <li>Added About DfE Manage console help page</li>
+            <p class="govuk-hint">Added a help page to the help section called about DfE Manage Console.</p>
+            <li>Added manage users help page</li>
+            <p class="govuk-hint">Added a help page to the help section called Manage users.</p>
+            <li>Added Search organisations help page</li>
+            <p class="govuk-hint">Added a help page to the help section called Search organisations.</p>
+            <li>Added Edit service configuration help page</li>
+            <p class="govuk-hint">Added a help page to the help section called Edit service configuration.</p>
+            <li>Added Create new service help page</li>
+            <p class="govuk-hint">Added a help page to the help section called Create new service.</p>
+            <li>Updated most popular help links</li>
+            <p class="govuk-hint">Updated the most popular help links to include the new help pages.</p>
         </ul>
 
     </div>
