@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - MFA Service blueprint - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">MFA - Service blueprint</h1>
+        <p class="govuk-body-l">Service blueprint for the multi-factor authentication solution for DfE Sign-in</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 29th September 2023</p>
+        <p>Last updated: 29th September 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Multi-factor authentication overview</h2>
+        <p class="govuk-body">Multi-factor authentication is a security feature which is required to be implemented for users on DfE sign-in to protect DfE sign-in as a service and to protect the data and information held by services which use DfE sign-in.</p>
+        <p class="govuk-body">Users a re required to enter a code recieved to another registered device to confirm their identity and login. Users can dit and change their authentication methods and can choose from 3 different authentication methods to register to their account.</p>
+
+        <h2 class="govuk-heading-m">Who can access MFA?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>End users of DfE Sign-in</li>
+            <li>Approvers of DfE Sign-in</li>
+            <li>Manage Console users</li>
+            <li>Support Console users of DfE Sign-in</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Service blueprint (Scroll down to view)</h2>
+        <a href="/public/images/mfa-service-blueprint.png"><img src="/public/images/mfa-service-blueprint.png"
+                alt="Screenshot of help section journey" width="900px"></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+            <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidchart/fd8a9dfe-32d3-45b3-aed8-ca9769bd6361/edit?viewport_loc=-5078%2C-4014%2C19817%2C9817%2C0_0&invitationId=inv_588842f6-6ffc-406d-994c-343540111aaf">Multi-factor authentication service blueprint Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="https://dfe-signin-multi-factor-auth.herokuapp.com/">Prototype link</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
