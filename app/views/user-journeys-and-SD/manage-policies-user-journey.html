@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Manage policies - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage Console - Manage policies journey</h1>
+        <p class="govuk-body-l">User journey for the Manage policies section of Manage Console</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 29th September 2023</p>
+        <p>Last updated: 29th September 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">As part of Manage Console users previously had the ability to view policies. Policies are important as they control who is able to access certain roles/sub-services.</p>
+        <p class="govuk-body">Users with the correct permission level will be able to with the updated functionality be able to: view existing policies, change & edit policies, create new policies & remove policies.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Internal DfE users who can access Manage Console</li>
+            <li>Users with the correct permission to Manage policies</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Current Functionality</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Users can view policies,they can view the roles and conditions which are currently assigned to a specific policy.</li>
+            <li>Users are able to request policies to be updated where required by contacting the DfE Sign-in team.</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">User Journeys</h2>
+        <h3 class="govuk-heading-s">Edit/change policy journey</h3>
+        <a href="/public/images/edit-change-policy-journey.png"><img src="/public/images/edit-change-policy-journey.png"
+                alt="Screenshot of edit / change policy journey" width="900px"></a>
+
+                <h3 class="govuk-heading-s govuk-!-margin-top-5">Remove policy journey</h3>
+                <a href="/public/images/remove-policy-journey.png"><img src="/public/images/remove-policy-journey.png"
+                        alt="Screenshot of remove policy journey" width="900px"></a>
+
+                        <h3 class="govuk-heading-s govuk-!-margin-top-5">View policy & roles journey</h3>
+                        <a href="/public/images/view-policy-journey.png"><img src="/public/images/view-policy-journey.png"
+                                alt="Screenshot of view policy journey" width="900px"></a>
+
+                                <h3 class="govuk-heading-s govuk-!-margin-top-5">Create new policy journey</h3>
+                                <a href="/public/images/create-policy-journey.png"><img src="/public/images/create-policy-journey.png"
+                                        alt="Screenshot of create new policy journey" width="900px"></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+            <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/ab7476be-84d1-45aa-972d-6b1c6e9461f5/edit?view_items=iI-xfIgzzpqe&invitationId=inv_6d2dfe0c-12bf-403f-8eae-f9b74476c8f1">Manage policies Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../manage-console/v1/manage-policies/policies.html">Prototype link</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

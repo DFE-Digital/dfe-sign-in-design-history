@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Create new service - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage Console - Create new service journey</h1>
+        <p class="govuk-body-l">User journey for the create new service functionality in Manage Console</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 29th September 2023</p>
+        <p>Last updated: 29th September 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">Users can search by organisation and can manage and search for users in Manage Console.</p>
+        <p class="govuk-body">Users can now filter organisations by status and organistion category & can filter users by user type, organisation type, last login and account status.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Internal DfE users who can access Manage Console</li>
+            <li>Users with the correct permission to create a new service</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Current Functionality</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Filter organisations by status and organisation category</li>
+            <li>Search for organisations</li>
+            <li>Filter users by user type, organisation type, last login and account status</li>
+            <li>Search for users</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        <a href="/public/images/create-new-service-journey.png"><img src="/public/images/create-new-service-journey.png"
+                alt="Screenshot of create new service journey" width="900px"></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+            <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/d13e5438-1d70-4788-8a74-c3c250a09ab6/edit?view_items=aQ7sEir52OOG&invitationId=inv_7e6a9d4e-f8a9-48ee-9aa4-55c506fb41ac">Manage Console user journey Lucid board (contains create new service journey)</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../manage-console/v1/manage-dashboard.html">Prototype link</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

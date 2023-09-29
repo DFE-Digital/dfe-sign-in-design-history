@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Help section - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage Console - Help section journey</h1>
+        <p class="govuk-body-l">User journey for the help section in Manage Console</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 29th September 2023</p>
+        <p>Last updated: 29th September 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">Users can access help and articles which will answer any queries they have about actions they try to complete on the Manage console.</p>
+        <p class="govuk-body">Users can access the help section from multiple different journeys as relevant help links are displayed on the pages which relates to said help link.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Internal DfE users who can access Manage Console</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Current Functionality</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Explore the help section through a range of articles on various topics which relate to the DfE Sign-in Manage Console</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        <a href="/public/images/help-section-journey.png"><img src="/public/images/help-section-journey.png"
+                alt="Screenshot of help section journey" width="900px"></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+            <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/d13e5438-1d70-4788-8a74-c3c250a09ab6/edit?view_items=CwnzLM.FurQk&invitationId=inv_7e6a9d4e-f8a9-48ee-9aa4-55c506fb41ac">Manage Console user journey Lucid board (contains help section journey)</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../manage-console/v1/help.html">Prototype link</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

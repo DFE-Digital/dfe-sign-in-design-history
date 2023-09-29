@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - organisation and user management filtering - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage Console - Organisation search and user management filtering journey</h1>
+        <p class="govuk-body-l">User journey for the organisation search and user management filtering functionality in Manage Console</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 29th September 2023</p>
+        <p>Last updated: 29th September 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">In order to create a new service users currently have to contact DfE Sign-in and complete a manual process in the form of a word document to provide details for the service to be setup.</p>
+        <p class="govuk-body">Users with the correct permission level will be able to create a new service and provide the details required for the DfE Sign-in to review and set up a new service.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Internal DfE users who can access Manage Console</li>
+            <li>Users with the correct permission to create a new service</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Current Functionality</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Currently users cannot create a new service via Manage Console it is currently a manual process and requires support from the DfE Sign-in team.</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        <a href="/public/images/user-org-filtering-journey.png"><img src="/public/images/user-org-filtering-journey.png"
+                alt="Screenshot of org search and user management filtering journey" width="900px"></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+            <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/d13e5438-1d70-4788-8a74-c3c250a09ab6/edit?view_items=S.mzeVOQa7JX&invitationId=inv_7e6a9d4e-f8a9-48ee-9aa4-55c506fb41ac">Manage Console user journey Lucid board (contains org and user filtering journey)</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../manage-console/v1/manage-policies/policies.html">Prototype link</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

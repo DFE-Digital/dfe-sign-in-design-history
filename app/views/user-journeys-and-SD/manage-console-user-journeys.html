@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage Console - User journeys
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../index.html">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Design History</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-top-5">
+        Manage Console - User journeys
+      </h1>
+
+      <h2 class="govuk-heading-l">Select the user journey you want to view</h2>
+
+      <h3 class="govuk-heading-m"> <a class="govuk-link" href="manage-policies-user-journey.html">Manage Policies</a></h3>
+      <p class="govuk-body">View user journeys for Manage policies functionality in Manage Console.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      <h3 class="govuk-heading-m"> <a class="govuk-link" href="create-service-user-journey.html">Create new service</a></h3>
+      <p class="govuk-body">Create a new service for DfE sign-in within Manage Console.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m"> <a class="govuk-link" href="org-user-filters.html">Organisation search & user management filters</a></h3>
+      <p class="govuk-body">Filtering functionality for both organisation search & user management.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m"> <a class="govuk-link" href="service-config-user-journey.html">Service configuration</a></h3>
+      <p class="govuk-body">Service configuration journey for service on DfE Sign-in.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m"> <a class="govuk-link" href="help-section-user-journey.html">Manage Console help section</a></h3>
+      <p class="govuk-body">Help section journey for users when they need support on Manage Console.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
