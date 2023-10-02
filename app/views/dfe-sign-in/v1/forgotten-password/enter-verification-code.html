@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DfE Sign-in
+{% endblock %}
+
+<div class="govuk-header__content">
+  <span class="govuk-header--service-name">DfE Sign-In</span>
+</div>
+
+
+{% block content %}
+<div class="govuk-phase-banner govuk-!-margin-bottom-6">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="../forgotten-password/forgotten-password.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-top-0 govuk-!-static-margin-bottom-5">Back</a>
+
+<div class="govuk-notification-banner govuk-!-width-three-quarters" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      Confirm your email address by entering your verification code
+      <p class="govuk-body">If there is an account associated with [email], we will have sent you an email containing a verification code</p>
+      <a class="govuk-notification-banner__link govuk-!-font-weight-bold" href="#">Resend verification code</a>.
+    </p>
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Enter your verification code
+      </h1>
+
+      <h2 class="govuk-heading-m govuk-!-font-weight-regular">
+        Enter the verification code included in the email we've sent you and then you can continue on to create a new password.
+      </h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+            Verification code
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+      </div>
+      
+      <div class="govuk-button-group">
+        <a type="submit" class="govuk-button" href="../forgotten-password/create-password.html">
+          Continue
+      </a>
+        
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DfE Sign-in
+{% endblock %}
+
+<div class="govuk-header__content">
+  <span class="govuk-header--service-name">DfE Sign-In</span>
+</div>
+
+
+{% block content %}
+<div class="govuk-phase-banner govuk-!-margin-bottom-6">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="../create-account/confirm-email-address.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-top-0 govuk-!-static-margin-bottom-5">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Resend verification email
+      </h1>
+
+      <p>A verification email was send to [email].</p>
+      <p class="govuk-!-margin-bottom-5">If this email address is incorrect then you can change it below.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+            Email address
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+      </div>
+      
+      <div class="govuk-button-group">
+        <a type="submit" class="govuk-button" href="../create-account/confirm-email-address.html">
+            Submit
+        </a>
+        
+            <a class="govuk-button govuk-button--secondary" href="../create-account/confirm-email-address.html" role="button">Cancel</a>
+        
+    </div>
+    </div>
+  </div>
+{% endblock %}

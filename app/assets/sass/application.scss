@@ -549,3 +549,27 @@ dd {
 margin-inline-start: 10px;
 }
 //Filters ends here//
+
+.icon-remove {
+  color: #d4351c;
+  font-weight: bold;
+  font-family: "GDS Transport",arial,sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+
+.icon-remove::before {
+  content: "✘ ";
+}
+
+.icon-ok {
+  color: #00703c;
+  font-weight: bold;
+  font-family: "GDS Transport",arial,sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+
+.icon-ok::before {
+  content: "✔ ";
+}
