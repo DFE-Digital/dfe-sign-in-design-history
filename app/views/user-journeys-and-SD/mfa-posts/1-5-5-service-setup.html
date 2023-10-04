@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Manage policies - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">MFA - Service login & setup MFA journey</h1>
+        <p class="govuk-body-l">User journey for when a user accesses a service via the service landing page and is required to setup MFA</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 3rd October 2023</p>
+        <p>Last updated: 4th October 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">This journey shows the journey for when a user accesses a service via the service start page and is required to setup their MFA for the first time as the service has chosen to switch on MFA.</p>
+        <p class="govuk-body">Users will be required to setup MFA as part of the login process and will be able to choose which MFA method they wish to use and can add more than 1 option to their account. The users will be required to use MFA everytime they login after setting this up.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>DfE Sign-in end users who access at least 1 service with MFA switched on</li>
+            <li>All approver users in DfE Sign-in</li>
+            <li>All Manage Console users</li>
+            <li>All Support Console users</li>
+        </ul>
+
+
+       
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        
+        <a href="/public/images/setup-mfa-journey.png"><img src="/public/images/setup-mfa-journey.png"
+                alt="Screenshot of setup MFA journey" width="900px"></a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+                  <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/7c2af875-7242-41d4-ada4-093a2ec40e2d/edit?viewport_loc=992%2C315%2C6123%2C3359%2C0_0&invitationId=inv_8e42a476-caaa-4d1d-b685-a18130ca703f">Multi-factor authentication user journey Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="https://dfe-signin-multi-factor-auth.herokuapp.com/">Prototype link</a>
+                        </h3>
+                    </li>
+
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../mfa-service-blueprint.html">Multi-factor authentication service blueprint</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

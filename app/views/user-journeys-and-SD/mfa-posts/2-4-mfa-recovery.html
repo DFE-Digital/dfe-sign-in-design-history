@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Manage policies - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">MFA - Recovery journey</h1>
+        <p class="govuk-body-l">User journey for when a user cannot access their chosen authentication method</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 3rd October 2023</p>
+        <p>Last updated: 4th October 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">A key part of MFA is allowing users to recover their accoun should they be locked out due to the user not being able to access their MFA methods.</p>
+        <p class="govuk-body">This journey shows the recovery journey for how users can recover their MFA via a reset or disable request in order to get access to their DfE Sign-in account.</p>
+        <p class="govuk-body">All users are required to have the ability to recover their account however dpending on their permission level they will need to request it from either an approver or the DfE support team with users with higher permission levels required to request a reset from the support team.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>DfE Sign-in end users who access at least 1 service with MFA switched on</li>
+            <li>All approver users in DfE Sign-in</li>
+            <li>All Manage Console users</li>
+            <li>All Support Console users</li>
+        </ul>
+
+
+       
+
+        <h2 class="govuk-heading-m">User Journeys</h2>
+
+        <h3 class="govuk-heading-s">End user reset journey</h3>
+        
+        <a href="/public/images/2-4-end-user-recovery.png"><img src="/public/images/2-4-end-user-recovery.png"
+                alt="Screenshot of end user MFA recovery journey" width="900px"></a>
+
+                <h3 class="govuk-heading-s">Approver reset journey</h3>
+
+                <a href="/public/images/2-4-approver-recovery.png"><img src="/public/images/2-4-approver-recovery.png"
+                    alt="Screenshot of approver MFA recovery journey" width="900px"></a>
+
+                    <h3 class="govuk-heading-s">End user reset journey (no approvers at their organisation)</h3>
+
+                    <a href="/public/images/2-4-recover-no-approvers.png"><img src="/public/images/2-4-recover-no-approvers.png"
+                        alt="Screenshot of end user MFA recovery journey when the user has no approvers at their organisation" width="900px"></a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+                  <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/7c2af875-7242-41d4-ada4-093a2ec40e2d/edit?viewport_loc=992%2C315%2C6123%2C3359%2C0_0&invitationId=inv_8e42a476-caaa-4d1d-b685-a18130ca703f">Multi-factor authentication user journey Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="https://dfe-signin-multi-factor-auth.herokuapp.com/">Prototype link</a>
+                        </h3>
+                    </li>
+
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../mfa-service-blueprint.html">Multi-factor authentication service blueprint</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

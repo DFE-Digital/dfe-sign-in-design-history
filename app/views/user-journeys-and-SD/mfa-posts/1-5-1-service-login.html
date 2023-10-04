@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Manage policies - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">MFA - Service login journey</h1>
+        <p class="govuk-body-l">User journey for the login journey for a user using MFA to access their DfE Sign-in account via the service landing page</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 3rd October 2023</p>
+        <p>Last updated: 4th October 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">This journey is the login journey for users who access services which require MFA. MFA is configured at a service level meaning if users access 1 service which requires MFA they will be requires to enter a verification code when they login.</p>
+        <p class="govuk-body">For users where MFA is required this is the most common journey they will interact with as it will be required every time they login. To make the process of loggin in quicker and easier for users they will have the option to remember this device for 1 day.</p>
+        <p class="govuk-body">Users will have a choice of receiving their verification code by 1 of 3 methods and can chose the option of which one to use based on which option is right for them.</p>
+        <p class="govuk-body">This journey shows the login journey for when users sign in via the service start page. Users have 2 routes to access DfE Sign-in and those are: via the service start page directly or via DfE Sign-in's start page.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>DfE Sign-in end users who access at least 1 service with MFA switched on</li>
+            <li>All approver users in DfE Sign-in</li>
+            <li>All Manage Console users</li>
+            <li>All Support Console users</li>
+        </ul>
+
+
+       
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        
+        <a href="/public/images/1-5-service-journey.png"><img src="/public/images/1-5-service-journey.png"
+                alt="Screenshot of service-led MFA journeys" width="900px"></a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+                  <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/7c2af875-7242-41d4-ada4-093a2ec40e2d/edit?viewport_loc=992%2C315%2C6123%2C3359%2C0_0&invitationId=inv_8e42a476-caaa-4d1d-b685-a18130ca703f">Multi-factor authentication user journey Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="https://dfe-signin-multi-factor-auth.herokuapp.com/">Prototype link</a>
+                        </h3>
+                    </li>
+
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../mfa-service-blueprint.html">Multi-factor authentication service blueprint</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

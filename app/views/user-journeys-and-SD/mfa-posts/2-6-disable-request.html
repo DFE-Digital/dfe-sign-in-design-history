@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Manage Console - Manage policies - DfE Sign-in design history
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">MFA - Disable MFA request journey</h1>
+        <p class="govuk-body-l">User journey for when an end user requests MFA to be disabled from an approver</p>
+        <p>From: DfE Sign-in Team</p>
+        <p>Published: 3rd October 2023</p>
+        <p>Last updated: 4th October 2023</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l ">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Journey overview</h2>
+        <p class="govuk-body">As an approver one of the main responsibilities is to manage users at their organisation therefore the responsibility for approving or denying requests therefore when an end user requests to disable their MFA this responsibility are for approvers.</p>
+        <p class="govuk-body">This journey shows the process of how an approver will respond to an end user who has requested that their MFA should be temporarily disabled because they cannot access their account due to the fact they cannot access their MFA method.</p>
+        <p class="govuk-body">Users who request to disable their account, if approved, will have their MFA disabled for the day in order to give them access, this journey should only be used as a last resort for example if a user requires immediate access to complete an urgent action that same day.</p>
+
+        <h2 class="govuk-heading-m">Who can access this journey?</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>All approver users in DfE Sign-in</li>
+        </ul>
+
+
+       
+
+        <h2 class="govuk-heading-m">User Journey</h2>
+        
+        <a href="/public/images/2-6-disable-request.png"><img src="/public/images/2-6-disable-request.png"
+                alt="Screenshot of disable MFA request journey" width="900px"></a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <aside class="app-related govuk-!-display-none-print" role="complementary">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
+                  <nav role="navigation" aria-labelledby="-title">
+                <ul class="govuk-list">
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link" href="https://lucid.app/lucidspark/7c2af875-7242-41d4-ada4-093a2ec40e2d/edit?viewport_loc=992%2C315%2C6123%2C3359%2C0_0&invitationId=inv_8e42a476-caaa-4d1d-b685-a18130ca703f">Multi-factor authentication user journey Lucid board</a>
+                        </h3>
+                    </li>
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="https://dfe-signin-multi-factor-auth.herokuapp.com/">Prototype link</a>
+                        </h3>
+                    </li>
+
+                    <li class="app-related__list-item">
+                        <h3 class="govuk-heading-s">
+                            <a class="govuk-link"
+                                href="../mfa-service-blueprint.html">Multi-factor authentication service blueprint</a>
+                        </h3>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
