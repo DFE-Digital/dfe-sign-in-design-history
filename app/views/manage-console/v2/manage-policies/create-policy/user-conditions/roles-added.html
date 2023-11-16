@@ -85,28 +85,58 @@
 
   <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../user-conditions/roles-added.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="../user-conditions/role.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
   
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (organisation type)</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (user type)</span>
   
-        <h1 class="govuk-heading-xl">Create new policy</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">You have added 1 role</h1>
 
-        <h2 class="govuk-heading-m">Name your policy</h2>
-        <p class="govuk-body">Choose a name for your new policy that reflects the conditions you have added. The policy name will only be seen by internal users.</p>   
-  
-        <div class="govuk-form-group govuk-!-margin-top-5">
-          <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
-              Policy name
-            </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              School Practitioner
+            </dd>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="role.html">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to add another role?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="addanotherole" name="addanotherole" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="addanotherole">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="addanotherole-2" name="addanotherole" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="addanotherole-2">
+                  No
+                </label>
+              </div>
             </div>
-
+          </fieldset>
+        </div>
+        
           <div class="govuk-button-group govuk-!-margin-top-5">
-            <a type="submit" class="govuk-button" href="../organisation-conditions/review-policy.html">
+            <a type="submit" class="govuk-button" href="../user-conditions/policy-name.html">
               Continue
           </a>
 
@@ -120,7 +150,7 @@
       <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
           <h3 class="govuk-heading-m">Related actions</h3>
           <ul class="govuk-list">
-              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage policies</a> </li>
+              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage policies</a></li>
           </ul>
       </aside>
   </div>

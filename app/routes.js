@@ -88,6 +88,24 @@ router.post('/service-type-answer', function (req, res) {
     }
   })
 
+    // Run this code when a form is submitted to 'policy type answer for version 2'
+    router.post('/policy-type-answer-v2', function (req, res) {
+
+      // Make a variable and give it the value from 'how-many-balls'
+      var policyType = req.session.data['policy-type']
+    
+      // Check whether the variable matches a condition
+      if (policyType == "Organisation"){
+        // Send user to next page
+        res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/organisation')
+      } else if (policyType == "User"){
+        // Send user to ineligible page
+        res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/email-address')
+      }
+    })
+  
+
+
     // Run this code when a form is submitted to 'juggling-balls-answer'
     router.post('/org-condition-type-answer', function (req, res) {
 
@@ -113,6 +131,38 @@ router.post('/service-type-answer', function (req, res) {
       }
     })
 
+        // Run this code when a form is submitted to 'juggling-balls-answer'
+        router.post('/org-condition-type-answer-v2', function (req, res) {
+
+          // Make a variable and give it the value from 'how-many-balls'
+          var conditionType = req.session.data['org-condition-type']
+        
+          // Check whether the variable matches a condition
+          if (conditionType == "Establishment"){
+            // Send user to next page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/establishment-type')
+          } else if (conditionType == "Category"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/organisation-category')
+          } else if (conditionType == "Organisation"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/organisation-id')
+          }else if (conditionType == "Status"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/organisation-status')
+
+          }else if (conditionType == "Establishment", "Category", "Organisation", "Status"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/establishment-type')
+
+
+          }else if (conditionType == "No condition"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/organisation-conditions/policy-name')
+          }
+        })
+    
+
       // Run this code when a form is submitted to 'juggling-balls-answer'
   router.post('/user-condition-type-answer', function (req, res) {
 
@@ -132,6 +182,31 @@ router.post('/service-type-answer', function (req, res) {
     }
   })
 
+        // Run this code when a form is submitted to 'juggling-balls-answer'
+        router.post('/user-condition-type-answer-v2', function (req, res) {
+
+          // Make a variable and give it the value from 'how-many-balls'
+          var conditionType = req.session.data['condition-type']
+        
+          // Check whether the variable matches a condition
+          if (conditionType == "Permission"){
+            // Send user to next page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/permission-level')
+          } else if (conditionType == "Email"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/email-address')
+          } 
+          else if (conditionType == "Permission", "Email"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/permission-level')
+          } 
+          
+          else if (conditionType == "No condition"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/policy-name')
+          }
+        })
+
       // Run this code when a form is submitted to 'juggling-balls-answer'
       router.post('/permission-level-answer', function (req, res) {
 
@@ -147,6 +222,23 @@ router.post('/service-type-answer', function (req, res) {
           res.redirect('/manage-console/v1/manage-policies/create-policy/user-conditions/add-another-condition')
         }
       })
+
+            // Run this code when a form is submitted to 'juggling-balls-answer'
+            router.post('/permission-level-answer-v2', function (req, res) {
+
+              // Make a variable and give it the value from 'how-many-balls'
+              var permissionLevel = req.session.data['permission-level']
+            
+              // Check whether the variable matches a condition
+              if (permissionLevel == "End user"){
+                // Send user to next page
+                res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/email-address')
+              } else if (permissionLevel == "Approver"){
+                // Send user to ineligible page
+                res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/email-address')
+              }
+            })
+      
 
          // Run this code when a form is submitted to 'juggling-balls-answer'
          router.post('/change-permission-level-answer', function (req, res) {

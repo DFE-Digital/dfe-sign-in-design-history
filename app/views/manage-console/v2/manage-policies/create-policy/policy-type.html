@@ -93,7 +93,7 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Create new policy</h1>
 
-    <form class="form" action="/policy-type-answer" method="post">
+    <form class="form" action="/policy-type-answer-v2" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -114,14 +114,14 @@
             value: "Organisation",
             text: "Organisation type",
             hint: {
-              text: "Limit access to your service based on organisation status, category, ID or establishment type"
+              text: "Limit access to your service based on individual organisations"
             }
           },
           {
             value: "User",
             text: "User type",
             hint: {
-              text: "Limit access to your service based on user permission level or email address"
+              text: "Limit access to your service based on individual email addresses"
             }
           }
         ]

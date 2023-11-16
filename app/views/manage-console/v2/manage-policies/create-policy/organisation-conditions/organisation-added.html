@@ -85,93 +85,62 @@
 
   <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../organisation-conditions/add-another-condition-3.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="organisation.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
   
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Assessment Service</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (organisation type)</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Create new policy</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">You have added 1 organisation</h1>
 
-        <h2 class="govuk-heading-m">Organisation status</h2>
-        <p class="govuk-body">Choose which organisations can access your service by their status. Select at least 1.</p>
-        
-          <table class="govuk-table govuk-!-margin-top-5">
-            <caption class="govuk-table__caption govuk-table__caption--s">Organisation status</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Select</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Status</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Description</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label"></label>
-                  </div>
-                </div>
-                </th>
-                <td class="govuk-table__cell govuk-!-font-weight-bold">Open</td>
-                <td class="govuk-table__cell">An open organisation is one that is currently operating, and is expected to continue to do so.</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label"></label>
-                  </div>
-                </div>
-                </th>
-                <td class="govuk-table__cell govuk-!-font-weight-bold">Closed</td>
-                <td class="govuk-table__cell">A closed organisation is one that is no longer operating. It may have been replaced by a different organisation.</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label"></label>
-                  </div>
-                </div>
-                </th>
-                <td class="govuk-table__cell govuk-!-font-weight-bold">Proposed to open</td>
-                <td class="govuk-table__cell">A proposed to open organisation is one that is in the process of either re-opening, or becoming an active organisation for the first time.</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label"></label>
-                  </div>
-                </div>
-                </th>
-                <td class="govuk-table__cell govuk-!-font-weight-bold">Proposed to close</td>
-                <td class="govuk-table__cell">A proposed to close organisation is one that is currently operating, but is scheduled to close sometime soon.</td>
-              </tr>
-          </table>
-
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              Only organisations with the selected statuses will be able to access your service.
-            </strong>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              Arkham Limited
+            </dd>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation.html">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
           </div>
+        </dl>
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to add another organisation?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="addanotherole" name="addanotherole" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="addanotherole">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="addanotherole-2" name="addanotherole" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="addanotherole-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        
           <div class="govuk-button-group govuk-!-margin-top-5">
-            <a type="submit" class="govuk-button" href="../organisation-conditions/policy-name.html">
+            <a type="submit" class="govuk-button" href="../organisation-conditions/role.html">
               Continue
           </a>
 
-          <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
+          <a class="govuk-button govuk-button--secondary" href="/manage-console/v2/manage-policies/policies.html">Cancel</a>
             
         </div>
 
@@ -181,7 +150,7 @@
       <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
           <h3 class="govuk-heading-m">Related actions</h3>
           <ul class="govuk-list">
-              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage policies</a> </li>
+              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage policies</a></li>
           </ul>
       </aside>
   </div>

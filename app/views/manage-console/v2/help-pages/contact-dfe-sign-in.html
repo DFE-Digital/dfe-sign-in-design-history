@@ -1,0 +1,141 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DfE Sign-in
+{% endblock %}
+
+<div class="govuk-header__content">
+  <span class="govuk-header--service-name">DfE Sign-In</span>
+</div>
+
+
+{% block content %}
+<div class="govuk-phase-banner govuk-!-margin-bottom-6">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-static-margin-top-5">
+        Contact us for further help
+      </h1>
+
+      <p>Fill in your details and include any information you think will help us understand your query.</p>
+      <p class="govuk-!-margin-top-4">We will respond within 5 working days..</p>
+
+      <div class="govuk-form-group govuk-!-margin-top-5">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+            Full name
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+            Email address
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+            Organisation name
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+          Organisation URN or UKPRN (optional)
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters govuk-!-static-margin-bottom-1" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="sort">
+          What do you need help with?
+        </label>
+        <select class="govuk-select govuk-!-width-three-quarters govuk-!-static-margin-bottom-7 onchange="showHideOtherMessageInput()" id="sort" name="sort">
+          <option disabled selected value>Tell us what you need help with</option>
+          <option value="published">Setting up a DfE Sign-in account</option>
+          <option value="views">Using a DfE service</option>
+          <option value="comments">Changing my email or password</option>
+          <option value="comments">Managing my users as an approver</option>
+          <option value="comments">Adding organisations to your account</option>
+          <option value="comments">Using DfE manage console</option>
+          <option value="comments">Other (please specify)</option>
+        </select>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="sort">
+            What service are you trying to use?
+          </label>
+          <select class="govuk-select govuk-!-width-three-quarters govuk-!-static-margin-bottom-7 onchange="showHideOtherMessageInput()" id="sort" name="sort">
+            <option disabled selected value>Tell us what service you are trying to use</option>
+            <option value="published">Setting up a DfE Sign-in account</option>
+            <option value="views">Using a DfE service</option>
+            <option value="comments">Anlayse school performance</option>
+            <option value="comments">Apply To Become An Academy</option>
+            <option value="Assessment Service">Assessment Service</option>
+                <option value="Assessment Service - Develop an assessment">Assessment Service - Develop an assessment</option>
+                <option value="Assessment Service - Manage your school assessments">Assessment Service - Manage your school assessments</option>
+                <option value="Assessment Service - Start an assessment">Assessment Service - Start an assessment</option>
+                <option value="Child Safeguarding Incident Notification System">Child Safeguarding Incident Notification System</option>
+                <option value="Claim additional payments for teaching">Claim additional payments for teaching</option>
+                <option value="Collect">Collect</option>
+                <option value="Document exchange">Document exchange</option>
+                <option value="Get Information About Schools">Get Information About Schools</option>
+                <option value="Get help buying for schools">Get help buying for schools</option>
+                <option value="Get information about pupils">Get information about pupils</option>
+                <option value="Get my Ofsted Inspection Data Summary Report">Get my Ofsted Inspection Data Summary Report</option>
+                <option value="Hiring Supply Teachers and Agency Workers">Hiring Supply Teachers and Agency Workers</option>
+                <option value="Key to Success (LAs)">Key to Success (LAs)</option>
+                <option value="Key to Success (Schools)">Key to Success (Schools)</option>
+                <option value="Multiplication tables check">Multiplication tables check</option>
+                <option value="National non-domestic rates (NNDR) claims">National non-domestic rates (NNDR) claims</option>
+                <option value="Online Collections Service - including Risk Protection Arrangements">Online Collections Service - including Risk Protection Arrangements</option>
+                <option value="Publish to the course directory">Publish to the course directory</option>
+                <option value="Register Trainee Teachers">Register Trainee Teachers</option>
+                <option value="School Experience">School Experience</option>
+                <option value="School to School">School to School</option>
+                <option value="T Level Results and Certification">T Level Results and Certification</option>
+                <option value="T Levels - Connect with Employers">T Levels - Connect with Employers</option>
+                <option value="Teacher Services - Appropriate Body">Teacher Services - Appropriate Body</option>
+                <option value="Teacher Services - Employer Access - Agent">Teacher Services - Employer Access - Agent</option>
+                <option value="Teacher Services - Employer Access - Schools">Teacher Services - Employer Access - Schools</option>
+                <option value="Teacher Services - ITT Provider">Teacher Services - ITT Provider</option>
+                <option value="Teaching Vacancies">Teaching Vacancies</option>
+                <option value="View Your Education Data (VYED)">View Your Education Data (VYED)</option>
+                <option value="das-tool-service">das-tool-service</option>
+            <option value="Other">Other (please specify)</option>
+            <option value="None">None</option>
+          </select>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="sort">
+                Tell us about your problem
+              </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+      
+          <div class="govuk-button-group govuk-!-margin-top-7">
+            <a type="submit" class="govuk-button" href="../V1/request-sent.html">
+              Continue
+          </a>
+
+          <a class="govuk-button govuk-button--secondary" href="../V1/dfe-sign-in-login.html" role="button">Cancel</a>
+            
+        </div>
+        
+    </div>
+    </div>
+  </div>
+{% endblock %}

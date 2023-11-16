@@ -85,35 +85,26 @@
 
   <main id="content" class="govuk-!-margin-bottom-0"> 
 
-    <a href="../organisation-conditions/add-another-condition-2.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="../user-conditions/email-address.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
   
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Assessment Service</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (user type)</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Create new policy</h1>
-
-        <h2 class="govuk-heading-m">Search for an organisation</h2>
-        <p class="govuk-body">Search and select at least 1 organisation.</p>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Search for a role</h1>
 
         <form method="post" id="form-user-search">
           <fieldset class="govuk-fieldset">
               <div class="govuk-form-group govuk-!-margin-top-3 govuk-!-margin-bottom-0">
-                  <h2 class="govuk-label-wrapper">
-                      <label for="criteria" class="govuk-label govuk-label--s">
-                          Search organisations
-                      </label>
-                  </h2>
                   <div id="event-name-hint" class="govuk-hint">
-                    Search by name, UKPRN or URN
+                    Search by name or code
                   </div>
-                  <input class="govuk-input govuk-!-width-two-thirds" type="text" id="criteria" name="criteria">
+                  <input class="govuk-input govuk-!-width-two-thirds" value="Sch" type="text" id="criteria" name="criteria">
                   <button type="submit" class="govuk-button" data-module="govuk-button">
                       Search
                   </button>
-                  <a class="govuk-link-bold govuk-!-margin-left-2 govuk-!-font-size-19" href="#">Clear search</a>                  
               </div>
           </fieldset>
       </form>
@@ -122,65 +113,40 @@
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Select</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Organisation</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Status</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Role name</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-half">code</th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label"></label>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio">
+                    <label class="govuk-label govuk-radios__label"></label>
                   </div>
                 </div>
                 </th>
-                <td class="govuk-table__cell govuk-!-font-weight-bold">Arkham Limited</td>
-                <td class="govuk-table__cell">Open</td>
+                <td class="govuk-table__cell govuk-!-font-weight-bold">School 
+                  Practitioner</td>
+                <td class="govuk-table__cell">assessment_service_school_practitioner</td>
               </tr>
           </table>
-
-         <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold" href="#">Add another organisation</a></p>
-
-         <table class="govuk-table govuk-!-margin-top-7">
-          <caption class="govuk-table__caption govuk-table__caption--m">Organisations you have selected</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Select</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Organisation</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header govuk-!-padding-bottom-5 govuk-!-padding-top-5">
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" type="checkbox" checked>
-                  <label class="govuk-label govuk-checkboxes__label"></label>
-                </div>
-              </div>
-              </th>
-              <td class="govuk-table__cell govuk-!-font-weight-bold">Blackgate Centre</td>
-              <td class="govuk-table__cell">Open</td>
-            </tr>
-        </table>
 
           <div class="govuk-warning-text govuk-!-margin-top-5">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
               <span class="govuk-warning-text__assistive">Warning</span>
-              Only selected organisations will be able to access your service.
+              If you cannot find the role you're looking for, contact the  <a href="#" class="govuk-link">support team</a>.
             </strong>
           </div>
 
           <div class="govuk-button-group govuk-!-margin-top-5">
-            <a type="submit" class="govuk-button" href="../organisation-conditions/add-another-condition-3.html">
+            <a type="submit" class="govuk-button" href="../user-conditions/roles-added.html">
               Continue
           </a>
 
-          <a class="govuk-button govuk-button--secondary" href="../policies.html" role="button">Cancel</a>
+          <a class="govuk-button govuk-button--secondary" href="/manage-console/v2/manage-policies/policies.html">Cancel</a>
             
         </div>
 
