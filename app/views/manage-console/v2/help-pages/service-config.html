@@ -142,10 +142,17 @@
 
                 <p class="govuk-body">The home URL is the home page of the service you want to configure.</p>
 
-                <p class="govuk-body">It is usually the service landing page from DfE Sign-in. For example:</p>
+                <p class="govuk-body">It is usually the service landing page from DfE Sign-in. For example,</p>
 
                 <p><code class="code">https://www.apply-for-teacher-training.service.gov.uk/provider</code></p>
 
+                <p class="govuk-body govuk-!-margin-top-4">The home URL must:</p> 
+
+                <ol class="govuk-list govuk-list--bullet">
+                  <li>follow http or https protocols</li>
+                  <li>be 200 characters or less</li>
+                  <li>not include spaces or the following characters " < > # % { } | \ ^ ~ [ ] `</li>
+                </ol>
 
                 <h3 class="govuk-heading-m govuk-!-margin-top-5">Post password-reset URL</h3>
 
@@ -154,6 +161,14 @@
                 <p class="govuk-body">It is usually the DfE Sign-in home page. For example:</p> 
 
                 <p><code class="code">https://www.apply-for-teacher-training.service.gov.uk/provider</code></p>
+
+                <p class="govuk-body govuk-!-margin-top-4">The post password-reset URL must:</p> 
+
+                <ol class="govuk-list govuk-list--bullet">
+                  <li>follow http or https protocols</li>
+                  <li>be 200 characters or less</li>
+                  <li>not include spaces or the following characters " < > # % { } | \ ^ ~ [ ] `</li>
+                </ol>
 
                 <p class="govuk-body govuk-!-margin-top-4">If you do not provide a post password-reset URL, the DfE Sign-in system will automatically use one of the redirect URLs provided.</p> 
 
@@ -200,7 +215,8 @@
 
                 <p class="govuk-body">The client ID should not be easy for third parties to guess as it can lead to phishing attacks. You cannot change this value when configuring a service.</p>
 
-                <p class="govuk-body">The value of the client ID must be passed as part of the authentication request.</p>
+                <p class="govuk-body">The value of the client ID must be passed as part of the authentication request. 
+                  Changing this value may cause validation issues.</p>
 
                 <p class="govuk-body">Find out more about <a class="govuk-link-bold" href="#">client ID on OAuth</a>.</p>
 
@@ -211,17 +227,17 @@
 
                 <p class="govuk-body">You can add multiple redirect URLs. For security reasons, it is important to add at least 1.</p>
 
-                <p class="govuk-body">URLs must be valid, trusted and start with <code class="code">https</code>. URLs must not include:</p> 
+                <p class="govuk-body">Redirect URLs must:</p> 
 
                 <ul class="govuk-list govuk-list--bullet">
-                  <li class="govuk-!-margin-bottom-2">query string, for example <code class="code">https://myservice.com/auth/cb?user=xyz</code></li>
-                  <li class="govuk-!-margin-bottom-2">local host, for example <code class="code">https://localhost</code></li>
-                  <li>wildcards, for example <code class="code">https://*.myservice.com</code></li>
+                  <li class="govuk-!-margin-bottom-2">follow http or https protocols</code></li>
+                  <li class="govuk-!-margin-bottom-2">be 200 characters or less</code></li>
+                  <li>not include spaces or the following characters " < > # % { } | \ ^ ~ [ ] `</code></li>
                 </ul>
 
                 <p class="govuk-body">Users will only be redirected back to a URL if it exists in this whitelist.</p>
 
-                <p class="govuk-body">It is important to keep redirect URLs up to date and remove any URLs that are no longer relevant. You can remove a redirect URL on the 'Edit service configuration' page by clicking ‘Remove’ next to the URL field.</p>
+                <p class="govuk-body">It is important to keep redirect URLs up to date and remove any URLs that are no longer relevant. You can remove a redirect URL on the ‘Edit service configuration’ page by clicking ‘Remove’ next to the URL field. </p>
 
                 <h3 class="govuk-heading-m">Logout redirect URL</h3>
 
@@ -233,12 +249,12 @@
 
                 <p class="govuk-body">You can add multiple logout redirect URLs. For security reasons, it is important to add at least 1.</p>
 
-                <p class="govuk-body">URLs must be valid, trusted and start with <code class="code">https</code>. URLs must not include:</p> 
+                <p class="govuk-body">Logout redirect URLs must:</p> 
 
                 <ul class="govuk-list govuk-list--bullet">
-                  <li class="govuk-!-margin-bottom-2">query string, for example <code class="code">https://myservice.com/auth/cb?user=xyz</code></li>
-                  <li class="govuk-!-margin-bottom-2">local host, for example <code class="code">https://localhost</code></li>
-                  <li>wildcards, for example <code class="code">https://*.myservice.com</code></li>
+                  <li class="govuk-!-margin-bottom-2">follow http or https protocols</li>
+                  <li class="govuk-!-margin-bottom-2">be 200 characters or less</li>
+                  <li>not include spaces or the following characters " < > # % { } | \ ^ ~ [ ] `</li>
                 </ul>
 
                 <p class="govuk-body">Users will only be redirected back to a URL if it exists in this whitelist. If you do not provide a logout redirect URL, users will be redirected to the DfE Sign-in page.</p>
@@ -382,9 +398,9 @@
 
             <ul class="govuk-list">
               <li><a class="govuk-link-bold" href="../help-pages/about-manage-console.html">About DfE Manage Console</a></li>
-              <li><a class="govuk-link-bold" href="../help-pages/manage-organisations.html">Search organisations</a></li>
               <li><a class="govuk-link-bold" href="../help-pages/manage-users.html">Manage users</a></li>
-              <li><a class="govuk-link-bold" href="../help-pages/create-new-service.html">Create new service</a></li>
+              <li><a class="govuk-link-bold" href="../help-pages/manage-organisations.html">View and search organisations</a></li>
+              <li><a class="govuk-link-bold" href="../help-pages/manage-policies.html">Manage policies</a></li>
             </ul>
         
     </div>
