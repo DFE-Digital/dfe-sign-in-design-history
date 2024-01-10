@@ -103,6 +103,23 @@ router.post('/service-type-answer', function (req, res) {
         res.redirect('/manage-console/v2/manage-policies/create-policy/user-conditions/email-address')
       }
     })
+
+
+    // Run this code when a form is submitted to 'policy type answer for version 2'
+    router.post('/policy-type-answer-v6', function (req, res) {
+
+      // Make a variable and give it the value from 'how-many-balls'
+      var policyType = req.session.data['policy-type']
+    
+      // Check whether the variable matches a condition
+      if (policyType == "Organisation"){
+        // Send user to next page
+        res.redirect('/manage-console/v6/manage-policies/create-policy/organisation-conditions/organisation')
+      } else if (policyType == "User"){
+        // Send user to ineligible page
+        res.redirect('/manage-console/v6/manage-policies/create-policy/user-conditions/email-address')
+      }
+    })
   
 
 

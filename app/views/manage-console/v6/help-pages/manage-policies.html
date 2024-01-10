@@ -1,0 +1,321 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="https://www.gov.uk/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <!--[if gt IE 8]><!-->
+          <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z">
+            </path>
+          </svg>
+          <!--<![endif]-->
+          <!--[if IE 8]>
+          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
+          <![endif]-->
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../manage-dashboard.html" class="govuk-header__link govuk-header__service-name">
+        DfE Manage
+      </a>
+      <nav aria-label="Menu" class="govuk-header__navigation ">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation"
+          aria-label="Show or hide menu" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../manage-dashboard.html">
+              Dashboard
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../service-configuration/service-configuration.html">
+              Configuration
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../manage-policies/policies.html">
+              Policies
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../user-management/user-management.html">
+              Users
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="../organisation-search/organisation-search.html">
+              Organisations
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="../help.html">
+              Help
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<main id="content" class="govuk-!-margin-bottom-5">
+  <div class="my-services-header">
+    <div id="home-top" class="home-top">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">Help using DfE Sign-in manage console</h1>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-7">Guidance, tips and articles to help you use DfE Sign-in manage console</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="../help.html" class="govuk-back-link govuk-!-font-weight-bold govuk-!-static-margin-top-3">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-5">Manage policies</h1>
+
+      <p class="govuk-body">A policy is a set of conditions that determines who can and cannot access your service.</p>
+
+      <p class="govuk-body">On DfE manage console you can view, create, change and remove policies.</p>
+
+      <p class="govuk-body">A policy does not give users immediate access to your service. Users will need to add your service within their DfE Sign-in account.</p>
+
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-5">View, create, change or remove policies </h2>
+
+      <p class="govuk-body">To manage policies on DfE manage console, you need to:</p>
+
+      <ul class="govuk-list govuk-!-margin-top-4">
+        <li>1. Sign into your DfE Sign-in account.</li>
+        <li>2. Once signed in, select 'DfE Sign-in manage' from your list of services</li>
+        <li>3. On the DfE manage console dashboard, click 'Manage policies'.</li>
+
+        </ol>
+      </ul>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">View a policy</h2>
+
+        <p class="govuk-body">To view a policy, click on the policy name on the DfE manage console dashboard. When you view a policy, you will be able to see its associated conditions and roles. 
+        </p>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Create a new policy
+          </h3>
+
+          <p class="govuk-body">To create a new policy, you need to:</p>
+
+          <ul class="govuk-list govuk-!-margin-top-4">
+            <li>1. Click ‘Create new policy’ on the DfE Sign-in manage console dashboard.</li>
+            <li>2. Select a policy type.</li>
+            <li>3. Depending on which policy type has been selected, search and select an organisation or email address. You can add multiple.</li>
+            <li>4. Search and select a role. You can add multiple.</li>
+            <li>5. Choose a name for your new policy that reflects the conditions you have added.</li>
+            <li>6. Review the policy details and click ‘Submit’.</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">When you create a new policy, it will be sent to the DfE Sign-in support team for review. Your policy will be approved or rejected within 5 days.</p>
+
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Change a policy
+          </h3>
+
+          <p class="govuk-body">You can change a policy name and its existing policy conditions, including adding new conditions and removing existing conditions.</p>
+
+          <p class="govuk-body">To create a policy, you need to:</p>
+
+          <ul class="govuk-list govuk-!-margin-top-4">
+            <li>1. Either click on the policy name on the DfE manage console dashboard and click ‘Change policy’ under ‘Related actions’. Or, click ‘Change’ next to the policy you would like to edit on the DfE Sign-in manage console dashboard.</li>
+            <li>2. On the policy details table, click ‘Change’ next to the policy name, condition or role you want to edit. </li>
+            <li>3. Depending on the policy name, condition or role you are editing, make your changes and click ‘Continue’.</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">When you change a policy, the changes will be made automatically without having to contact the DfE Sign-in team.</p>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Remove a policy
+          </h3>
+
+          <p class="govuk-body">To remove a policy, you need to:</p>
+
+          <ul class="govuk-list govuk-!-margin-top-4">
+            <li>1. Click on the policy name on the DfE Sign-in manage console dashboard.</li>
+            <li>2. Click ‘Remove policy’ under ‘Related actions’.</li>
+            <li>3. Review the policy that you would like to remove. Select either ‘Yes, remove’ or ‘No, keep’ and click ‘Continue’.</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">When you remove a policy, the users associated with that policy will no longer be able to access your service.</p>
+
+
+          <h3 class="govuk-heading-l govuk-!-margin-top-5">
+            Policy types and conditions 
+          </h3>
+
+          <p class="govuk-body">When creating a new policy or changing an existing one, you must choose the policy type.</p>
+
+          <p class="govuk-body">On DfE manage console, there are 2 policy types:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+            <li>organisation type</li>
+            <li>user type</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">Each policy type has certain conditions that limits access to your service based on specific criteria.</p>
+
+          <p class="govuk-body">These conditions can be broad, such as ‘you must belong to a local authority’. They can also be very specific, such as ‘you must have this email address’.</p>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Organisation type
+          </h3>
+
+          <p class="govuk-body">An organisation type policy lets you limit access to your service based on individual organisations. This condition means that only users with the selected organisations will be able to access your service.</p>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            User type
+          </h3>
+
+          <p class="govuk-body">A user type policy lets you limit access to your service based on individual email addresses. This condition means that only users with the selected email addresses will be able to access your service.</p>
+
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Condition details
+          </h3>
+
+          <p class="govuk-body">When you view an organisation type policy on DfE Sign-in manage console, the condition details include:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+            <li>organisation: the condition that has been added to the policy</li>
+            <li>role: relates to the specific roles that have been added to the policy</li>
+            <li>establishment type: relates to the specific establishment the condition is, such as a free school or a foundation school</li>
+            <li>organisation category: relates to the kind of organisation the condition is, such as a training provider</li>
+            <li>status: relates to the active status of an organisation, such as open or closed</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">When you view a user type policy on DfE Sign-in manage console, the condition details include:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+            <li>email address: the condition that has been added to the policy</li>
+            <li>role: relates to the specific roles that have been added to the policy</li>
+            </ol>
+          </ul>
+
+          <h3 class="govuk-heading-l govuk-!-margin-top-5">
+            Roles
+          </h3>
+
+          <p class="govuk-body">A role, sometimes called a sub-service or form, gives users access to certain areas within a service. </p>
+
+          <p class="govuk-body">A role gives more information about how you will use a service so that the service can shape to the different needs of its users. For example, some services will have ‘admin’ and ‘headteacher’ roles, or ‘school practitioner’ and ‘pupil’ roles.</p>
+
+          <p class="govuk-body">When creating a new policy or changing an existing one, you must have at least 1 role associated with the policy.</p>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Role details 
+          </h3>
+
+          <p class="govuk-body">When you view a role on DfE manage console, the role details include:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+            <li>code: the technical presentation of the role name as it passes through the back end of the service</li>
+            <li>ID: a numeral value generated when a role is created</li>
+            </ol>
+          </ul>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-5">
+            Policy name
+          </h3>
+
+          <p class="govuk-body">When creating a new policy, you must choose a name for the policy.</p>
+
+          <p class="govuk-body">A policy name should:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-top-4">
+            <li>be 125 characters or less</li>
+            <li>be unique, clear and descriptive</li>
+            <li>reflect the conditions you have applied to the policy</li>
+            </ol>
+          </ul>
+
+          <p class="govuk-body">The policy name will only be seen by internal users. It will not be shown to users of your service.</p>
+
+          <p class="govuk-body">Once the policy has been created, you can change the policy name without having to contact the DfE Sign-in team.</p>
+
+
+              <p class="govuk-body font-style-italic govuk-!-margin-top-5">
+                Updated October 2023
+              </p>
+
+              <hr class="custom-section-break">
+
+              <h3 class="govuk-heading-m govuk-!-margin-top-5">
+                Most popular help topics
+              </h3>
+
+              <ul class="govuk-list">
+                <li><a class="govuk-link-bold" href="../help-pages/about-manage-console.html">About DfE manage console</a></li>
+                <li><a class="govuk-link-bold" href="../help-pages/manage-users.html">Manage users</a></li>
+                <li><a class="govuk-link-bold" href="../help-pages/service-config.html">Edit service configuration</a></li>
+                <li><a class="govuk-link-bold" href="../help-pages/manage-organisations.html">View and search organisations</a></li>
+              </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third pull-right">
+      <aside class="govuk-!-margin-top-5">
+        <h2 class="govuk-heading-m">Related actions</h2>
+        <ul class="govuk-list">
+          <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Contact DfE Sign-in</a> </li>
+        </ul>
+      </aside>
+    </div>
+
+  </div>
+
+
+
+
+
+
+</main>
+
+{% endblock %}
