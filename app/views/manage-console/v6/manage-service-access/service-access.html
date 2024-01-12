@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{% include "includes/header.html" %} 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <main id="content" class="govuk-!-margin-bottom-0"> 
+
+    <a href="../manage-dashboard.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+  
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+  
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Submit Learner Data</span>
+  
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">Manage service access</h1>
+  
+        <p class="govuk-body">You can manage access to your service by adding, changing or removing policies.</p>
+
+        <p class="govuk-body">A policy is a set of rules that determines who can and cannot access your service. The rules limit access to your service based on specific criteria, such as by organisation or email address.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third pull-right">
+      <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-0">
+          <h3 class="govuk-heading-m">Related actions</h3>
+          <ul class="govuk-list">
+              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage service access (opens in new tab)</a> </li>
+          </ul>
+      </aside>
+  </div>
+
+  </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            
+
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Policy name</th>
+                    <th scope="col" class="govuk-table__header">Type</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="../manage-service-access/view-policies/organisation-policy.html">Internal Users</a></th>
+                    <td class="govuk-table__cell">Organisation</td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">
+                         ACTIVE
+                        </strong>
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="change-policy/org-change-policy.html">Change</a></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="../manage-service-access/view-policies/user-policy.html">External Users</a></th>
+                    <td class="govuk-table__cell">User</td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">
+                         ACTIVE
+                        </strong>
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="change-policy/user-change-policy.html">Change</a></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"> <a class="govuk-!-font-weight-bold" href="../manage-service-access/view-policies/child-safeguarding.html">Child safeguarding</a></th>
+                    <td class="govuk-table__cell">Organisation</td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">
+                         ACTIVE
+                        </strong>
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              
+
+                <div class="govuk-button-group pull-left">
+                  <a type="submit" class="govuk-button" href="#">
+                    Create new policy
+                </a>
+              </div>
+             
+    </div>
+  </div>
+       
+  </main>
+
+{% endblock %}

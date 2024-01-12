@@ -114,10 +114,10 @@ router.post('/service-type-answer', function (req, res) {
       // Check whether the variable matches a condition
       if (policyType == "Organisation"){
         // Send user to next page
-        res.redirect('/manage-console/v6/manage-policies/create-policy/organisation-conditions/organisation')
+        res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/organisations')
       } else if (policyType == "User"){
         // Send user to ineligible page
-        res.redirect('/manage-console/v6/manage-policies/create-policy/user-conditions/email-address')
+        res.redirect('/manage-console/v6/manage-service-access/create-policy/user-rules/email-address')
       }
     })
   
@@ -348,3 +348,27 @@ router.post('/remove-policy-answer', function (req, res) {
     res.redirect('/manage-console/v1/manage-policies/view-policies/organisation-policy')
   }
 })
+
+        // Run this code when a form is submitted to 'juggling-balls-answer'
+        router.post('/v6/remove-policy-answer', function (req, res) {
+
+          // Make a variable and give it the value from 'how-many-balls'
+          var removePolicy = req.session.data['remove-policy']
+        
+          // Check whether the variable matches a condition
+          if (removePolicy == "yes"){
+            // Send user to next page
+            res.redirect('/manage-console/v6/manage-service-access/service-access-removed')
+          } else if (removePolicy == "no"){
+            // Send user to ineligible page
+            res.redirect('/manage-console/v6/manage-service-access/service-access')
+          }
+        })
+
+        // Routes, cookie will expire after 5 secs
+
+        // Res.cookie, name, value and age 
+
+        // Notification is in includes 
+
+        // Script on view complete learner to get the ids and save them 
