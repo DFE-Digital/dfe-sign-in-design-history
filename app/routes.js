@@ -108,20 +108,157 @@ router.post('/service-type-answer', function (req, res) {
     // Run this code when a form is submitted to 'policy type answer for version 2'
     router.post('/policy-type-answer-v6', function (req, res) {
 
-      // Make a variable and give it the value from 'how-many-balls'
+      // Make a variable and give it a variable 
       var policyType = req.session.data['policy-type']
-    
-      // Check whether the variable matches a condition
-      if (policyType == "Organisation"){
-        // Send user to next page
+
+      // If a selection isn't made rerender the form with an error message
+      if (!policyType) {
+        res.render('/manage-console/v6/manage-service-access/create-policy/policy-type',
+        { showError: true });
+
+        // If the form submits with organsaition, redirect to the organisations screen
+      } else if (policyType == "Organisation"){
         res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/organisations')
+
+       // If the form submits with user redirect to the user screen
       } else if (policyType == "User"){
-        // Send user to ineligible page
         res.redirect('/manage-console/v6/manage-service-access/create-policy/user-rules/email-address')
       }
-    })
-  
+    });
 
+        // Run this code when a form is submitted to 'policy type answer for version 2'
+        router.post('/organisations-v6', function (req, res) {
+
+          // Make a variable and give it a variable 
+          var organisations = req.session.data['selected-organisations']
+    
+          // If a selection isn't made rerender the form with an error message
+          if (!organisations) {
+            res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/organisations',
+            { showError: true });
+    
+            // If the form submits with the id, redirect to the next screen
+          } else if (organisations == "Organisation"){
+            res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-organisations')
+    
+           // If the form submits with user redirect to the user screen
+          } 
+        });
+
+                // Run this code when a form is submitted to 'policy type answer for version 2'
+                router.post('/change-organisations-v6', function (req, res) {
+
+                  // Make a variable and give it a variable 
+                  var organisations = req.session.data['selected-organisations']
+            
+                  // If a selection isn't made rerender the form with an error message
+                  if (!organisations) {
+                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/organisations',
+                    { showError: true });
+            
+                    // If the form submits with the id, redirect to the next screen
+                  } else if (organisations == "Organisation"){
+                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-organisations')
+            
+                   // If the form submits with user redirect to the user screen
+                  } 
+                });
+              
+                router.post('/organisation-roles-v6', function (req, res) {
+
+                  // Make a variable and give it a variable 
+                  var roles = req.session.data['selected-roles']
+            
+                  // If a selection isn't made rerender the form with an error message
+                  if (!roles) {
+                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/roles',
+                    { showError: true });
+            
+                    // If the form submits with the id, redirect to the next screen
+                  } else if (roles == "Roles"){
+                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-roles')
+            
+                   // If the form submits with user redirect to the user screen
+                  } 
+                });
+
+                router.post('/organisation-change-roles-v6', function (req, res) {
+
+                  // Make a variable and give it a variable 
+                  var roles = req.session.data['selected-roles']
+            
+                  // If a selection isn't made rerender the form with an error message
+                  if (!roles) {
+                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/change-role',
+                    { showError: true });
+            
+                    // If the form submits with the id, redirect to the next screen
+                  } else if (roles == "Roles"){
+                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-roles')
+            
+                   // If the form submits with user redirect to the user screen
+                  } 
+                });
+
+                router.post('/organisation-name-policy-v6', function (req, res) {
+
+                  // Make a variable and give it a variable 
+                  var name = req.session.data['name-policy']
+            
+                  // If a selection isn't made rerender the form with an error message
+                  if (!name) {
+                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/policy-name',
+                    { showError: true });
+            
+                    // If the form submits with the id, redirect to the next screen
+                  } else if (name == "Name"){
+                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/review-policy')
+            
+                   // If the form submits with user redirect to the user screen
+                  } 
+                });
+
+
+                
+
+                                // Run this code when a form is submitted to 'policy type answer for version 2'
+                                router.post('/organisation-selected-roles-v6', function (req, res) {
+
+                                  // Make a variable and give it a variable 
+                                  var roles = req.session.data['selected-roles']
+                            
+                                  // If a selection isn't made rerender the form with an error message
+                                  if (!roles) {
+                                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-roles',
+                                    { showError: true });
+                            
+                                    // If the form submits with the id, redirect to the next screen
+                                  } else if (roles == "Roles"){
+                                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/policy-name')
+                            
+                                   // If the form submits with user redirect to the user screen
+                                  } 
+                                });                
+      
+                // Run this code when a form is submitted to 'policy type answer for version 2'
+                router.post('/selected-organisations-v6', function (req, res) {
+
+                  // Make a variable and give it a variable 
+                  var organisations = req.session.data['selected-organisations']
+            
+                  // If a selection isn't made rerender the form with an error message
+                  if (!organisations) {
+                    res.render('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-organisations',
+                    { showError: true });
+            
+                    // If the form submits with the id, redirect to the next screen
+                  } else if (organisations == "Organisation"){
+                    res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/roles')
+            
+                   // If the form submits with user redirect to the user screen
+                  } 
+                });
+  
 
     // Run this code when a form is submitted to 'juggling-balls-answer'
     router.post('/org-condition-type-answer', function (req, res) {
@@ -349,6 +486,24 @@ router.post('/remove-policy-answer', function (req, res) {
   }
 })
 
+ // Run this code when a form is submitted to 'juggling-balls-answer'
+ router.post('/v6/review-policy', function (req, res) {
+
+            // Make a variable and give it the value from 'how-many-balls'
+            var addPolicy = req.session.data['add-policy']
+        
+          // Check whether the variable matches a condition
+          if (addPolicy == "yes"){
+
+          res.cookie("policy", "success-created", {
+            maxAge: 5000,
+          });
+            // Send user to next page
+            res.redirect('/manage-console/v6/manage-service-access/service-access-removed')
+          } 
+
+ })
+
         // Run this code when a form is submitted to 'juggling-balls-answer'
         router.post('/v6/remove-policy-answer', function (req, res) {
 
@@ -357,12 +512,17 @@ router.post('/remove-policy-answer', function (req, res) {
         
           // Check whether the variable matches a condition
           if (removePolicy == "yes"){
+
+          res.cookie("policy", "success", {
+            maxAge: 5000,
+          });
             // Send user to next page
             res.redirect('/manage-console/v6/manage-service-access/service-access-removed')
           } else if (removePolicy == "no"){
             // Send user to ineligible page
             res.redirect('/manage-console/v6/manage-service-access/service-access')
-          }
+          } 
+
         })
 
         // Routes, cookie will expire after 5 secs
