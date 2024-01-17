@@ -6,6 +6,7 @@
 {% endblock %}
 
 
+
 {% block content %}
 
 <div class="govuk-phase-banner">
@@ -23,21 +24,19 @@
 
     <a href="../policy-type.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
-    <form class="form" action="/email-address-v6" method="post">
-
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
         <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
-        tabindex="-1" data-module="govuk-error-summary" {% if not showError %} style="display: none;" {% endif %}>
+        tabindex="-1" data-module="govuk-error-summary">
         <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
           There is a problem
         </h2>
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#roles">Add an email address</a>
+              <a href="#roles">Enter an email address in the correct format, like name@example.com</a>
             </li>
           </ul>
         </div>
@@ -51,26 +50,20 @@
         
         <p class="govuk-body">Add at least 1 email address.</p>
 
-        <div class="govuk-form-group {% if showError %} govuk-form-group--error {% endif %}">
+        <div class="govuk-form-group govuk-form-group--error">
 
 
         <div class="govuk-form-group govuk-!-margin-top-5">
           <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
               Email address
             </label>
-          <!-- <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2" id="event-name" name="event-name" type="text" value="bruce.wayne@education.gov.uk"> <a class="govuk-link-bold govuk-body" href="#">Remove</a>
-          <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2 govuk-!-margin-top-4" id="event-name" name="event-name" type="text"> <a class="govuk-link-bold govuk-body" href="#">Remove</a> -->
+          <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2 govuk-input--error" id="event-name" name="event-name" type="text" value="education"> <a class="govuk-link-bold govuk-body" href="email-address.html">Remove</a>
+          <!-- <input class="govuk-input govuk-!-width-three-quarters govuk-!-margin-right-2 govuk-!-margin-top-4" id="event-name" name="event-name" type="text"> <a class="govuk-link-bold govuk-body" href="#">Remove</a> -->
         </div>
-
-        {% if showError %}
-        <p id="policy-type-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span>Add an email address
-        </p>
-        {% endif %}
-
-        <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold" href="/manage-console/v6/manage-service-access/create-policy/user-rules/email-address-added.html">Add email address</a></p>
-      
       </div>
+
+        <p class="govuk-body"><a class="govuk-link govuk-!-font-weight-bold govuk-!-margin-right-2" href="#">Add email address</a></p>
+
 
           <div class="govuk-warning-text">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -80,13 +73,16 @@
             </strong>
           </div>
 
-          <div class="govuk-grid-row">
+          <div class="govuk-button-group govuk-!-margin-top-5">
+            <a type="submit" class="govuk-button" href="../user-rules/roles.html">
+              Continue
+          </a>
 
-            <button class="govuk-button govuk-!-margin-left-2 govuk-!-margin-right-2" class="govuk-button">Continue</button>
-            <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
+          <a class="govuk-button govuk-button--secondary" href="/manage-console/v2/manage-policies/policies.html">Cancel</a>
+            
+        </div>
       </div>
-</form>
-    </div>
+
 
     <div class="govuk-grid-column-one-third pull-right">
       <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">

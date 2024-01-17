@@ -25,26 +25,11 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        {% include "includes/success_policy_removed.html" %} 
-
-<!-- 
-        <div class="govuk-notification-banner govuk-notification-banner--success govuk-!-margin-top-5" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-              Success
-            </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-            <h3 class="govuk-notification-banner__heading">
-              New policy sent for review
-            </h3>
-            <p class="govuk-body">The internal users policy has been sent to the DfE Sign-in support team for review. You will receive an email within 5 days to tell you if your policy has been approved or rejected.</p>
-          </div>
-        </div> -->
+        {% include "includes/success_policy_sent_for_review.html" %} 
   
         <span class="govuk-caption-xl">Submit Learner Data</span>
   
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Manage service access</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Manage service access</h1>
   
         <p class="govuk-body">You can manage access to your service by adding, changing or removing policies.</p>
 
@@ -101,7 +86,7 @@
 
   <script>
     // this controls all the success banners
-    const BANNER = document.getElementById("success-created")
+    const BANNER = document.getElementById("success")
   
     function getCookie(cname) {
       let name = cname + "=";
@@ -123,7 +108,7 @@
   
     if (getCookie("field") === "BANNER") {
       FAM.style.display = "block"
-    } else if (getCookie("policy") === "success-created") {
+    } else if (getCookie("policy") === "success") {
       success.style.display = "block"
     } 
   </script>

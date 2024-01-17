@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+
+{% block header %}
+{% include "includes/header.html" %} 
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <main id="content" class="govuk-!-margin-bottom-0"> 
+
+    <a href="../change-policy/org-change-policy.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+  
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-error-summary govuk-!-margin-top-5" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#">Policy name must be 125 characters or less
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <h1 class="govuk-heading-xl">Change policy name</h1>
+
+        <p class="govuk-body">Choose a name for your policy that describes the policy you have created. 
+          The policy name will only be seen by internal users.</p>   
+  
+
+          <h1 class="govuk-heading-l">Your details</h1>
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Policy name
+            </label>
+            <p id="full-name-input-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Policy name must be 125 characters or less
+            </p>
+            <input class="govuk-input govuk-input--error govuk-input--width-20" id="full-name-input" name="name" type="text" aria-describedby="full-name-input-error" autocomplete="name">
+          </div>
+
+        <!-- <div class="govuk-form-group govuk-!-margin-top-5">
+          <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Policy name
+            </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text">
+            </div> -->
+
+          <div class="govuk-button-group govuk-!-margin-top-5">
+            <a type="submit" class="govuk-button" href="../change-policy/org-change-policy.html">
+              Continue
+          </a>
+
+          <a class="govuk-button govuk-button--secondary" href="../change-policy/org-change-policy.html" role="button">Cancel</a>
+            
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third pull-right">
+      <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
+          <h3 class="govuk-heading-m">Related actions</h3>
+          <ul class="govuk-list">
+              <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage service access (opens in new tab)</a> </li>
+          </ul>
+      </aside>
+  </div>
+
+  </div>
+       
+  </main>
+
+{% endblock %}

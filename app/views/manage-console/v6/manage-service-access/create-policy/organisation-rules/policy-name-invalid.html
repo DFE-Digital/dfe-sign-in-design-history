@@ -1,0 +1,139 @@
+{% extends "layouts/main.html" %}
+
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<main id="content">
+
+  <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+
+  <form class="form" action="/organisation-name-policy-v6" method="post">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third pull-right">
+        <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
+          <h3 class="govuk-heading-m">Related actions</h3>
+          <ul class="govuk-list">
+            <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage service access (opens in new
+                tab)</a> </li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
+          tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#roles">Policy name must be 125 characters or less
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (organisation)</span>
+
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Name your policy</h1>
+
+        <p class="govuk-body">Choose a name for your policy that describes the policy you have created. The policy
+          name will only be seen by internal users.</p>
+      </div>
+    </div>
+
+
+
+    <div class="govuk-grid-row govuk-body govuk-!-margin-top-5">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-row">
+
+          <div class="container">
+            <div class="govuk-grid-column-full" id="div1">
+              <div class="govuk-form-group govuk-form-group--error">
+
+                <p id="policy-type-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Policy name must be 125 characters or less
+                </p>
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--s" for="account-number">
+                      Policy name
+                    </label>
+                  </h1>
+                  <div id="account-number-hint" class="govuk-hint">
+                    Must be 125 characters or less
+                  </div>
+
+                  <input class="govuk-input govuk-input--error govuk-input--width-20" id="name-policy"
+                    name="name-policy" type="text" value="Name"  aria-describedby="full-name-input-error">
+
+                </div>
+              </div>
+
+              <button class="govuk-button govuk-!-margin-right-2 " data-module="govuk-button">Continue</button>
+              <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html"
+                role="button">Cancel</a>
+            </div>
+
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+  let checker = document.getElementById('checker');
+  let col = document.querySelectorAll('input.skills_select');
+
+  checker.addEventListener('click', function (e) {
+    col.forEach(n => n.checked = this.checked);
+  });
+
+  col.forEach(n => {
+    n.addEventListener('click', function (e) {
+      if (!this.checked && checker.checked) checker.checked = false;
+    })
+  })
+
+  function clearName() {
+
+    var textInput = document.getElementById('name-policy');
+    if (textInput.value === 'Name') {
+      textInput.value = '';
+    }
+  }
+
+    document.getElementById('form').onsubmit = function(event) {
+      var textInputValue = document.getElementById('name-policy').value.trim();
+
+      if (textInputValue === '') {
+        event.preventDefault();
+        alert('Please enter a name to proceeed');
+      }
+    }
+
+
+</script>
+
+
+{% endblock %}

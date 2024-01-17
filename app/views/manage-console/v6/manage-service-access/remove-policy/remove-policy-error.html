@@ -45,6 +45,20 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+        <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
+        tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#roles">Select a response</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
         <!-- We hide the error to begin with -->
 
         <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
@@ -116,6 +130,9 @@
             </div>
           </dl>
 
+
+          <div class="govuk-form-group govuk-form-group--error">
+
           <div class="govuk-form-group" name="remove-policy">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -123,6 +140,10 @@
                   Are you sure?
                 </h1>
               </legend>
+              <p id="policy-type-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select a response
+              </p>
+    
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="remove-policy" name="remove-policy" type="radio" value="Yes">
@@ -139,7 +160,8 @@
               </div>
             </fieldset>
           </div>
-    
+        </div>
+
           <button class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">Continue</button>
     
           <a class="govuk-button govuk-button--secondary" href="../view-policies/organisation-policy.html" role="button">Cancel</a>
