@@ -1,0 +1,251 @@
+{% extends "layouts/main.html" %}
+
+
+{% block header %}
+{% include "includes/header.html" %} 
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <main id="content"> 
+
+    <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+  
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third pull-right">
+        <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
+            <h3 class="govuk-heading-m">Related actions</h3>
+            <ul class="govuk-list">
+                <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage service access (opens in new tab)</a> </li>
+            </ul>
+        </aside>
+    </div>
+
+
+<div class="govuk-grid-column-two-thirds">
+
+
+        <span class="govuk-caption-xl govuk-!-margin-top-5">External users</span>
+  
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Change roles</h1>
+
+        <p class="govuk-body">A role gives users access to certain areas within a service. Add at least 1 role to your policy.</p>
+
+          <fieldset class="govuk-fieldset">
+              <div class="govuk-form-group govuk-!-margin-top-3 govuk-!-margin-bottom-0">
+                  <div id="event-name-hint" class="govuk-hint">
+                    Search by name or code
+                  </div>
+                  
+                  <div class="searchBorder gem-c-search__item-wrapper">
+                    <input class="govuk-input govuk-!-width" value="" type="text" id="criteria" name="criteria">
+
+                  <div class="gem-c-search__item gem-c-search__submit-wrapper">
+                    
+                    <button class="gem-c-search__submit" type="submit" data-module="gem-track-click" enterkeyhint="search" data-gem-track-click-module-started="true">
+                      Search
+                    
+
+                      <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                        <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+                      </svg>
+              </button>   
+             </div>
+            </div>
+          </div>
+         </div>
+
+         <form class="form" action="selected-roles.html">
+
+              <div class="govuk-grid-row">
+
+              <div class="govuk-grid-column-full govuk-body govuk-!-margin-top-8">
+                  <div class="container">
+          <div class="govuk-grid-column-full" id="div1">
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        
+                        <tr class="govuk-table__row sortable">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                              <a href="#" class="govuk-link-bold govuk-link--no-underline">
+                                &#9662;
+                              </a>
+                                <a href="#" class="govuk-link-bold">
+                                  Role
+                                </a>
+                            </th>
+      
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                              <a href="#" class="govuk-link-bold">
+                                Code
+                              </a>
+                          </th>
+                        </tr>
+                    </thead>
+      
+                    <tbody class="govuk-table__body">
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">
+                              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id='checker' name="selectall" type="checkbox" value="hmrc">
+                                  <label class="govuk-label govuk-checkboxes__label" for="selectall">
+                                    Select all
+                                  </label>
+                                </div>
+                              </div>
+                            </th>
+                            <td class="govuk-table__cell"></th>
+                              <td class="govuk-table__cell"></th>
+
+                        </tr>
+                        
+                        <tr class="govuk-table__row fullWidth">
+                          <th scope="row" class="govuk-table__cell">
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                                <!-- Organisation -->
+                                <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                                  Submit Learner Data - FE Workplace
+                                </label>
+
+                                 <!-- Category -->
+                                <td class="govuk-table__cell">
+                                  FEW
+                                </th>
+
+
+                            </th>
+                      </tr>             
+
+                      <tr class="govuk-table__rowh">
+                        <th scope="row" class="govuk-table__cell">
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                              <!-- Organisation -->
+                              <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                                Submit Learner Data - FE Workplace Governor
+                              </label>
+
+                               <!-- Category -->
+                              <td class="govuk-table__cell">
+                                FEWG
+                              </th>
+
+                              
+                          </th>
+                    </tr>   
+
+                    <tr class="govuk-table__rowh">
+                      <th scope="row" class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                            <!-- Organisation -->
+                            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                              Submit Learner Data - EDS
+                            </label>
+
+                             <!-- Category -->
+                            <td class="govuk-table__cell">
+                              EDRS
+                            </th>
+
+                            
+                        </th>
+                  </tr>  
+
+                  <tr class="govuk-table__rowh">
+                    <th scope="row" class="govuk-table__cell">
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                          <!-- Organisation -->
+                          <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                            Submit Learner Data - Standard Submissions
+                          </label>
+
+                           <!-- Category -->
+                          <td class="govuk-table__cell">
+                            DCFT
+                          </th>
+
+                          
+                      </th>
+                </tr>  
+                      
+                       
+                    </tbody>
+                </table>
+
+                <p class="govuk-body govuk-!-margin-top-4">Showing 1 - 4 of <b>4</b> rows
+
+                  <div class="govuk-warning-text govuk-grid-column-two-thirds">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-visually-hidden">Warning</span>
+                      If you cannot find the role you're looking for, contact the
+                      <a href="#" class="govuk-link govuk-link--no-visited-state">DfE Sign-in support team</a>.
+                    </strong>
+                  </div>
+
+                  <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row">
+
+                      <button class="govuk-button govuk-!-margin-right-2" class="govuk-button">Continue</button>
+                      <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
+                </div>
+              </div>
+
+                </div>
+
+                </div>
+
+                </div>
+              </form>
+
+              </div>
+            
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+  let checker=document.getElementById('checker');
+let col=document.querySelectorAll('input.skills_select');
+
+checker.addEventListener('click',function(e){
+    col.forEach(n=>n.checked=this.checked);
+});
+
+col.forEach( n=>{
+  n.addEventListener('click',function(e){
+    if( !this.checked && checker.checked )checker.checked=false;
+  })
+})
+</script>
+
+
+{% endblock %}

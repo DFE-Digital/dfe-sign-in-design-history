@@ -37,6 +37,19 @@
       </div>
 
       <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
+          tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#roles">Enter a policy name</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (organisation)</span>
 
@@ -58,18 +71,25 @@
             <div class="govuk-grid-column-full" id="div1">
               <div class="govuk-form-group {% if showError %} govuk-form-group--error {% endif %}">
 
+
                 <div class="govuk-form-group">
+
                   <h1 class="govuk-label-wrapper">
                     <label class="govuk-label govuk-label--s" for="account-number">
                       Policy name
                     </label>
                   </h1>
+
+                  <p id="policy-type-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span>Enter a policy name
+                  </p>
+                  
                   <div id="account-number-hint" class="govuk-hint">
                     Must be 125 characters or less
                   </div>
 
-                  <input class="govuk-input govuk-input--width-20" id="name-policy"
-                    name="name-policy" type="text" value="Internal users"  aria-describedby="full-name-input-error">
+                  <input class="govuk-input govuk-input--error govuk-input--width-20" id="name-policy"
+                    name="name-policy" type="text" value="Name"  aria-describedby="full-name-input-error">
 
                 </div>
               </div>
