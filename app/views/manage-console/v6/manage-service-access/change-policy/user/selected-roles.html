@@ -21,7 +21,7 @@
 
   <main id="content"> 
 
-    <a href="org-change-policy-success.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+    <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third pull-right">
@@ -37,11 +37,11 @@
 <div class="govuk-grid-column-two-thirds">
 
 
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">External users</span>
   
-        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Selected organisations</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Selected roles</h1>
 
-        <p class="govuk-body">You have selected the following organisations to add to your policy.</p>
+        <p class="govuk-body">You have selected the following roles to add to your policy.</p>
 </div>
 </div>
 
@@ -52,7 +52,7 @@
 
         <div class="govuk-grid-row">
 
-          <form class="form" action="org-change-policy.html">
+          <form class="form" action="../user-change-policy-success">
     <div class="container">
           <div class="govuk-grid-column-full" id="div1">
 
@@ -61,24 +61,12 @@
                         
                         <tr class="govuk-table__row sortable">
                             <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                                  Organisation
+                                  Role
                             </th>
       
                             <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                                Category
+                                Code
                           </th>
-
-                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
-                                URN
-                          </th>
-
-                          <th scope="col" class="govuk-table__header">
-                              UKPRN
-                        </th>
-
-                            <th scope="col" class="govuk-table__header">
-                                  Status
-                            </th>
                         </tr>
                     </thead>
       
@@ -97,8 +85,6 @@
                             </th>
                             <td class="govuk-table__cell"></th>
                               <td class="govuk-table__cell"></th>
-                                <td class="govuk-table__cell"></th>
-                                  <td class="govuk-table__cell"></th>
 
                         </tr>
                         
@@ -110,36 +96,28 @@
 
                                 <!-- Organisation -->
                                 <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
-                                  Department for Education
+                                  Submit Learner Data - EDS
                                 </label>
 
                                  <!-- Category -->
                                 <td class="govuk-table__cell">
-                                  Local Authority
+                                  EDRS
                                 </th>
                                <!-- URN -->
                                 <td class="govuk-table__cell">
                                   
                                 </th>
-                                 <!-- UKPRN -->
-                                <td class="govuk-table__cell">
-                                </th>
-                               <!-- Status  -->
-                                <td class="govuk-table__cell">
-                                  Open
-                                </th>
                               </div>
                               </div>
                             </th>
                       </tr>             
-                  
-
+                    
                        
                     </tbody>
                 </table>
 
                 <p class="govuk-body govuk-!-margin-bottom-8 govuk-!-font-weight-bold">
-                  <a href="change-organisation.html" class="govuk-link-bold" rel="noreferrer noopener">Change organisations</a>
+                  <a href="change-roles.html" class="govuk-link-bold" rel="noreferrer noopener">Change roles</a>
                 </p>
 
 

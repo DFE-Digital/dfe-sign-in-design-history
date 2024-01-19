@@ -23,26 +23,40 @@
 
     <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
-    
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-5">
       <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-error-summary govuk-!-margin-top-5" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#">Enter a policy name</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
     
         <h1 class="govuk-heading-xl">Change policy name</h1>
 
         <p class="govuk-body">Choose a name for your policy that describes the policy you have created. 
           The policy name will only be seen by internal users.</p>   
   
-        <div class="govuk-form-group govuk-!-margin-top-5">
-          <h1 class="govuk-label-wrapper">
+
+          <h1 class="govuk-heading-l">Your details</h1>
+          <div class="govuk-form-group govuk-form-group--error">
             <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
               Policy name
             </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            Must be 125 characters or less
+            <p id="full-name-input-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a policy name
+            </p>
+            <input class="govuk-input govuk-input--error govuk-input--width-20" id="full-name-input" name="name" type="text" aria-describedby="full-name-input-error" autocomplete="name">
           </div>
-          <input class="govuk-input govuk-input--width-20" value="External users" id="width-20" name="width20" type="text" aria-describedby="event-name-hint">
-        </div>
 
         <!-- <div class="govuk-form-group govuk-!-margin-top-5">
           <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
@@ -52,11 +66,11 @@
             </div> -->
 
           <div class="govuk-button-group govuk-!-margin-top-5">
-            <a type="submit" class="govuk-button" href="../change-policy/user-change-policy.html">
+            <a type="submit" class="govuk-button" href="../change-policy/org-change-policy.html">
               Continue
           </a>
 
-          <a class="govuk-button govuk-button--secondary" href="../change-policy/user-change-policy.html" role="button">Cancel</a>
+          <a class="govuk-button govuk-button--secondary" href="../change-policy/org-change-policy.html" role="button">Cancel</a>
             
         </div>
 

@@ -23,6 +23,8 @@
 
     <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
+    <form class="form" action="/change-organisation-selected-roles-v6" method="post">
+
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third pull-right">
         <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
@@ -35,9 +37,21 @@
 
 
 <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
+  tabindex="-1" data-module="govuk-error-summary" {% if not showError %} style="display: none;" {% endif %}>
+  <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#roles">Select at least 1 role</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Create new policy (organisation)</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
   
         <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Selected roles</h1>
 
@@ -52,13 +66,18 @@
 
         <div class="govuk-grid-row">
 
-          <form class="form" action="org-change-policy.html">
     <div class="container">
           <div class="govuk-grid-column-full" id="div1">
+            <div class="govuk-form-group {% if showError %} govuk-form-group--error {% endif %}">
 
                 <table class="govuk-table">
                     <thead class="govuk-table__head">
                         
+                      {% if showError %}
+                      <p id="policy-type-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span>Select at least 1 role
+                      </p>
+                      {% endif %}
                         <tr class="govuk-table__row sortable">
                             <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
                                   Role
@@ -92,7 +111,7 @@
                           <th scope="row" class="govuk-table__cell">
                             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                               <div class="govuk-checkboxes__item">
-                                <input class="skills_select govuk-checkboxes__input" checked style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                                <input class="skills_select govuk-checkboxes__input" checked style="margin-left:auto; margin-right:auto;" id="selected-roles" value="Roles" name="selected-roles"  type="checkbox">
 
                                 <!-- Organisation -->
                                 <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
@@ -115,9 +134,10 @@
                        
                     </tbody>
                 </table>
+              </div>
 
                 <p class="govuk-body govuk-!-margin-bottom-8 govuk-!-font-weight-bold">
-                  <a href="change-roles.html" class="govuk-link-bold" rel="noreferrer noopener">Change roles</a>
+                  <a href="change-role.html" class="govuk-link-bold" rel="noreferrer noopener">Change roles</a>
                 </p>
 
 
@@ -125,7 +145,7 @@
                   <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
                 </div>
 
-            
+        </form>
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

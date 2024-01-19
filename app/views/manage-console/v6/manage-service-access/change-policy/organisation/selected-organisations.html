@@ -1,0 +1,202 @@
+{% extends "layouts/main.html" %}
+
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype of a service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<main id="content">
+
+  <a href="../organisation-conditions/organisation.html" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
+
+  <form class="form" action="/change-selected-organisations-v6" method="post">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third pull-right">
+        <aside class="govuk-!-margin-top-5 govuk-!-margin-bottom-9">
+          <h3 class="govuk-heading-m">Related actions</h3>
+          <ul class="govuk-list">
+            <li><a class="govuk-link govuk-!-font-weight-bold" href="#">Help with manage service access (opens in new
+                tab)</a> </li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <div class="govuk-error-summary govuk-!-margin-top-4" aria-labelledby="govuk-error-summary" role="alert"
+          tabindex="-1" data-module="govuk-error-summary" {% if not showError %} style="display: none;" {% endif %}>
+          <h2 class="govuk-error-summary__title" id="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#policy-type">Select at least 1 organisation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
+
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Selected organisations</h1>
+
+        <p class="govuk-body">You have selected the following organisations to add to your policy.</p>
+      </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-row">
+
+          <div class="container">
+            <div class="govuk-grid-column-full" id="div1">
+              <div class="govuk-form-group {% if showError %} govuk-form-group--error {% endif %}">
+
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+
+                    {% if showError %}
+                    <p id="policy-type-error" class="govuk-error-message">
+                      <span class="govuk-visually-hidden">Error:</span>Select at least 1 organisation
+                    </p>
+                    {% endif %}
+                    <tr class="govuk-table__row sortable">
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                        Organisation
+                      </th>
+
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                        Category
+                      </th>
+
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">
+                        URN
+                      </th>
+
+                      <th scope="col" class="govuk-table__header">
+                        UKPRN
+                      </th>
+
+                      <th scope="col" class="govuk-table__header">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id='checker' checked name="selectall" type="checkbox"
+                              value="hmrc">
+                            <label class="govuk-label govuk-checkboxes__label" for="selectall">
+                              Select all
+                            </label>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="govuk-table__cell">
+                        </th>
+                      <td class="govuk-table__cell">
+                        </th>
+                      <td class="govuk-table__cell">
+                        </th>
+                      <td class="govuk-table__cell">
+                        </th>
+
+                    </tr>
+
+                    <tr class="govuk-table__row fullWidth">
+                      <th scope="row" class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="skills_select govuk-checkboxes__input" checked
+                              style="margin-left:auto; margin-right:auto;" id="selected-organisation"
+                              value="Organisation" name="selected-organisations" type="checkbox">
+
+                            <!-- Organisation -->
+                            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold"
+                              for="organisation">
+                              Department for Education
+                            </label>
+
+                            <!-- Category -->
+                      <td class="govuk-table__cell">
+                        Local Authority
+                        </th>
+                        <!-- URN -->
+                      <td class="govuk-table__cell">
+
+                        </th>
+                        <!-- UKPRN -->
+                      <td class="govuk-table__cell">
+                        </th>
+                        <!-- Status  -->
+                      <td class="govuk-table__cell">
+                        Open
+                        </th>
+              </div>
+            </div>
+            </th>
+            </tr>
+
+      </tbody>
+      </table>
+
+    </div>
+
+    <p class="govuk-body govuk-!-margin-bottom-8 govuk-!-font-weight-bold">
+      <a href="change-organisations.html" class="govuk-link-bold" rel="noreferrer noopener">Change organisations</a>
+    </p>
+
+
+    <button class="govuk-button govuk-!-margin-right-2 " data-module="govuk-button">Continue</button>
+    <a class="govuk-button govuk-button--secondary" href="../manage-policies/policies.html" role="button">Cancel</a>
+    </div>
+
+  </form>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+  let checker = document.getElementById('checker');
+  let col = document.querySelectorAll('input.skills_select');
+
+  checker.addEventListener('click', function (e) {
+    col.forEach(n => n.checked = this.checked);
+  });
+
+  col.forEach(n => {
+    n.addEventListener('click', function (e) {
+      if (!this.checked && checker.checked) checker.checked = false;
+    })
+  })
+</script>
+
+
+{% endblock %}

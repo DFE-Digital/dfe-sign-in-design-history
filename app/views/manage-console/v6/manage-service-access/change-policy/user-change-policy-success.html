@@ -25,13 +25,27 @@
     <a href="javascript: history.go(-1)" class="govuk-back-link govuk-!-font-weight-bold">Back</a>
   
     
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-margin-top-5">
       <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              Policy changed
+            </h3>
+            <p class="govuk-body">The external users policy has been updated with your changes.</p>
+          </div>
+        </div>
   
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">External users</span>
         <h1 class="govuk-heading-xl">Change your policy</h1>
   
-        <p class="govuk-body">Review and change the internal users policy.</p>   
+        <p class="govuk-body">Review and change the external users policy.</p>   
         <h2 class="govuk-heading-m">Policy details</h2>
 
         <dl class="govuk-summary-list">
@@ -40,10 +54,10 @@
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              Internal users	
+              External users	
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../change-policy/organisation/org-policy-name">Change<span class="govuk-visually-hidden"> name</span></a>
+              <a class="govuk-link" href="../change-policy/user/user-policy-name">Change<span class="govuk-visually-hidden">name</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -51,18 +65,18 @@
               Type
             </dt>
             <dd class="govuk-summary-list__value">
-              Organisation
+              User
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-            Organisations
+              Email address	
             </dt>
             <dd class="govuk-summary-list__value">
-              Adult Community Learning Service<br>Pre-LGE 2019 Poole<br>Pre-LGE 2021 Northamptonshire
+              bruce.wayne@education.gov.uk<br>bond.james.bond@gov.uk
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../change-policy/organisation/change-organisations">Change<span class="govuk-visually-hidden"> organisations</span></a>
+              <a class="govuk-link" href="../change-policy/user/email-address">Change<span class="govuk-visually-hidden"> address</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -70,12 +84,11 @@
               Roles
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Submit Learner Data - Advanced 
-                Support Resubmit File</p>
+              <p class="govuk-body">Submit Learner Data - EDS</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <ul class="govuk-summary-list__actions-list">
-                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="../change-policy/organisation/change-role.html">Change<span class="govuk-visually-hidden"> contact details</span></a></li>
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="../change-policy/user/roles">Change<span class="govuk-visually-hidden"> contact details</span></a></li>
               </ul>
             </dd>
           </div>

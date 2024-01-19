@@ -6,6 +6,7 @@
 {% endblock %}
 
 
+
 {% block content %}
 
 <div class="govuk-phase-banner">
@@ -37,9 +38,9 @@
 <div class="govuk-grid-column-two-thirds">
 
 
-        <span class="govuk-caption-xl govuk-!-margin-top-5">Internal users</span>
+        <span class="govuk-caption-xl govuk-!-margin-top-5">External users</span>
   
-        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Change roles</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Search for roles</h1>
 
         <p class="govuk-body">A role gives users access to certain areas within a service. Add at least 1 role to your policy.</p>
 
@@ -68,7 +69,7 @@
           </div>
          </div>
 
-         <form class="form" action="org-selected-roles.html">
+         <form class="form" action="selected-roles.html">
 
               <div class="govuk-grid-row">
 
@@ -123,12 +124,12 @@
 
                                 <!-- Organisation -->
                                 <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
-                                  Submit Learner Data - Advanced Support Resubmit File
+                                  Submit Learner Data - FE Workplace
                                 </label>
 
                                  <!-- Category -->
                                 <td class="govuk-table__cell">
-                                  LSC
+                                  FEW
                                 </th>
 
 
@@ -143,23 +144,63 @@
 
                               <!-- Organisation -->
                               <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
-                                Submit Learner Data - Helpdesk access
+                                Submit Learner Data - FE Workplace Governor
                               </label>
 
                                <!-- Category -->
                               <td class="govuk-table__cell">
-                                RSF
+                                FEWG
                               </th>
 
                               
                           </th>
                     </tr>   
+
+                    <tr class="govuk-table__rowh">
+                      <th scope="row" class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                            <!-- Organisation -->
+                            <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                              Submit Learner Data - EDS
+                            </label>
+
+                             <!-- Category -->
+                            <td class="govuk-table__cell">
+                              EDRS
+                            </th>
+
+                            
+                        </th>
+                  </tr>  
+
+                  <tr class="govuk-table__rowh">
+                    <th scope="row" class="govuk-table__cell">
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="skills_select govuk-checkboxes__input" style="margin-left:auto; margin-right:auto;" id="organisation" name="organisation" type="checkbox" value="hmrc">
+
+                          <!-- Organisation -->
+                          <label class="govuk-label govuk-checkboxes__label govuk-body govuk-!-font-weight-bold" for="organisation">
+                            Submit Learner Data - Standard Submissions
+                          </label>
+
+                           <!-- Category -->
+                          <td class="govuk-table__cell">
+                            DCFT
+                          </th>
+
+                          
+                      </th>
+                </tr>  
                       
                        
                     </tbody>
                 </table>
 
-                <p class="govuk-body govuk-!-margin-top-4">Showing 1 - 2 of <b>2</b> rows
+                <p class="govuk-body govuk-!-margin-top-4">Showing 1 - 4 of <b>4</b> rows
 
                   <div class="govuk-warning-text govuk-grid-column-two-thirds">
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
