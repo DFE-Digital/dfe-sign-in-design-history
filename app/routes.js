@@ -158,6 +158,27 @@ router.post('/organisations-v6', function (req, res) {
 });
 
 // Run this code when a form is submitted to 'policy type answer for version 2'
+router.post('/change-organisations-org-v6', function (req, res) {
+
+  // Make a variable and give it a variable 
+  var organisations = req.session.data['selected-organisations']
+
+  // If a selection isn't made rerender the form with an error message
+  if (!organisations) {
+    res.render('/manage-console/v6/manage-service-access/change-policy/change-organisations', {
+      showError: true
+    });
+
+    // If the form submits with the id, redirect to the next screen
+  } else if (organisations == "Organisation") {
+  
+    res.redirect('/manage-console/v6/manage-service-access/change-policy/selected-organisations')
+
+    // If the form submits with user redirect to the user screen
+  }
+});
+
+// Run this code when a form is submitted to 'policy type answer for version 2'
 router.post('/change-organisations-v6', function (req, res) {
 
   // Make a variable and give it a variable 
@@ -191,6 +212,26 @@ router.post('/organisation-roles-v6', function (req, res) {
     // If the form submits with the id, redirect to the next screen
   } else if (roles == "Roles") {
     res.redirect('/manage-console/v6/manage-service-access/create-policy/organisation-rules/selected-roles')
+
+    // If the form submits with user redirect to the user screen
+  }
+});
+
+router.post('/organisation-change-org-roles-v6', function (req, res) {
+
+  // Make a variable and give it a variable 
+  var roles = req.session.data['selected-roles']
+
+  // If a selection isn't made rerender the form with an error message
+  if (!roles) {
+    
+    res.render('/manage-console/v6/manage-service-access/change-policy/change-role', {
+      showError: true
+    });
+
+    // If the form submits with the id, redirect to the next screen
+  } else if (roles == "Roles") {
+    res.redirect('/manage-console/v6/manage-service-access/change-policy/org-selected-roles')
 
     // If the form submits with user redirect to the user screen
   }
