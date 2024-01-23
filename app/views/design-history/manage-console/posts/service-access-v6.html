@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Manage Console Overview - Service prototype > Version 6
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="../../../index.html">Home</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-5">Service access > Version 6</h1>
+        <p>Documented changes from the service access prototype.</p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body-l">Contents</p>
+        <ol class="govuk-list govuk-list--number">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#about">About service access</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#create">Create policy</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#conditions">Conditions</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#service-onboarding">Service onboarding</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#existing">Existing policies</a></li>
+        </ol>
+
+         <!--   Transfer prototype from Invision Studio to Gov prototype kit    -->
+         <h2 class="govuk-heading-l" id="about">About service access</h2>
+
+         <ul class="govuk-list govuk-list--bullet">
+             <li>Changed 'Manage policies to 'Manage Service access' </li>
+             <p class="govuk-hint">
+                Policies are business rules located within service access that help control who approvers can assign roles to. The policy owner can grant specific roles to specific organisations. 
+                We changed 'Manage policies' to 'Manage service access' as an umbrella term above 'Policies' so that it would be easier for users to understand.
+             </p>
+         </ul>
+
+        <!--   Org and user filters   -->
+        <h2 class="govuk-heading-l" id="create">Create policy</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Limited the organisaton policy</li>
+            <p class="govuk-hint">We limited the organisation policy to just the organisation and role fields, where users can select multiple fields if necessary. 
+                Users have the ability to filter through to find their organisations, if necessary.
+            </p>
+            <li>Limited the user policy</li>
+            <p class="govuk-hint">We limited the user policy to just the email and role fields, where users can select multiple fields if necessary.</p>
+        </ul>
+
+
+        <!--   Changes made to service configuration     -->
+        <h2 class="govuk-heading-l" id="conditions">Conditions</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Changed the language conditions to rules</li>
+            <p class="govuk-hint">Users found the 'Conditions' language confusing, so we changed it to 'Rules' as these are business rules that make up the policy.</p>
+        </ul>
+
+        <!--   Changes made to service onboarding    -->
+        <h2 class="govuk-heading-l" id="existing">Existing policies</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Policies already within the system</li>
+            <p class="govuk-hint">Policies within the existing system will still be displayed, but we are not including 'Change policy' or 'Remove policy' for these existing policies. Instead, we have a warning message telling users to create a 'Service Now' request.</p>
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}
