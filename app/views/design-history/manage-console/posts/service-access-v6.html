@@ -37,7 +37,6 @@
             <li><a class="govuk-link govuk-link--no-visited-state" href="#about">About service access</a></li>
             <li><a class="govuk-link govuk-link--no-visited-state" href="#create">Create policy</a></li>
             <li><a class="govuk-link govuk-link--no-visited-state" href="#conditions">Conditions</a></li>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="#service-onboarding">Service onboarding</a></li>
             <li><a class="govuk-link govuk-link--no-visited-state" href="#existing">Existing policies</a></li>
         </ol>
 
@@ -45,10 +44,14 @@
          <h2 class="govuk-heading-l" id="about">About service access</h2>
 
          <ul class="govuk-list govuk-list--bullet">
-             <li>Changed 'Manage policies to 'Manage Service access' </li>
+             <li>Changed 'Manage policies to 'Manage service access' </li>
              <p class="govuk-hint">
-                Policies are business rules located within service access that help control who approvers can assign roles to. The policy owner can grant specific roles to specific organisations. 
-                We changed 'Manage policies' to 'Manage service access' as an umbrella term above 'Policies' so that it would be easier for users to understand.
+                A policy is a set of rules that determines who can and cannot access a service. 
+                During user testing, we found that ‘Manage policies’ wasn’t descriptive enough and if users 
+                were coming in to manage access to a service, the mental link wasn’t there with the 
+                terminology ‘Manage policies’. 
+                <br> <br>
+                We changed 'Manage policies' to 'Manage service access' as an umbrella term above 'policies' so that it would be easier for users to understand.
              </p>
          </ul>
 
@@ -56,7 +59,7 @@
         <h2 class="govuk-heading-l" id="create">Create policy</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Limited the organisaton policy</li>
+            <li>Limited the organisation policy</li>
             <p class="govuk-hint">We limited the organisation policy to just the organisation and role fields, where users can select multiple fields if necessary. 
                 Users have the ability to filter through to find their organisations, if necessary.
             </p>
@@ -69,8 +72,15 @@
         <h2 class="govuk-heading-l" id="conditions">Conditions</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>Changed the language conditions to rules</li>
-            <p class="govuk-hint">Users found the 'Conditions' language confusing, so we changed it to 'Rules' as these are business rules that make up the policy.</p>
+            <li>Changed 'conditions' to 'rules'</li>
+            <p class="govuk-hint">
+                Changed ‘conditions’ to ‘rules’ as ‘rules’ is simpler and plainer English, scoring as 
+                grade 3 on Hemingway compared to ‘conditions’ which scores as post graduate. ‘Rules’ is also 
+                more descriptive as these are business rules the user is adding to the policy, 
+                and they encapsulate specific instructions in the technical system. 
+                <br><br>
+                While both ‘rules’ and ‘conditions’ can be used to describe criteria or criteria-like elements, the pairing of ‘rules’ with ‘policy’ is more common language usage in computing contexts.
+               </p>
         </ul>
 
         <!--   Changes made to service onboarding    -->
@@ -78,7 +88,14 @@
 
         <ul class="govuk-list govuk-list--bullet">
             <li>Policies already within the system</li>
-            <p class="govuk-hint">Policies within the existing system will still be displayed, but we are not including 'Change policy' or 'Remove policy' for these existing policies. Instead, we have a warning message telling users to create a 'Service Now' request.</p>
+            <p class="govuk-hint">
+                As we have created the MVP, we have not created designs for multiple conditions within 
+                a policy (for example, by establishment type, organisation ID or status).
+                <br><br>
+                Therefore, policies within the existing system which have multiple conditions will still be 
+                displayed in the MVP, but we are not adding functionality to change or remove these policies. 
+                Instead, we have a warning message telling users to create a 'Service Now' request.
+            </p>
         </ul>
 
     </div>
